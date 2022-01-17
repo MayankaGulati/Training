@@ -8,4 +8,5 @@ git add .
 	to stage new and modified files.
 git add -u
 	to stage modified and delted files.
-
+git commit -m "comment"
+	This command records the file in the version history. The -m means that a commit message follows.
