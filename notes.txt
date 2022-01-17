@@ -1,1 +1,11 @@
-hello
+Git init-
+	to initialise a new git repository.
+Git add <file name.py>
+	this commands addsone or all changes files to staging area
+git add -A
+	to stage new, modified or deleted files.
+git add .
+	to stage new and modified files.
+git add -u
+	to stage modified and delted files.
+
