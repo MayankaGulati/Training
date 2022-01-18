@@ -17,4 +17,12 @@ gitlog
 	This command will list the version history for the current branch.
 git branch
 	To list all the branches and see on what branch you currently are on.
-
+git branch <branch name>
+	this will create a new branch.
+git checkout <branch name>
+	will switch to the given branch name.
+git checkout -b <branch name>
+	it will create a new branch and switch to it automatically.
+git restore <file name>
+	it will undo the changes made in file which are not added and committed.
+	
