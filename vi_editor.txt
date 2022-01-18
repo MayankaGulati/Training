@@ -1,0 +1,72 @@
+VI  EDITOR COMMANDS
+
+Two operation modes-
+	command mode
+	insert mode
+
+1. To create a new file-
+	syntax-  vi <file name>
+2.To enter insert mode-
+	i
+	I -to write in the begining of current line.
+	a -inserts text after the current cursor.
+	A- Inserts text at the end of the current line.
+	o– creates new line for text entry below the cursor location
+	O -creates a new line for text entry above the cursor location.
+	
+3.To exit any mode-
+	esc
+4.To save the changes-
+	:w
+5. To close the file-
+	:q
+6.To close without saving-
+	:q!
+7.Save and close-
+	:wq  & shift+zz
+8. undo-
+	u  -to undo last change
+	U -undoall change to enire line.
+9. change case of individual character-
+	
+	
+10.Moving -
+	k -up
+	j -down
+	h -left
+	l -right
+11.To delete-
+	in command mode.
+	x  - is used to delete the character under the cursor.
+	X – is used to delete the character before the cursor.
+	dw -deletes from current cursor location to the next word.
+	d^ - deletes from current cursor to begining of line.
+	d$  -Deletes from the current cursor position to the end of the line.
+	D -Deletes from the cursor position to the end of the current line.
+	dd -Deletes the line the cursor is on.
+	3dd -delete 3 lines.
+12. Change commands-
+	cc-Removes the contents of the line, leaving you in insert mode.
+	@cw-changes the last letter of the word the cursor is on and enable to edit the letter the cursor is on.
+r- replace the letter the cursor is on and return to command mode.
+R- overwrites the characters from the letter the cursor is on.and use esc to stop overwritting.
+s-Replaces the current character with the character you type. Afterward, you are left in the insert mode.
+S-Deletes the line the cursor is on and replaces it with the new text. After the new text is entered, vi remains in the insert mode.
+
+13. copy paste commands-
+
+yy-copies the current line.
+yw-Copies the current word from the character the lowercase w cursor is on, until the end of the word.
+p-paste it after the line cursor is on
+P-paste the copied text on line before the cursor is on.
+
+14. Searching commands-
+	/  is used tosearch downwards in a file.
+	? is used to search upwards in a file.
+
+	^ (/^<first ch to be searched>)searches character at the begining of the line.
+	.  (/.<charcter tobe searched>)matches single character anywhere acc to(/ or ?)
+	* (/<previous characters>*) matches zero or more for previous characters.
+	$ (/<endline word>$) matches the word at end of line.
+	[ ( /[ <expression to find> ] ) will find the mathing or partial matching word.
+	
