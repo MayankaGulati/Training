@@ -10,3 +10,11 @@ git add -u
 	to stage modified and delted files.
 git commit -m "comment"
 	This command records the file in the version history. The -m means that a commit message follows.
+git status
+	This command will list files in green or red colors. Green files have been added to the stage but not committed yet. Files marked as red are the ones not yet added to the stage.
+
+gitlog
+	This command will list the version history for the current branch.
+git branch
+	To list all the branches and see on what branch you currently are on.
+
