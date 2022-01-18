@@ -25,4 +25,7 @@ git checkout -b <branch name>
 	it will create a new branch and switch to it automatically.
 git restore <file name>
 	it will undo the changes made in file which are not added and committed.
-	
+git pull
+	to pull changes from the remote serverto your local computer.
+git pull origin <branch name>
+	the file of <branch name> will be copied in the branch weare currently on.	
