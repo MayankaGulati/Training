@@ -1,3 +1,15 @@
+Git --version 
+	tells about the version of your machine.
+Git config --global user.name <name>
+	this command set the user name as the given name
+Git config --global user.email <email>
+	this command set the user email as the given email id
+Git config --global user.name
+	this will display the user name
+Git config --global user.email
+        this will display the user email
+Git config --list
+	it will list all the configuration or user details
 Git init-
 	to initialise a new git repository.
 Git add <file name.py>
@@ -15,6 +27,8 @@ git status
 
 gitlog
 	This command will list the version history for the current branch.
+Git shortlog
+	it will list out short summary of previous commits
 git branch
 	To list all the branches and see on what branch you currently are on.
 git branch <branch name>
