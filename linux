@@ -1,0 +1,269 @@
+LINUX COMMANDS:
+
+LINUX DIRECTORY COMMANDS:
+
+1. pwd command-
+	it is used to display the current location of the current working directory.
+<PRINT WORKING DIRECTORY>
+	syboliclinks  can also be made using <ls> command pwd-L will show the path with symbolic link and -P will show the path of which symbolic link is created.
+	Syntax- pwd
+	output- pwd  ->home/beryl
+
+	pwd -L (prints the symbolic path)
+	output- pwd -L  ->it’ll be same as physical link.
+	
+	pwd -P (prints actual path)
+	output- pwd  -P -> will remove the symbolic link and show actual link.
+
+	BINARYPWD COMMAND
+	syntax- /bin /pwd
+	@@@@@@@@@@@@
+	
+
+2. mkdir command-
+	this command is used to create new directory under any directory.
+	Syntax- mkdir <directory name>
+	output- mkdir mayanka (new directory with name mayanka will be created)
+
+	syntax-
+	mkdir - - version (displays the version and information regarding the licence.)
+	Mkdir - - help (it displays help related information)
+	mkdir  -v (creates the directoriesand displays them as well)
+	mkdir -p (creates parent directories and following directories in them)
+	output -   mkdir -p first/second/third   --->
+		reates ‘first’ creates ‘first/second’ creates ‘first/second/third’
+	mkdir -m  (it is used to set permission or modes for files using rwx if if the user can read, write and execute)
+
+
+3. rmdir command-
+	this command is used to remove or delete a directory
+	syntax- rmdir <directory name>
+	output- mkdir mayanka (directory name mayanka will be deleted)
+	rmdir -help (display help related information)
+	rmdir -p (to delete parent and child directories)
+	rmdir -v (diplays that the file is being deleted and delete itas well)
+	rmdir  <parent file name>/<childfile name>    <parent file name> 
+	(it will delete the directory and subdirectory as well)
+	rmdir – version (displays the version)
+
+4. ls command-
+	this command is used todisplay listof content of directory.
+	Syntax-   ls 
+	output-    ls -> desktop  documents downloads  music  pictures public snap  templates videos
+		-l is used for just the name of the directories
+		-ld is used for the deatails of the directories
+	ls -t (it sortes the list of directories with last editted file on first)
+	ls -lt (it gives the detailed list of directories with last editted on first)
+	ls -ltr (it gives the detailed list in reverse order)
+	ls -1 (displays one file per line)
+	ls -l (shows listing information of the directories)
+	ls -lh (displays file size in easy to read format)
+	ls -l/etc (display thefiles in etc directory)
+	ls -ld/etc(displays the detailes of the files in etc directory)
+	ls -a (displays hidden files with current (.) and parent(..)file)
+	ls -A(displays hidden file without (‘.’ &’..’)
+	ls -R (is used to display files recursively)
+	example- ls -R -etc -apt
+	ls -i (display files with their inode number)
+	ls -q(print question mark instead of non graphic control characters)
+	ls -n (displays file UID GID)
+	ls -f ()
+	ls –color=auto()
+
+5. cdcommand-
+	this is used to change the current directory.
+	Syntax- cd <directory name>
+	output- :~/Desktop$
+	cd/  (changes directory to root directory)
+	cd dir1/dir2/dir3 (to move inside a directory)
+	cd ~(change directory to home directory)
+	cd ..  (move to the parent directory of the current directory)
+	cd <directory name> (will navigate to the directory)
+	
+
+LINUX FILE COMMANDS:
+
+6.Touch command- 
+	this command is usedto create empty files,we can also create multiple empty files at once.
+	Syntax- touch <file name>
+	output-   touch demo.txt     OR   touch demo1.txt demo2.txt 
+	touch -a ()
+	touch -c
+	touch -c -d
+	touch -m
+	touch -r
+	touch -t
+	
+
+7. cat command-
+	its a multipurpose command  i)create a file  ii)display content of file 
+	iii)copy content from one file to another file
+	CNTRL+D is used to save the file.
+	syntax- cat[option] [FILE]
+		cat > [file name]
+		content for file      //file creation
+		cat [file name]      //displayor execute the file
+
+	output- cat > demo.txt
+		this is a text file.this is the text of demo.txt file
+		cat demo.txt -> displays the content of demo.txt file
+
+		cat <file1><file2>  ->to view multiple files
+		cat -n <filename>   ->to view data with line numbers
+		cat (file1) >(file2)   ->file1 content will be copiedin file2
+		cat -s <file name>   ->resduce the empty spaces 
+		cat <file1> >> <file2>  ->content of file1 will be appended in flie 2
+		cat -E <file name>     ->end of line will be marked with $
+		
+		
+8. rm command
+	it is used to remove a file.
+	Syntax-  rm <file name>
+	output – rm mayanka.txt   (file will be deleted)
+	rm -i <file name>   (interactive deletion)
+	rm -f <file name> (will delete the file forefully and would not work on read only files)
+	rm – r or -R <file name>  (will delete the subfiles and the file altogether)
+	
+
+9. cp command
+	this command is used to copy data of  a fileto another 
+	syntax- cp <from file> <to file>
+	output- cp Mayanka.txt demo.txt (data of file mayanka will be copied to file demo.txt)
+
+10. mv command
+	it is used to move a file or a directory from one location to another location.
+	Syntax- mv <file name><directory path>
+	output-  mv mayanka.txt changeit 
+
+	mv -i <file1><file2> (interactive deletion)
+	mv -f <file1><file2> (fored deletion)
+	mv -n (prevents a filefrom being overridden)
+	mv -b  (backup an exsisting file)
+@@@@@@@@@@@
+
+11.rename command
+	it is used to rename files.
+	Syntax- rename ‘s/<old file name>/<new file name>/’
+@@@@@@@@@@@
+
+rename using mv command
+	mv<old name><new name>
+
+LINUX FILE CONTENT COMMANDS
+
+12. Head command
+	it is used to display the content of the file.  First 10 lines.
+	Syntax- head <filename>
+	output- head demo.txt
+		(it’ll display the content upto 10 lines)
+
+13. tail command
+	it is used to display last 10 lines of the file’s content.
+	Syntax – tail<file name>
+	output- tail demo.txt
+		(it’ll display the content oflast 10 lines)
+
+14.tac command
+	it displays the file content in reverse order.
+	Syntax- tac<file name>
+	output – tac demo.text
+		(it displays the file content in reverse order.)
+
+@@@@@@@@@@@@@@
+15. more command
+
+
+16. less command
+
+@@@@@@@@@@@@@@
+
+
+LINUX USER COMMAND
+
+@@@@@@@@@
+
+17. SU command
+	it is used to provide  administrative access.
+
+18.  id command
+	it is used to display the user id and the group id
+	syntax- id
+	output-  uid=1000(beryl)  gid=1000(beryl) groups=1000... .. ..
+
+19. user add command
+	it isused to addor remove user on linux server
+	syntax-sudo useradd <username>
+
+20. passwd command
+	it is used to create and change password for a user
+	syntax- passwd<username>
+
+21. groupadd command
+	the groupadd command is used to create a user group
+	syntax- groupadd<group name>
+
+LINUX FILTERCOMMANDS
+
+22. cat filter command
+	syntax- cat <file name> |tac |cat |tac |cat
+
+23. cut command
+	it is used to select specific coloumn of a file.
+	Delimiter- is any symbol jiske phle ka text cut hoga.
+	Column number- is the column from left of the data to be displayed.
+
+	Syntax- cut -d(delimiter) -f(column number)<file name>
+
+24. grep command
+	global regular expression print. Used for searching content in a file.
+	Will highlight the word and display the line.
+
+	syntax- command |grep<search word>
+
+25. comm command
+	is used to compare two files.Display result in3 sections- 
+	first- non matching items of first file.
+	Second-non matching items of second file.
+	Third-matching items in both files.
+
+	Syntax- comm <file1><file2>
+
+26. Sed command 
+	it is used to edit, does not permanently delete the file. Make changes temporarly.
+	
+	syntax- comand |sed ‘s/<oldword>/<new word>/’
+	example- echo class33 | sed ‘s/s3/88/’  ==> clas883
+	
+27. tee command
+	@
+	@
+
+
+
+
+
+LINUX UTILITY COMMANDS
+
+35. find command
+	itis used to find a particular file within a directory. Options to find file are-
+	by type, by name, by date and more.
+	Syntax-   find .  -name  “*.pdf”
+
+36. Locate command
+	The locate command is used to search a file by file name.
+	syntax- locate<file name>
+
+37. date command
+	The date command is used to display date, time, time zone and more.
+	syntax- date
+38. cal command
+	display current months calender with today’s day 
+	syntax- cal
+39. sleep command
+	it is used to hold the terminal for the mentionedno of seconds.
+	syntax-sleep<sec>
+
+40. time command
+	it is used to display the time to execute a command.
+	Syntax- time.
+	
