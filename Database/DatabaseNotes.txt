@@ -1,0 +1,23 @@
+DATATYPES:
+smallint
+integer
+bigint
+decimal
+numeric
+real
+double precision
+smallserial
+serial
+bigserial
+
+Psql:
+
+postgres -V 
+	to check curent version of psql.
+install:
+	sudo apt update
+	sudo apt install postgresql postgresql-contrib 
+
+DATABASE:
+
+create database <database name>
