@@ -47,6 +47,8 @@ eval "$(ssh-agent -s)"
 	Start the ssh agent in the background.
 git remote add origin 
 	Lets you add remote repository on your local repository.
+git clone <url copied from remote>
+	Creating a copy of remote repository on local system
 git branch
 	To list all the branches and see on what branch you currently are on.
 git branch <branch name>
@@ -55,9 +57,29 @@ git checkout <branch name>
 	will switch to the given branch name.
 git checkout -b <branch name>
 	it will create a new branch and switch to it automatically.
+push origin --delete <branch_name>
+	Delete branch from remote repository.
+push <remote> <branch> 
+	Push new branch to the remote repository
+rename a branch
+	If you want to rename a branch while pointed to any branch, do:
+	git branch -m <oldname> <newname>
+	If you want to rename the current branch, you can do:
+	git branch -m <newname>
+	If you want to push the local branch and reset the upstream branch:
+	git push origin -u <newname>
+	And finally if you want to Delete the remote branch:
+	git push origin --delete <oldname>
+git remote -v
+	Shows URLs of remote repositories when listing your current remote connections.
 git restore <file name>
 	it will undo the changes made in file which are not added and committed.
+git merge 
+	Helps you to merge the branch into selected branch.
 git pull
 	to pull changes from the remote serverto your local computer.
 git pull origin <branch name>
-	the file of <branch name> will be copied in the branch weare currently on.	
+	the file of <branch name> will be copied in the branch weare currently on.
+Fork from remote
+	creating a copy of remote repository on your github account.
+	
