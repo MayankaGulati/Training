@@ -29,6 +29,24 @@ gitlog
 	This command will list the version history for the current branch.
 Git shortlog
 	it will list out short summary of previous commits
+Git show <commit_id>
+	will display the commit details of the particular commit.
+git help log
+	display detail information about log.
+git log --since date= <dd-mm-yy>
+	display commits from that date
+git log --until date = <dd-mm-yy>
+	display all the commits until that date.
+git diff
+	tells the difference between staging and working directory
+git diff --staged
+	tells the difference between repository and staging directory.
+ssh-keygen -t rsa -b 4096 -C "<email>"
+	Creates a ssh key using the provided email.
+eval "$(ssh-agent -s)"
+	Start the ssh agent in the background.
+git remote add origin 
+	Lets you add remote repository on your local repository.
 git branch
 	To list all the branches and see on what branch you currently are on.
 git branch <branch name>
