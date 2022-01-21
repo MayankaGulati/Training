@@ -190,3 +190,8 @@ Drop table <table name>
 \dt
 	to view tables
 
+library_management_system=# create table students(
+library_management_system(# student_id int primary key not null,
+library_management_system(# name text not null,
+library_management_system(# age int not null unique,
+library_management_system(# marks real default 0);
