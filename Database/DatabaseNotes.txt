@@ -152,3 +152,41 @@ postgres=# \l
 
 \c <database name>
 	to enter into data base
+
+exit- to get out of database
+Databse can be created using two prompts-
+Database sql prompts:
+	using postgres Create database <> command
+OS command prompts:
+	from command line.
+
+
+Constraints-
+	NOT NULL Constraint − Ensures that a column cannot have NULL value.
+    • UNIQUE Constraint − Ensures that all values in a column are different.
+    • PRIMARY Key − Uniquely identifies each row/record in a database table.
+    • FOREIGN Key − Constrains data based on columns in other tables.
+    • CHECK Constraint − The CHECK constraint ensures that all values in a column satisfy certain conditions.
+    • EXCLUSION Constraint − The EXCLUDE constraint ensures that if any two rows are compared on the specified column(s) or expression(s) using the specified operator(s), not all of these comparisons will return TRUE.
+
+
+CREATE TABLE Book(
+library_management_system(# book_id int primary key not null,
+library_management_system(# book_name varchar(50) not null,
+library_management_system(# book_author text not null);
+CREATE TABLE
+library_management_system=# \dt
+        List of relations
+ Schema | Name | Type  |  Owner   
+--------+------+-------+----------
+ public | book | table | postgres
+(1 row)
+
+
+
+Drop table <table name>
+	delete the table
+
+\dt
+	to view tables
+
