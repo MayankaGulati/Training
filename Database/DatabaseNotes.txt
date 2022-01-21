@@ -106,9 +106,9 @@ cstring:    Indicates that a function accepts or returns a null-terminated C str
 internal:   Indicates that a function accepts or returns a server-internal data type.
 language_handler:A procedural language call handler is declared to return language_handler.
 fdw_handler:A foreign-data wrapper handler is declared to return fdw_handler.
-record:Identifies a function returning an unspecified row type.
-trigger:A trigger function is declared to return trigger.
-void:Indicates that a function returns no value.
+record:     Identifies a function returning an unspecified row type.
+trigger:    A trigger function is declared to return trigger.
+void:       Indicates that a function returns no value.
 
 
 		Psql commands:
@@ -124,6 +124,31 @@ switching over post gress account:
 
 to exit out:
 	postgres=# \q
+to logout from postgres:
+	postgres=# exit
 
 create database:
 	create database <datbase name>
+
+eg-
+
+postgres=# CREATE DATABASE library_management_system;
+CREATE DATABASE
+postgres=# \l
+                                     List of databases
+           Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+---------------------------+----------+----------+---------+-------+-----------------------
+ library_management_system | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                  | postgres | UTF8     | en_IN   | en_IN | 
+ template0                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+(4 rows)
+
+
+\l 
+	to see the list of database
+
+\c <database name>
+	to enter into data base
