@@ -10,14 +10,19 @@ smallserial
 serial
 bigserial
 
-Psql:
+		Psql commands:
+Postress install:
+	
+$ sudo apt update
+$ sudo apt install postgresql postgresql -contrib
 
-postgres -V 
-	to check curent version of psql.
-install:
-	sudo apt update
-	sudo apt install postgresql postgresql-contrib 
+switching over post gress account:
 
-DATABASE:
+	$ sudo -i -u postgres
+	$ psql
 
-create database <database name>
+to exit out:
+	postgres=# \q
+
+create database:
+	create database <datbase name>
