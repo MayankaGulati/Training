@@ -40,6 +40,76 @@ Enumerated (enum) types are data types that comprise a static, ordered set of va
 syntax: AS ENUM
 
 Geometric Type-
+point
+line
+lseg 
+box 
+path
+path 
+polygon
+circle
+
+Network address type-
+cidr
+inet
+macaddr
+
+Bit string type-
+bit(n)
+bit varying (n)
+
+Text search type-
+tsvector
+tsquery
+
+UUID Type-
+	A UUID (Universally Unique Identifiers) is written as a sequence of lower-case hexadecimal digits, in several groups separated by hyphens, specifically a group of eight digits, followed by three groups of four digits, followed by a group of 12 digits, for a total of 32 digits representing the 128 bits.
+
+XML Type-
+The XML data type can be used to store XML data
+
+JSON Type-
+	The json data type can be used to store JSON (JavaScript Object Notation) data. 
+Array Type-
+	PostgreSQL gives the opportunity to define a column of a table as a variable length multidimensional array. 
+Composite value Input-
+	Composite values can be inserted as a literal constant, enclosing the field values within parentheses and separating them by commas. 
+Accessing Composite Types-
+	To access a field of a composite column, use a dot followed by the field name, much like selecting a field from a table name. 
+Range types-
+	Range types represent data types that uses a range of data.
+
+
+    int4range − Range of integer
+
+    int8range − Range of bigint
+
+    numrange − Range of numeric
+
+    tsrange − Range of timestamp without time zone
+
+    tstzrange − Range of timestamp with time zone
+
+    daterange − Range of date
+
+Object identifier type-
+Object identifiers (OIDs) are used internally by PostgreSQL as primary keys for various system tables. 
+
+Pseudo type-
+any:        Indicates that a function accepts any input data type.
+anyelement: Indicates that a function accepts any data type.
+anyarray:   Indicates that a function accepts any array data type.
+anynonarray:Indicates that a function accepts any non-array data type.
+anyenum:    Indicates that a function accepts any enum data type.
+anyrange:   Indicates that a function accepts any range data type.
+cstring:    Indicates that a function accepts or returns a null-terminated C string.
+internal:   Indicates that a function accepts or returns a server-internal data type.
+language_handler:A procedural language call handler is declared to return language_handler.
+fdw_handler:A foreign-data wrapper handler is declared to return fdw_handler.
+record:Identifies a function returning an unspecified row type.
+trigger:A trigger function is declared to return trigger.
+void:Indicates that a function returns no value.
+
 
 		Psql commands:
 Postress install:
