@@ -204,3 +204,14 @@ library_management_system(# subject text not null,
 library_management_system(# student_id int references students(student_id) );
 CREATE TABLE
 
+view created tables-
+
+library_management_system=# \dt
+            List of relations
+ Schema |     Name     | Type  |  Owner   
+--------+--------------+-------+----------
+ public | book         | table | postgres
+ public | sample_paper | table | postgres
+ public | students     | table | postgres
+(3 rows)
+
