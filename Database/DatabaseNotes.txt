@@ -195,3 +195,12 @@ library_management_system(# student_id int primary key not null,
 library_management_system(# name text not null,
 library_management_system(# age int not null unique,
 library_management_system(# marks real default 0);
+
+Using foreign key refrence-
+
+library_management_system=# create table sample_paper(
+library_management_system(# Id int primary key not null,
+library_management_system(# subject text not null,
+library_management_system(# student_id int references students(student_id) );
+CREATE TABLE
+
