@@ -1,4 +1,6 @@
-DATATYPES:
+	DATATYPES:
+Numeric type-
+
 smallint
 integer
 bigint
@@ -9,6 +11,35 @@ double precision
 smallserial
 serial
 bigserial
+
+Monetory type-
+Money
+
+Character type-
+
+character varying(n), varchar(n)
+character(n),char(n)
+text	
+
+Binary Type-
+Bytea
+
+Date/Time types-
+timestamp[(p)]
+TIMESTAMPTZ
+date
+time[ (p)]
+time[(p)] with timezone
+interval[feilds][(p)]
+
+Boolean type-
+boolean
+
+Enumerated Type-
+Enumerated (enum) types are data types that comprise a static, ordered set of values.
+syntax: AS ENUM
+
+Geometric Type-
 
 		Psql commands:
 Postress install:
