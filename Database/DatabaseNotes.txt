@@ -264,4 +264,36 @@ library_management_system=# \l
 (4 rows)
 
 
+To view table-
 
+syntax- \d <table name>
+	    \d book
+                         Table "public.book"
+   Column    |         Type          | Collation | Nullable | Default 
+-------------+-----------------------+-----------+----------+---------
+ book_id     | integer               |           | not null | 
+ book_name   | character varying(50) |           | not null | 
+ book_author | text                  |           | not null | 
+Indexes:
+    "book_pkey" PRIMARY KEY, btree (book_id)
+
+
+Schema -
+
+library_management_system=# create schema firstschema;
+CREATE SCHEMA
+library_management_system=# create table firstschema.first_table(
+library_management_system(# id int primary key not null,
+library_management_system(# name text not null);
+CREATE TABLE
+library_management_system=# select * from firstschema.first_table;
+ id | name 
+----+------
+(0 rows)
+
+drop if schema is empty-
+	drop schema <schema name> ;
+drop if schema is not empty-
+	library_management_system=# drop schema firstschema cascade;
+NOTICE:  drop cascades to table firstschema.first_table
+DROP SCHEMA
