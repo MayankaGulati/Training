@@ -370,4 +370,42 @@ library_management_system=# select name, age from students;
  boston |  19
 (3 rows)
 
+Expression clause-
 
+SELECT column1, column2, columnN
+FROM table_name
+WHERE SINGLE VALUE MATCHTING EXPRESSION;
+library_management_system=# select * from students where age = 18;
+ student_id | name | age | marks 
+------------+------+-----+-------
+          2 | aman |  18 |    89
+(1 row)
+
+
+library_management_system=# SELECT (15 + 6) AS ADDITION;
+ addition 
+----------
+       21
+(1 row)
+
+SELECT COUNT(*) AS "RECORDS" FROM COMPANY;
+	to count no of reconds in a table.
+library_management_system=# select count (*) as marks from students;
+ marks 
+-------
+     3
+(1 row)
+
+where clause-
+
+SELECT column1, column2, columnN
+FROM table_name
+WHERE [search_condition]
+eg-
+library_management_system=# select name,age,marks from students where age < 20;
+  name  | age | marks 
+--------+-----+-------
+ alex   |  15 |    70
+ aman   |  18 |    89
+ boston |  19 |    87
+(3 rows)
