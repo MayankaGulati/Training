@@ -215,3 +215,53 @@ library_management_system=# \dt
  public | students     | table | postgres
 (3 rows)
 
+
+drop database:
+
+library_management_system=# create database new_database;
+CREATE DATABASE
+library_management_system=# \l
+                                     List of databases
+           Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+---------------------------+----------+----------+---------+-------+-----------------------
+ library_management_system | postgres | UTF8     | en_IN   | en_IN | 
+ new_database              | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                  | postgres | UTF8     | en_IN   | en_IN | 
+ template0                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+(5 rows)
+
+library_management_system=# drop database new_database;
+DROP DATABASE
+library_management_system=# \l
+                                     List of databases
+           Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+---------------------------+----------+----------+---------+-------+-----------------------
+ library_management_system | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                  | postgres | UTF8     | en_IN   | en_IN | 
+ template0                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+(4 rows)
+
+using if exists-
+
+library_management_system=# drop database if exists new_database;
+DROP DATABASE
+library_management_system=# \l
+                                     List of databases
+           Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+---------------------------+----------+----------+---------+-------+-----------------------
+ library_management_system | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                  | postgres | UTF8     | en_IN   | en_IN | 
+ template0                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+(4 rows)
+
+
+
