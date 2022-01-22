@@ -297,3 +297,53 @@ drop if schema is not empty-
 	library_management_system=# drop schema firstschema cascade;
 NOTICE:  drop cascades to table firstschema.first_table
 DROP SCHEMA
+
+to view table-
+
+syntax- \d <table name>
+	    \d book
+                         Table "public.book"
+   Column    |         Type          | Collation | Nullable | Default 
+-------------+-----------------------+-----------+----------+---------
+ book_id     | integer               |           | not null | 
+ book_name   | character varying(50) |           | not null | 
+ book_author | text                  |           | not null | 
+Indexes:
+    "book_pkey" PRIMARY KEY, btree (book_id)
+
+
+Schema -
+
+library_management_system=# create schema firstschema;
+CREATE SCHEMA
+library_management_system=# create table firstschema.first_table(
+library_management_system(# id int primary key not null,
+library_management_system(# name text not null);
+CREATE TABLE
+library_management_system=# select * from firstschema.first_table;
+ id | name 
+----+------
+(0 rows)
+
+drop if schema is empty-
+	drop schema <schema name> ;
+drop if schema is not empty-
+	library_management_system=# drop schema firstschema cascade;
+NOTICE:  drop cascades to table firstschema.first_table
+DROP SCHEMA
+
+insert into -
+
+INSERT INTO TABLE_NAME (column1, column2, column3,...columnN) VALUES (value1, value2, value3,...valueN);
+
+INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
+
+eg-
+
+library_management_system=# insert into students(student_id, name, age, marks) values(1, 'alex', 15, 70); 
+INSERT 0 1
+
+library_management_system=# insert into students values(2, 'aman', 18, 89);
+INSERT 0 1
+library_management_system=# insert into students values(3, 'boston', 19, 87);
+INSERT 0 1
