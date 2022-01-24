@@ -559,4 +559,40 @@ library_management_system=# select student_id,name, marks from students group by
 (6 rows)
 
 
+ with clause-
+
+WITH 
+   name_for_summary_data AS (
+      SELECT Statement)
+   SELECT columns
+   FROM name_for_summary_data
+   WHERE conditions <=> (
+      SELECT column
+      FROM name_for_summary_data)
+   [ORDER BY columns]
+
+Having clause-
+ HAVING [ conditions ]
+library_management_system=# select * from students group by student_id having marks=60;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          6 | dimple |  20 |    60
+(4 rows)
+
+distinct keyword-
+
+SELECT DISTINCT column1, column2,.....columnN
+FROM table_name
+WHERE [condition]
+library_management_system=# select distinct name, student_id from students where marks=60;
+  name  | student_id 
+--------+------------
+ ammy   |          2
+ auston |          4
+ candy  |          5
+ dimple |          6
+(4 rows)
 
