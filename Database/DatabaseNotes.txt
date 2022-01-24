@@ -458,4 +458,105 @@ DELETE 0
 library_management_system=# delete from students where name = 'anamika';
 DELETE 1
 
+LIMIT clause-
+SELECT column1, column2, column   FROM table_name    LIMIT [no of rows]
+
+library_management_system=# select * from students where marks= 60 limit 3;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+(3 rows)
+
+OFFSET [row num]-
+offset value will restrict that number of values from top.
+
+library_management_system=# select * from students limit 3 offset 1;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          3 | boston |  19 |    87
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+(3 rows)
+
+library_management_system=# select * from students limit 3 offset 3;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          6 | dimple |  20 |    60
+(3 rows)
+library_management_system=# select * from students where marks= 60 limit 3 offset 3;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          6 | dimple |  20 |    60
+(1 row)
+
+library_management_system=# select * from students where marks= 60 limit 3 offset 1;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          6 | dimple |  20 |    60
+
+Order by-
+	SELECT column-list
+FROM table_name
+[WHERE condition]
+[ORDER BY column1, column2, .. columnN] [ASC | DESC];
+library_management_system=# select * from students order by age asc;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          1 | alex   |  15 |    70
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          3 | boston |  19 |    87
+          6 | dimple |  20 |    60
+(6 rows)
+
+library_management_system=# select * from students order by age desc;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          6 | dimple |  20 |    60
+          3 | boston |  19 |    87
+          5 | candy  |  18 |    60
+          4 | auston |  17 |    60
+          2 | ammy   |  16 |    60
+          1 | alex   |  15 |    70
+(6 rows)
+
+
+group by-
+
+SELECT column-list
+FROM table_name
+WHERE [ conditions ]
+GROUP BY column1, column2....column
+ORDER BY column1, column2....column
+
+library_management_system=# select student_id,name, sum(age+marks) from students group by student_id;
+ student_id |  name  | sum 
+------------+--------+-----
+          2 | ammy   |  76
+          3 | boston | 106
+          5 | candy  |  78
+          4 | auston |  77
+          6 | dimple |  80
+          1 | alex   |  85
+(6 rows)
+
+library_management_system=# select student_id,name, marks from students group by student_id;
+ student_id |  name  | marks 
+------------+--------+-------
+          2 | ammy   |    60
+          3 | boston |    87
+          5 | candy  |    60
+          4 | auston |    60
+          6 | dimple |    60
+          1 | alex   |    70
+(6 rows)
+
+
 
