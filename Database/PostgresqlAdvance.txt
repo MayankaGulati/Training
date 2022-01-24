@@ -1,0 +1,89 @@
+JOINS-
+JOINS-
+
+
+cross joins-
+
+A CROSS JOIN matches every row of the first table with every row of the second table.
+SELECT ... FROM table1 CROSS JOIN table2 ...
+
+
+library_management_system=# select * from students cross join book ;
+ student_id |  name  | age | marks | book_id |     book_name      |   book_author    
+------------+--------+-----+-------+---------+--------------------+------------------
+          1 | alex   |  15 |    70 |       1 | mindset            | carol s. dweck
+          1 | alex   |  15 |    70 |       2 | the psycology book | catherine collin
+          1 | alex   |  15 |    70 |       3 | thinking           | daniel kahneman
+          3 | boston |  19 |    87 |       1 | mindset            | carol s. dweck
+          3 | boston |  19 |    87 |       2 | the psycology book | catherine collin
+          3 | boston |  19 |    87 |       3 | thinking           | daniel kahneman
+          2 | ammy   |  16 |    60 |       1 | mindset            | carol s. dweck
+          2 | ammy   |  16 |    60 |       2 | the psycology book | catherine collin
+          2 | ammy   |  16 |    60 |       3 | thinking           | daniel kahneman
+          4 | auston |  17 |    60 |       1 | mindset            | carol s. dweck
+          4 | auston |  17 |    60 |       2 | the psycology book | catherine collin
+          4 | auston |  17 |    60 |       3 | thinking           | daniel kahneman
+          5 | candy  |  18 |    60 |       1 | mindset            | carol s. dweck
+          5 | candy  |  18 |    60 |       2 | the psycology book | catherine collin
+          5 | candy  |  18 |    60 |       3 | thinking           | daniel kahneman
+          6 | dimple |  20 |    60 |       1 | mindset            | carol s. dweck
+          6 | dimple |  20 |    60 |       2 | the psycology book | catherine collin
+          6 | dimple |  20 |    60 |       3 | thinking           | daniel kahneman
+(18 rows)
+
+inner join-
+
+SELECT table1.column1, table2.column2...
+FROM table1
+INNER JOIN table2
+ON table1.common_filed = table2.common_field;
+
+library_management_system=# select * from students inner join book on students.student_id=book.book_id ;
+ student_id |  name  | age | marks | book_id |     book_name      |   book_author    
+------------+--------+-----+-------+---------+--------------------+------------------
+          1 | alex   |  15 |    70 |       1 | mindset            | carol s. dweck
+          3 | boston |  19 |    87 |       3 | thinking           | daniel kahneman
+          2 | ammy   |  16 |    60 |       2 | the psycology book | catherine collin
+(3 rows)
+
+The LEFT OUTER JOIN
+	
+SELECT ... FROM table1 LEFT OUTER JOIN table2 ON conditional_expression ...
+
+library_management_system=# select * from students left outer join book on students.student_id=book.book_id ;
+ student_id |  name  | age | marks | book_id |     book_name      |   book_author    
+------------+--------+-----+-------+---------+--------------------+------------------
+          1 | alex   |  15 |    70 |       1 | mindset            | carol s. dweck
+          3 | boston |  19 |    87 |       3 | thinking           | daniel kahneman
+          2 | ammy   |  16 |    60 |       2 | the psycology book | catherine collin
+          4 | auston |  17 |    60 |         |                    | 
+          5 | candy  |  18 |    60 |         |                    | 
+          6 | dimple |  20 |    60 |         |                    | 
+(6 rows)
+
+The RIGHT OUTER JOIN
+SELECT ... FROM table1 RIGHT OUTER JOIN table2 ON conditional_expression ...
+
+library_management_system=# select * from students right outer join book on students.student_id=book.book_id ;
+ student_id |  name  | age | marks | book_id |     book_name      |   book_author    
+------------+--------+-----+-------+---------+--------------------+------------------
+          1 | alex   |  15 |    70 |       1 | mindset            | carol s. dweck
+          3 | boston |  19 |    87 |       3 | thinking           | daniel kahneman
+          2 | ammy   |  16 |    60 |       2 | the psycology book | catherine collin
+(3 rows)
+
+The FULL OUTER JOIN
+SELECT ... FROM table1 FULL OUTER JOIN table2 ON conditional_expression ...
+
+library_management_system=# select * from students full outer join book on students.student_id=book.book_id ;
+ student_id |  name  | age | marks | book_id |     book_name      |   book_author    
+------------+--------+-----+-------+---------+--------------------+------------------
+          1 | alex   |  15 |    70 |       1 | mindset            | carol s. dweck
+          3 | boston |  19 |    87 |       3 | thinking           | daniel kahneman
+          2 | ammy   |  16 |    60 |       2 | the psycology book | catherine collin
+          4 | auston |  17 |    60 |         |                    | 
+          5 | candy  |  18 |    60 |         |                    | 
+          6 | dimple |  20 |    60 |         |                    | 
+(6 rows)
+
+
