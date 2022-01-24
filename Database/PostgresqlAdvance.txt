@@ -151,3 +151,78 @@ library_management_system=# select student_id as SID, name as N, age as A, marks
    5 | candy  | 18 | 60
    6 | dimple | 20 | 60
 (4 rows)
+
+alter table commands-
+
+change table name-
+
+ALTER TABLE table_name
+RENAME TO new_name;
+library_management_system=# alter table sample_paper rename to sample;
+ALTER TABLE
+library_management_system=# \dt
+            List of relations
+ Schema |     Name     | Type  |  Owner   
+--------+--------------+-------+----------
+ public | book         | table | postgres
+ public | sample       | table | postgres
+ public | student_info | table | postgres
+ public | students     | table | postgres
+(4 rows)
+
+add column-
+ALTER TABLE table_name ADD column_name datatype;
+
+library_management_system=# select * from student_info;
+ id |  name  | parent_name 
+----+--------+-------------
+  1 | ALex   | auston
+  2 | ashu   | lucifer
+  3 | vineet | verma
+(3 rows)
+
+library_management_system=# alter table student_info add address varchar(225);
+ALTER TABLE
+library_management_system=# select * from student_info;
+ id |  name  | parent_name | address 
+----+--------+-------------+---------
+  1 | ALex   | auston      | 
+  2 | ashu   | lucifer     | 
+  3 | vineet | verma       | 
+(3 rows)
+
+drop column-
+ALTER TABLE table_name DROP COLUMN column_name;
+
+library_management_system=# ALTER TABLE student_info DROP COLUMN address;
+ALTER TABLE
+library_management_system=# select * from student_info;
+ id |  name  | parent_name 
+----+--------+-------------
+  1 | ALex   | auston
+  2 | ashu   | lucifer
+  3 | vineet | verma
+(3 rows)
+
+to change data type-
+ALTER TABLE table_name ALTER COLUMN column_name TYPE datatype;
+
+to add a NOT NULL constraint -
+ALTER TABLE table_name MODIFY column_name datatype NOT NULL;
+
+to ADD UNIQUE CONSTRAINT-
+ALTER TABLE table_name
+ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);
+to ADD CHECK CONSTRAINT-
+ALTER TABLE table_name
+ADD CONSTRAINT MyUniqueConstraint CHECK (CONDITION);
+to ADD PRIMARY KEY constraint-
+ALTER TABLE table_name
+ADD CONSTRAINT MyPrimaryKey PRIMARY KEY (column1, column2...);
+to DROP CONSTRAINT-
+ALTER TABLE table_name
+DROP CONSTRAINT MyUniqueConstraint;
+to DROP PRIMARY KEY constraint-
+ALTER TABLE table_name
+DROP CONSTRAINT MyPrimaryKey;
+
