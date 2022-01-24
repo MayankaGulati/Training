@@ -409,3 +409,53 @@ library_management_system=# select name,age,marks from students where age < 20;
  aman   |  18 |    89
  boston |  19 |    87
 (3 rows)
+
+using add clause-
+	
+SELECT column1, column2, columnN
+FROM table_name
+WHERE [condition1] AND [condition2]...AND [conditionN];
+library_management_system=# select NAME from students where age < 19 and age>16;
+ name 
+------
+ aman
+(1 row)
+
+Or clause-
+
+SELECT column1, column2, columnN
+FROM table_name
+WHERE [condition1] OR [condition2]...OR [conditionN]
+library_management_system=# select * from students where age < 18 or marks>90;
+ student_id | name | age | marks 
+------------+------+-----+-------
+          1 | alex |  15 |    70
+(1 row)
+
+library_management_system=# select * from students where age < 18 or marks > 87;
+ student_id | name | age | marks 
+------------+------+-----+-------
+          1 | alex |  15 |    70
+          2 | aman |  18 |    89
+(2 rows)
+
+
+update query-
+
+UPDATE table_name
+SET column1 = value1, column2 = value2...., columnN = valueN
+WHERE [condition];
+library_management_system=# update students set name = 'anamika' where age =18;
+UPDATE 1
+
+
+delete query-
+
+DELETE FROM table_name
+WHERE [condition];
+library_management_system=# delete from students where name = 'anamika' and age < 16;
+DELETE 0
+library_management_system=# delete from students where name = 'anamika';
+DELETE 1
+
+
