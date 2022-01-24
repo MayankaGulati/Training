@@ -86,4 +86,68 @@ library_management_system=# select * from students full outer join book on stude
           6 | dimple |  20 |    60 |         |                    | 
 (6 rows)
 
+UNION-
 
+UNION clause/operator is used to combine the results of two or more SELECT statements without returning any duplicate rows.
+The column numberand datatype should be same.
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+UNION
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+library_management_system=# select * from student_info;
+ id |  name  | parent_name 
+----+--------+-------------
+  1 | ALex   | auston
+  2 | ashu   | lucifer
+  3 | vineet | verma
+(3 rows)
+
+library_management_system=# select * from book where book_id = 3 union select * from student_info where id =3;
+ book_id | book_name |   book_author   
+---------+-----------+-----------------
+       3 | thinking  | daniel kahneman
+       3 | vineet    | verma
+(2 rows)
+
+Alias-
+
+alias in table-
+SELECT column1, column2....
+FROM table_name AS alias_name
+WHERE [condition];
+SELECT column_name AS alias_name
+FROM table_name
+WHERE [condition];
+library_management_system=# select * from students where marks = 60;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          6 | dimple |  20 |    60
+(4 rows)
+library_management_system=# select * from students as average_students where marks = 60;
+ student_id |  name  | age | marks 
+------------+--------+-----+-------
+          2 | ammy   |  16 |    60
+          4 | auston |  17 |    60
+          5 | candy  |  18 |    60
+          6 | dimple |  20 |    60
+(4 rows)
+
+alias in columns-
+
+library_management_system=# select student_id as SID, name as N, age as A, marks as M from students where marks=60;
+ sid |   n    | a  | m  
+-----+--------+----+----
+   2 | ammy   | 16 | 60
+   4 | auston | 17 | 60
+   5 | candy  | 18 | 60
+   6 | dimple | 20 | 60
+(4 rows)
