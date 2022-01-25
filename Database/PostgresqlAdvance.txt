@@ -249,3 +249,104 @@ DROP CONSTRAINT MyPrimaryKey;
 
 library_management_system=# alter table test drop constraint myprimarykey;
 ALTER TABLE
+
+INDEXES-
+
+create index on single column-
+CREATE INDEX index_name
+ON table_name (column_name);
+library_management_system=# create index newindex on  book(book_code) ;
+CREATE INDEX
+
+Multicolumn Indexes-
+CREATE INDEX index_name
+ON table_name (column1_name, column2_name);
+
+library_management_system=# CREATE INDEX bookindex 
+ON book (book_name, book_author);
+CREATE INDEX
+Unique Indexes-
+CREATE UNIQUE INDEX index_name
+on table_name (column_name);
+library_management_system=# CREATE UNIQUE INDEX bookuniqueindex
+on book (book_code);
+CREATE INDEX
+Partial Indexes
+CREATE INDEX index_name
+on table_name (conditional_expression);
+Implicit Indexes
+# CREATE INDEX salary_index ON COMPANY (salary);
+
+library_management_system=# create index implicitindex on book(book_code);
+CREATE INDEX
+
+library_management_system=# \d book
+                         Table "public.book"
+   Column    |         Type          | Collation | Nullable | Default 
+-------------+-----------------------+-----------+----------+---------
+ id          | integer               |           | not null | 
+ book_name   | character varying(50) |           | not null | 
+ book_author | text                  |           | not null | 
+ book_code   | text                  |           |          | 
+Indexes:
+    "book_pkey" PRIMARY KEY, btree (id)
+    "bookuniqueindex" UNIQUE, btree (book_code)
+    "bookindex" btree (book_name, book_author)
+    "implicitindex" btree (book_code)
+    "newindex" btree (book_code)
+
+To DROP INDEX 
+DROP INDEX index_name;
+
+library_management_system=# drop index newindex;
+DROP INDEX
+
+truncate table-
+to delete all the rows
+TRUNCATE TABLE  table_name;
+
+library_management_system=# select * from student_info;
+ id |  name  | parent_name 
+----+--------+-------------
+  1 | ALex   | auston
+  2 | ashu   | lucifer
+  3 | vineet | verma
+(3 rows)
+
+library_management_system=# truncate table student_info;
+TRUNCATE TABLE
+library_management_system=# select * from student_info;
+ id | name | parent_name 
+----+------+-------------
+(0 rows)
+
+
+VIEWS-
+
+CREATE VIEW-
+CREATE [TEMP | TEMPORARY] VIEW view_name AS
+SELECT column1, column2.....
+FROM table_name
+WHERE [condition];
+library_management_system=# create temp view bookview as select id,book_name,book_code  from book ;
+CREATE VIEW
+
+TO view the created view of table-
+testdb=# SELECT * FROM COMPANY_VIEW;
+
+
+library_management_system=# select * from bookview;
+ id |     book_name      | book_code 
+----+--------------------+-----------
+  1 | mindset            | mnth
+  2 | the psycology book | kjts
+  3 | thinking           | ppqqc
+(3 rows)
+
+DROP VIEW-
+testdb=# DROP VIEW view_name;
+
+library_management_system=# drop view bookview;
+DROP VIEW
+
+
