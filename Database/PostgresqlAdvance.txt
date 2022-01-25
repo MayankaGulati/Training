@@ -207,22 +207,46 @@ library_management_system=# select * from student_info;
 to change data type-
 ALTER TABLE table_name ALTER COLUMN column_name TYPE datatype;
 
+library_management_system=# alter table students alter column marks type decimal;
+ALTER TABLE
+
 to add a NOT NULL constraint -
 ALTER TABLE table_name MODIFY column_name datatype NOT NULL;
 
 to ADD UNIQUE CONSTRAINT-
 ALTER TABLE table_name
 ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);
+
+library_management_system=# ALTER TABLE students  
+ADD CONSTRAINT MyUniqueConstraint UNIQUE(name);
+ALTER TABLE
+
 to ADD CHECK CONSTRAINT-
 ALTER TABLE table_name
 ADD CONSTRAINT MyUniqueConstraint CHECK (CONDITION);
+
+library_management_system=# ALTER TABLE students
+ADD CONSTRAINT marksConstraint CHECK (marks<=100);
+ALTER TABLE
+
 to ADD PRIMARY KEY constraint-
 ALTER TABLE table_name
 ADD CONSTRAINT MyPrimaryKey PRIMARY KEY (column1, column2...);
+
+library_management_system=# ALTER TABLE test    
+ADD CONSTRAINT MyPrimaryKey PRIMARY KEY (name);
+ALTER TABLE
+
 to DROP CONSTRAINT-
 ALTER TABLE table_name
 DROP CONSTRAINT MyUniqueConstraint;
+
+library_management_system=# alter table students drop constraint myuniqueconstraint;
+ALTER TABLE
+
 to DROP PRIMARY KEY constraint-
 ALTER TABLE table_name
 DROP CONSTRAINT MyPrimaryKey;
 
+library_management_system=# alter table test drop constraint myprimarykey;
+ALTER TABLE
