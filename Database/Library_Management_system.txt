@@ -1,0 +1,16 @@
+postgres=# create database LibraryManagementSystem ;
+CREATE DATABASE
+postgres=# create table students(id serial primary key not null,
+postgres(# name text not null,
+postgres(# address varchar(100) not null,
+postgres(# age int not null,
+postgres(# phoneno int not null,
+postgres(# rollno int not null);
+CREATE TABLE
+postgres=# create table books(id serial primary key not null,
+postgres(# book_name varchar(200) not null,
+postgres(# book_code varchar(50) not null,
+postgres(# auther_name char(100) not null,
+postgres(# publishing_year int not null);
+CREATE TABLE
+
