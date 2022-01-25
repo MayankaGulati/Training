@@ -1,5 +1,4 @@
 JOINS-
-JOINS-
 
 
 cross joins-
