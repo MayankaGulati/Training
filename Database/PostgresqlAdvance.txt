@@ -349,4 +349,82 @@ testdb=# DROP VIEW view_name;
 library_management_system=# drop view bookview;
 DROP VIEW
 
+date and time-
 
+to calculate age-
+testdb=# SELECT AGE(timestamp '2001-04-10', timestamp '1957-06-13');
+
+library_management_system=# select age(timestamp '1999-12-27', timestamp '2022-01-25');
+        age         
+--------------------
+ -22 years -29 days
+(1 row)
+library_management_system=# select age(timestamp '1999-12-27');
+       age        
+------------------
+ 22 years 29 days
+(1 row)
+
+to calculate current time-
+library_management_system=# select current_time;
+     current_time      
+-----------------------
+ 16:28:45.859978+05:30
+(1 row)
+
+current date-
+library_management_system=# select current_date;
+ current_date 
+--------------
+ 2022-01-25
+(1 row)
+
+current timestamp-
+library_management_system=# select current_timestamp;
+        current_timestamp         
+----------------------------------
+ 2022-01-25 16:30:20.533143+05:30
+(1 row)
+
+(precision)-used to roundoff the digit to that many fractional digits
+library_management_system=# select current_timestamp(3);
+       current_timestamp       
+-------------------------------
+ 2022-01-25 16:53:51.671+05:30
+(1 row)
+
+library_management_system=# select current_time(3);
+    current_time    
+--------------------
+ 16:53:57.976+05:30
+(1 row)
+
+time of day-
+library_management_system=# select timeofday();
+              timeofday              
+-------------------------------------
+ Tue Jan 25 17:01:03.741893 2022 IST
+(1 row)
+
+library_management_system=# select transaction_timestamp();
+      transaction_timestamp       
+----------------------------------
+ 2022-01-25 17:45:36.742491+05:30
+(1 row)
+
+library_management_system=# select statement_timestamp();
+       statement_timestamp        
+----------------------------------
+ 2022-01-25 17:55:00.220579+05:30
+(1 row)
+
+library_management_system=# select clock_timestamp();
+         clock_timestamp          
+----------------------------------
+ 2022-01-25 17:55:51.365658+05:30
+(1 row)
+library_management_system=# select now();
+               now                
+----------------------------------
+ 2022-01-25 17:56:45.084034+05:30
+(1 row)
