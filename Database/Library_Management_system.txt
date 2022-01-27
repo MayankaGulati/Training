@@ -144,3 +144,20 @@ librarymanagementsystem=# select student_id from issued_books group by student_i
           2
 (1 row)
 
+finding the number of books issued by a student-
+
+librarymanagementsystem=# select student_id,count(student_id) from issued_books group by student_id ;
+ student_id | count 
+------------+-------
+          3 |     2
+          5 |     2
+          2 |     5
+          7 |     2
+          8 |     1
+(5 rows)
+librarymanagementsystem=# select student_id,count(student_id) from issued_books where student_id=7 group by student_id ;
+ student_id | count 
+------------+-------
+          7 |     2
+(1 row)
+
