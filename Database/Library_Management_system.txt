@@ -102,3 +102,45 @@ librarymanagementsystem=# select name from students where id in(select student_i
  amita
 (3 rows)
 
+to find the student with maximum books issued-
+librarymanagementsystem=# select student_id,count(student_id) from issued_books group by student_id;
+ student_id | count 
+------------+-------
+          3 |     2
+          5 |     2
+          2 |     5
+          7 |     2
+          8 |     1
+(5 rows)
+
+librarymanagementsystem=# select count(student_id) from issued_books group by student_id;
+ count 
+-------
+     2
+     2
+     5
+     2
+     1
+(5 rows)
+
+librarymanagementsystem=# select student_id, count(student_id) from issued_books group by student_id order by count(student_id) desc ;
+ student_id | count 
+------------+-------
+          2 |     5
+          3 |     2
+          5 |     2
+          7 |     2
+          8 |     1
+(5 rows)
+librarymanagementsystem=# select student_id, count(student_id) from issued_books group by student_id order by count(student_id) desc limit 1;
+ student_id | count 
+------------+-------
+          2 |     5
+(1 row)
+
+librarymanagementsystem=# select student_id from issued_books group by student_id order by count(student_id) desc limit 1;
+ student_id 
+------------
+          2
+(1 row)
+
