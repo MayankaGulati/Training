@@ -428,3 +428,97 @@ library_management_system=# select now();
 ----------------------------------
  2022-01-25 17:56:45.084034+05:30
 (1 row)
+date time-
+isfinite()-
+librarymanagementsystem=# select isfinite (date'27-12-99');
+ isfinite 
+----------
+ t
+(1 row)
+librarymanagementsystem=# select isfinite (timestamp'27-12-99 21:38:10');
+ isfinite 
+----------
+ t
+(1 row)
+librarymanagementsystem=# select isfinite (interval'6 hours');
+ isfinite 
+----------
+ t
+(1 row)
+librarymanagementsystem=# select justify_days(interval '35 days');
+ justify_days 
+--------------
+ 1 mon 5 days
+(1 row)
+
+librarymanagementsystem=# select justify_hours(interval '30 hours');
+ justify_hours  
+----------------
+ 1 day 06:00:00
+(1 row)
+
+librarymanagementsystem=# select justify_interval(interval '1 month - 6 hours');
+ justify_interval 
+------------------
+ 29 days 18:00:00
+(1 row)
+extract-
+
+librarymanagementsystem=# select extract(day from timestamp '2001-02-16 20:38:40');
+ date_part 
+-----------
+        16
+(1 row)
+
+librarymanagementsystem=# select extract(month from timestamp '2001-02-16 20:38:40');
+ date_part 
+-----------
+         2
+(1 row)
+
+librarymanagementsystem=# select extract(min from timestamp '2001-02-16 20:38:40');
+ date_part 
+-----------
+        38
+(1 row)
+
+count function-
+library_management_system=# select count(*) from students;
+ count 
+-------
+     7
+(1 row)
+max function-
+library_management_system=# select max(marks) from students;
+ max 
+-----
+  87
+(1 row)
+min-
+library_management_system=# select min(marks) from students;
+ min  
+------
+ 67.9
+(1 row)
+avg function-
+library_management_system=# select avg(marks) from students;
+         avg         
+---------------------
+ 81.8428571428571429
+(1 row)
+array fun-
+library_management_system=# select array_agg(marks) from students;
+        array_agg         
+--------------------------
+ {70,87,67.9,87,87,87,87}
+(1 row)
+
+numeric and string functions-
+
+use of foreign key-
+first create the column in the table for foreign key 
+then refrence it to it’s own table with command-
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID); library_management_system=# alter table students add foreign key (book_id) references book(id);
+ALTER TABLE
+
