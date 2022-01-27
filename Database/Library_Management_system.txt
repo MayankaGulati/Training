@@ -81,3 +81,24 @@ librarymanagementsystem=# select * from issued_books;
  mm67s     |          8 | 2021-12-19    | 2022-02-19
 (6 rows)
 
+
+SQL QUERIES ON THE TABLES-
+
+selecting the students who all have issued one particular book-
+
+librarymanagementsystem=# select name from students where id in(select student_id from issued_books where book_code='8hg09');
+ name  
+-------
+ amita
+ ammy
+ jacob
+(3 rows)
+
+librarymanagementsystem=# select name from students where id in(select student_id from issued_books where book_code in(select book_code from book_details where book_name='DBMS'));
+ name  
+-------
+ ammy
+ jacob
+ amita
+(3 rows)
+
