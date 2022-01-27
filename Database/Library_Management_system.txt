@@ -1,21 +1,6 @@
 postgres=# create database LibraryManagementSystem ;
 CREATE DATABASE
-postgres=# create table students(id serial primary key not null,
-postgres(# name text not null,
-postgres(# address varchar(100) not null,
-postgres(# age int not null,
-postgres(# phoneno int not null,
-postgres(# rollno int not null);
-CREATE TABLE
-postgres=# create table books(id serial primary key not null,
-postgres(# book_name varchar(200) not null,
-postgres(# book_code varchar(50) not null,
-postgres(# auther_name char(100) not null,
-postgres(# publishing_year int not null);
-CREATE TABLE
 
-
-created tables again:
 
 librarymanagementsystem=# \d students;
                                        Table "public.students"
@@ -30,4 +15,69 @@ librarymanagementsystem=# \d students;
 Indexes:
     "students_pkey" PRIMARY KEY, btree (id)
 
+
+librarymanagementsystem=# create table book_details(book_code varchar(20)primary key  not null,
+book_name text not null,
+author varchar ,
+edition varchar,
+purchase_date date ,
+status boolean,
+no_of_copies int );
+CREATE TABLE
+
+inserting data-
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('8hg09','DBMS','peter rob','8th edition', '05-12-19',true,7);
+INSERT 0 1
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('09sa2','Operating system','avi silberschatz','9th edition', '25-12-20',true,6);
+INSERT 0 1
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('mm67s','Network security','eric maiwald','6th edition', '05-11-20',true,9);
+INSERT 0 1
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('ku2@h','Java','kathy','8th edition', '15-06-21',true,10);
+INSERT 0 1
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('oo12d','let us C','yashwant kanetkar','4th edition', '18-08-07',true,3);
+INSERT 0 1
+librarymanagementsystem=# insert into book_details(book_code, book_name, author, edition, purchase_date, status, no_of_copies) values('@po56','OOPS','barney','6th edition', '13-07-04',false,0);
+INSERT 0 1
+librarymanagementsystem=# select * from book_details;
+ book_code |    book_name     |      author       |   edition   | purchase_date | status | no_of_copies 
+-----------+------------------+-------------------+-------------+---------------+--------+--------------
+ 8hg09     | DBMS             | peter rob         | 8th edition | 2019-12-05    | t      |            7
+ 09sa2     | Operating system | avi silberschatz  | 9th edition | 2020-12-25    | t      |            6
+ mm67s     | Network security | eric maiwald      | 6th edition | 2020-11-05    | t      |            9
+ ku2@h     | Java             | kathy             | 8th edition | 2021-06-15    | t      |           10
+ oo12d     | let us C         | yashwant kanetkar | 4th edition | 2007-08-18    | t      |            3
+ @po56     | OOPS             | barney            | 6th edition | 2004-07-13    | f      |            0
+(6 rows)
+
+table for relation between book and students using foreign key-
+
+librarymanagementsystem=# create table issued_books(book_code varchar references book_details(book_code),
+student_id int references students(id),
+date_of_issue date not null,
+date_of_return date not null
+);
+CREATE TABLE
+
+librarymanagementsystem=# insert into issued_books values('8hg09',3,'08-12-21','08-02-22');
+INSERT 0 1
+librarymanagementsystem=# insert into issued_books values('ku2@h',3,'08-12-21','08-02-22');
+INSERT 0 1
+librarymanagementsystem=# insert into issued_books values('ku2@h',2,'012-12-21','12-02-22');
+INSERT 0 1
+librarymanagementsystem=# insert into issued_books values('@po56',2,'12-12-21','12-02-22');
+INSERT 0 1
+librarymanagementsystem=# insert into issued_books values('mm67s',2,'14-12-21','14-02-22');
+INSERT 0 1
+librarymanagementsystem=# insert into issued_books values('mm67s',8,'19-12-21','19-02-22');
+INSERT 0 1
+librarymanagementsystem=# select * from issued_books;
+ book_code | student_id | date_of_issue | date_of_return 
+-----------+------------+---------------+----------------
+ 8hg09     |          3 | 2021-12-08    | 2022-02-08
+ ku2@h     |          3 | 2021-12-08    | 2022-02-08
+ ku2@h     |          2 | 0012-12-21    | 2022-02-12
+ @po56     |          2 | 2021-12-12    | 2022-02-12
+ mm67s     |          2 | 2021-12-14    | 2022-02-14
+ mm67s     |          8 | 2021-12-19    | 2022-02-19
+(6 rows)
 
