@@ -14,3 +14,20 @@ postgres(# auther_name char(100) not null,
 postgres(# publishing_year int not null);
 CREATE TABLE
 
+
+created tables again:
+
+librarymanagementsystem=# \d students;
+                                       Table "public.students"
+    Column     |         Type          | Collation | Nullable |               Default                
+---------------+-----------------------+-----------+----------+--------------------------------------
+ id            | integer               |           | not null | nextval('students_id_seq'::regclass)
+ name          | text                  |           | not null | 
+ age           | integer               |           | not null | 
+ date_of_birth | date                  |           | not null | 
+ address       | character varying     |           | not null | 
+ phone_no      | character varying(15) |           | not null | 
+Indexes:
+    "students_pkey" PRIMARY KEY, btree (id)
+
+
