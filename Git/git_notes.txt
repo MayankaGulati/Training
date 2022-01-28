@@ -1,3 +1,29 @@
+Creating a new repository from local
+ 
+1. echo “#data in readme file” >> README.md
+2. git init
+3. git add README.md
+4. git commit -m “first commit”
+5. git branch -m main
+6. git remote add origin <url from remote>
+7. git push -u origin main
+
+or git clone <url>
+
+remove repository
+
+beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ ls
+anotherfolder  changeit  demo.txt  etc  file1.txt  firstgit  Git_training  mayanka  newrepository  opt  test  Training  usr
+
+beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ rm -rf newrepository .git
+
+beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ ls
+anotherfolder  changeit  demo.txt  etc  file1.txt  firstgit  Git_training  mayanka  opt  test  Training  usr
+
+from remote
+	go to settings from github after selecting the repository--> 
+	click on delete repository fromdanger zone.
+
 Git --version 
 	tells about the version of your machine.
 Git config --global user.name <name>
