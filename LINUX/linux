@@ -87,12 +87,12 @@ LINUX FILE COMMANDS:
 	this command is usedto create empty files,we can also create multiple empty files at once.
 	Syntax- touch <file name>
 	output-   touch demo.txt     OR   touch demo1.txt demo2.txt 
-	touch -a ()
-	touch -c
-	touch -c -d
-	touch -m
-	touch -r
-	touch -t
+	touch -a 	change the last access time of file    syntax- touch -a <file name>
+	touch -c 	check whether the file is created or not then create it   syntax- touch -c <file name>
+	touch -c -d 	update access and modification time   syntax- touch -c -d <file name>
+	touch -m	update only modification time        syntax - touch -m <filename>
+	touch -r	to use timestamp of another file     syntax- touch -r second_file first_file
+	touch -t	create a file using specific time    syntax- touch -t YYMMDDHHMM filename
 	
 
 7. cat command-
