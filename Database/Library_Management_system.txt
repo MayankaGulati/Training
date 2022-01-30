@@ -161,3 +161,13 @@ librarymanagementsystem=# select student_id,count(student_id) from issued_books 
           7 |     2
 (1 row)
 
+
+calculating age of student-
+
+
+librarymanagementsystem=# select current_date, age(timestamp'19-06-03');
+ current_date |           age           
+--------------+-------------------------
+ 2022-01-30   | 18 years 7 mons 11 days
+(1 row)
+
