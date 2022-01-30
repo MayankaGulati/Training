@@ -195,18 +195,10 @@ LINUX FILE CONTENT COMMANDS
 	output – tac demo.text
 		(it displays the file content in reverse order.)
 
-@@@@@@@@@@@@@@
-15. more command
-
-
-16. less command
-
-@@@@@@@@@@@@@@
 
 
 LINUX USER COMMAND
 
-@@@@@@@@@
 
 17. SU command
 	it is used to provide  administrative access.
