@@ -263,13 +263,6 @@ LINUX FILTERCOMMANDS
 	syntax- comand |sed ‘s/<oldword>/<new word>/’
 	example- echo class33 | sed ‘s/s3/88/’  ==> clas883
 	
-27. tee command
-	@
-	@
-
-
-
-
 
 LINUX UTILITY COMMANDS
 
@@ -277,6 +270,8 @@ LINUX UTILITY COMMANDS
 	itis used to find a particular file within a directory. Options to find file are-
 	by type, by name, by date and more.
 	Syntax-   find .  -name  “*.pdf”
+	eg- find ./Training -name "linux"
+	op-Training/Linux/linux
 
 36. Locate command
 	The locate command is used to search a file by file name.
