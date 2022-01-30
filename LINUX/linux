@@ -238,6 +238,17 @@ LINUX FILTERCOMMANDS
 
 	syntax- command |grep<search word>
 
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop/folder$ grep "content" file1.pdf 
+	this is content of file 1
+
+	-h : Display the matched lines, but do not display the filenames.
+	-i : Ignores, case for matching
+	-l : Displays list of a filenames only.
+	-n : Display the matched lines and their line numbers.
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop/folder$ grep "content" *
+	file1.pdf:this is content of file 1
+	newdir:this is content of file 1
+
 25. comm command
 	is used to compare two files.Display result in3 sections- 
 	first- non matching items of first file.
