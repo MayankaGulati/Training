@@ -153,6 +153,7 @@ LINUX FILE COMMANDS:
 
 10. mv command
 	it is used to move a file or a directory from one location to another location.
+	
 	Syntax- mv <file name><directory path>
 	output-  mv mayanka.txt changeit 
 
@@ -160,15 +161,19 @@ LINUX FILE COMMANDS:
 	mv -f <file1><file2> (fored deletion)
 	mv -n (prevents a filefrom being overridden)
 	mv -b  (backup an exsisting file)
-@@@@@@@@@@@
 
 11.rename command
-	it is used to rename files.
-	Syntax- rename ‘s/<old file name>/<new file name>/’
-@@@@@@@@@@@
+	it is used to rename files by changing the extention.
 
-rename using mv command
-	mv<old name><new name>
+	Syntax- rename ‘s/<old file ex>/<new file ex>/’ *.<old file ex>
+
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop/folder$ rename 's/.txt/.pdf/' *.txt
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop/folder$ ls
+	file1.pdf  newdir
+
+	
+	rename using mv command
+		mv<old name><new name>
 
 LINUX FILE CONTENT COMMANDS
 
