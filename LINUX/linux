@@ -126,9 +126,30 @@ LINUX FILE COMMANDS:
 	
 
 9. cp command
-	this command is used to copy data of  a fileto another 
+	this command is used to copy data of a file to another by overwriting the file 
 	syntax- cp <from file> <to file>
 	output- cp Mayanka.txt demo.txt (data of file mayanka will be copied to file demo.txt)
+	to copy files into a folder-
+	
+	syntax-  cp file1.txt file2.txt folder
+
+	to copy a folder in a folder-
+		syntax- cp -R src_folder dest_folder
+
+	-i interactive 
+		beryl@beryl-HP-Pavilion-Notebook:~/Desktop/dam/folder$ cp -i file1.txt file2.txt 
+		cp: overwrite 'file2.txt'? Y
+
+	-b backup
+		beryl@beryl-HP-Pavilion-Notebook:~/Desktop/dam/folder$ cp -b file1.txt file2.txt 
+		beryl@beryl-HP-Pavilion-Notebook:~/Desktop/dam/folder$ ls
+		file1.txt  file2.txt  file2.txt~
+		beryl@beryl-HP-Pavilion-Notebook:~/Desktop/dam/folder$ cat file2.txt~
+		this is content of file2
+
+	-f cp forcefully when the file doesnot have writing permission 
+		 cp -f file1.txt file2.txt
+	
 
 10. mv command
 	it is used to move a file or a directory from one location to another location.
