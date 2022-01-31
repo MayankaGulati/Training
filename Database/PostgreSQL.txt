@@ -127,6 +127,15 @@ to exit out:
 to logout from postgres:
 	postgres=# exit
 
+Basic Syntax of a query-
+	
+	SELECT column_name(s)
+	FROM table_name
+	WHERE condition
+	GROUP BY column_name(s)
+	ORDER BY column_name(s); 
+
+
 create database:
 	create database <datbase name>
 
@@ -583,6 +592,7 @@ library_management_system=# select * from students group by student_id having ma
 (4 rows)
 
 distinct keyword-
+(it is used to prevent displaying duplicate values)
 
 SELECT DISTINCT column1, column2,.....columnN
 FROM table_name
