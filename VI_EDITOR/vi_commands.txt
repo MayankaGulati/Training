@@ -28,9 +28,8 @@ Two operation modes-
 8. undo-
 	u  -to undo last change
 	U -undoall change to enire line.
-9. change case of individual character-
-	
-	
+9. To reach end of file-
+	shift+G	
 10.Moving -
 	k -up
 	j -down
@@ -64,7 +63,7 @@ P-paste the copied text on line before the cursor is on.
 14. Searching commands-
 	/  is used tosearch downwards in a file.
 	? is used to search upwards in a file.
-
+	n/N Once word found in vim, you can press the n key to go directly to the next occurrence of the word in backwards. Press the N key to go directly to the opposite direction.
 	^ (/^<first ch to be searched>)searches character at the begining of the line.
 	.  (/.<charcter tobe searched>)matches single character anywhere acc to(/ or ?)
 	* (/<previous characters>*) matches zero or more for previous characters.
