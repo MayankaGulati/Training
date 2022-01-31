@@ -171,3 +171,18 @@ librarymanagementsystem=# select current_date, age(timestamp'19-06-03');
  2022-01-30   | 18 years 7 mons 11 days
 (1 row)
 
+
+query to display name of students with age using DOB-
+
+librarymanagementsystem=# select name , age(date_of_birth) from students group by name,date_of_birth;
+  name  |           age            
+--------+--------------------------
+ ashu   | 21 years 6 mons 22 days
+ ammy   | 18 years 7 mons 8 days
+ jacob  | 22 years 10 mons 19 days
+ simran | 21 years 4 mons 6 days
+ amita  | 19 years 5 mons 14 days
+ alex   | 18 years 7 mons 12 days
+ jacob  | 21 years 7 mons 11 days
+(7 rows)
+
