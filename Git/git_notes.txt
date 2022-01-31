@@ -83,6 +83,8 @@ git checkout <branch name>
 	will switch to the given branch name.
 git checkout -b <branch name>
 	it will create a new branch and switch to it automatically.
+git branch -d/-D 
+	deletes the branch at local.
 push origin --delete <branch_name>
 	Delete branch from remote repository.
 push <remote> <branch> 
