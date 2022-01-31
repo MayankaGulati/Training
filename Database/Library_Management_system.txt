@@ -208,3 +208,35 @@ query to display number of rows or tuples or records
 	     8
 	(1 row)
 
+sql query to list the books issued in 2021 year-
+
+	librarymanagementsystem=# select * from issued_books where date_of_issue < timestamp'31-12-21' and date_of_issue > timestamp'01-01-21';
+	 book_code | student_id | date_of_issue | date_of_return 
+	-----------+------------+---------------+----------------
+	 8hg09     |          3 | 2021-12-08    | 2022-02-08
+	 ku2@h     |          3 | 2021-12-08    | 2022-02-08
+	 @po56     |          2 | 2021-12-12    | 2022-02-12
+	 mm67s     |          2 | 2021-12-14    | 2022-02-14
+	 mm67s     |          8 | 2021-12-19    | 2022-02-19
+	 ku2@h     |          2 | 2021-11-20    | 2022-01-20
+	 8hg09     |          2 | 2021-11-29    | 2022-01-29
+	 8hg09     |          5 | 2021-10-06    | 2021-12-06
+	 ku2@h     |          5 | 2021-10-27    | 2021-12-27
+	 ku2@h     |          7 | 2021-11-11    | 2022-01-11
+	(10 rows)
+
+to display the books issued between two specified months-
+
+	librarymanagementsystem=# select * from issued_books where date_of_issue < timestamp'31-12-21' and date_of_issue > timestamp'01-11-21';
+	 book_code | student_id | date_of_issue | date_of_return 
+	-----------+------------+---------------+----------------
+	 8hg09     |          3 | 2021-12-08    | 2022-02-08
+	 ku2@h     |          3 | 2021-12-08    | 2022-02-08
+	 @po56     |          2 | 2021-12-12    | 2022-02-12
+	 mm67s     |          2 | 2021-12-14    | 2022-02-14
+	 mm67s     |          8 | 2021-12-19    | 2022-02-19
+	 ku2@h     |          2 | 2021-11-20    | 2022-01-20
+	 8hg09     |          2 | 2021-11-29    | 2022-01-29
+	 ku2@h     |          7 | 2021-11-11    | 2022-01-11
+	(8 rows)
+
