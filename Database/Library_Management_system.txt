@@ -186,3 +186,25 @@ librarymanagementsystem=# select name , age(date_of_birth) from students group b
  jacob  | 21 years 7 mons 11 days
 (7 rows)
 
+
+query to display name of students with max age-
+
+	librarymanagementsystem=# select name, age from students where age =(select max(age) from students);
+	 name  | age 
+	-------+-----
+	 jacob |  22
+	(1 rows)
+
+query to drop a column
+
+	librarymanagementsystem=# alter table students drop column age;
+	ALTER TABLE
+
+query to display number of rows or tuples or records
+
+	librarymanagementsystem=# select count(*) from students;
+	 count 
+	-------
+	     8
+	(1 row)
+
