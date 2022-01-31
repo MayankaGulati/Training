@@ -15,9 +15,6 @@ LINUX DIRECTORY COMMANDS:
 	pwd -P (prints actual path)
 	output- pwd  -P -> will remove the symbolic link and show actual link.
 
-	BINARYPWD COMMAND
-	syntax- /bin /pwd
-	@@@@@@@@@@@@
 	
 
 2. mkdir command-
@@ -38,7 +35,7 @@ LINUX DIRECTORY COMMANDS:
 3. rmdir command-
 	this command is used to remove or delete a directory
 	syntax- rmdir <directory name>
-	output- mkdir mayanka (directory name mayanka will be deleted)
+	output- rmdir mayanka (directory name mayanka will be deleted)
 	rmdir -help (display help related information)
 	rmdir -p (to delete parent and child directories)
 	rmdir -v (diplays that the file is being deleted and delete itas well)
