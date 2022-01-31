@@ -228,6 +228,31 @@ LINUX FILTERCOMMANDS
 	Column number- is the column from left of the data to be displayed.
 
 	Syntax- cut -d(delimiter) -f(column number)<file name>
+	example-
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ cat >file1.txt 
+	naman - 20
+	palak - 90
+	dheeraj -38
+	may -87
+
+
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ cut -d - -f2 file1.txt 
+	 20
+	 90
+	38
+	87
+
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ cut -d " " -f 2 file1.txt 
+	-
+	-
+	-38
+	-87
+
+	beryl@beryl-HP-Pavilion-Notebook:~/Desktop$ cut -d " " -f 2,3 file1.txt 
+	- 20
+	- 90
+	-38
+	-87
 
 24. grep command
 	global regular expression print. Used for searching content in a file.
