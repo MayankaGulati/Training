@@ -1,3 +1,4 @@
+changes
 VI  EDITOR COMMANDS
 
 Two operation modes-
