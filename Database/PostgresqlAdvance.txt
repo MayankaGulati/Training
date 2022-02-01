@@ -210,7 +210,10 @@ library_management_system=# alter table students alter column marks type decimal
 ALTER TABLE
 
 to add a NOT NULL constraint -
-ALTER TABLE table_name MODIFY column_name datatype NOT NULL;
+ALTER TABLE table_name alter column <column name> set NOT NULL;
+
+librarymanagementsystem=# alter table book_details alter column  author set not null;
+ALTER TABLE
 
 to ADD UNIQUE CONSTRAINT-
 ALTER TABLE table_name
