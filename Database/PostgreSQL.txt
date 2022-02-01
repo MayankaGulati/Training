@@ -594,6 +594,42 @@ library_management_system=# select * from students group by student_id having ma
 distinct keyword-
 (it is used to prevent displaying duplicate values)
 
+ILIKE keyword-
+
+	librarymanagementsystem=# select name from students where address = 'haryana';
+ name 
+------
+(0 rows)
+
+librarymanagementsystem=# select name from students where address = 'Haryana';
+  name  
+--------
+ simran
+ simran
+(2 rows)
+
+
+librarymanagementsystem=# select name from students where address ilike 'haryana';
+  name  
+--------
+ simran
+ simran
+(2 rows)
+
+librarymanagementsystem=# select name from students where address ilike '%ana';
+  name  
+--------
+ simran
+ simran
+(2 rows)
+
+librarymanagementsystem=# select name from students where address ilike 'har_ana';
+  name  
+--------
+ simran
+ simran
+(2 rows)
+
 SELECT DISTINCT column1, column2,.....columnN
 FROM table_name
 WHERE [condition]
