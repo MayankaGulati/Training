@@ -362,3 +362,13 @@ to display  count of gender in the table-
 	-------
 	     3
 	(1 row)
+
+to display count of male and female in one query-
+
+	librarymanagementsystem=# select count(*),gender from students  group by gender;
+	 count | gender 
+	-------+--------
+	     3 | M
+	     5 | F
+	(2 rows)
+
