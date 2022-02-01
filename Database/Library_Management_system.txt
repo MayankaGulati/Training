@@ -326,3 +326,39 @@ to display the count of students from same address with name-
 	 simran |     2
 	(1 row)
 
+to display all the males-
+
+	librarymanagementsystem=# select * from students where gender ='M';
+	 id | name  | date_of_birth |  address   |   phone_no    | gender 
+	----+-------+---------------+------------+---------------+--------
+	  1 | alex  | 2003-06-19    | california | 918822330047  | M
+	  4 | jacob | 1999-03-12    | agra       | 915527303927  | M
+	  5 | jacob | 2000-06-20    | Ambala     | 9142235086727 | M
+	(3 rows)
+
+to display all the female-
+
+	librarymanagementsystem=# select * from students where gender ='F';
+	 id |  name  | date_of_birth | address |   phone_no    | gender 
+	----+--------+---------------+---------+---------------+--------
+	  2 | amita  | 2002-08-17    | India   | 918877420397  | F
+	  3 | ammy   | 2003-06-23    | melborn | 9100912630397 | F
+	  6 | simran | 2000-09-25    | Haryana | 919618643460  | F
+	  7 | simran | 2000-09-25    | Haryana | 919618643     | F
+	  8 | ashu   | 2000-07-09    | Pune    | +9196*f43#0   | F
+	(5 rows)
+
+
+to display  count of gender in the table-
+
+	librarymanagementsystem=# select count(*) from students where gender ='F';
+	 count 
+	-------
+	     5
+	(1 row)
+
+	librarymanagementsystem=# select count(*) from students where gender ='M';
+	 count 
+	-------
+	     3
+	(1 row)
