@@ -372,3 +372,41 @@ to display count of male and female in one query-
 	     5 | F
 	(2 rows)
 
+to display count of students with address-
+
+librarymanagementsystem=# select count(*),address from students group by address;
+ count |  address   
+-------+------------
+     1 | Ambala
+     1 | california
+     1 | Pune
+     2 | Haryana
+     1 | agra
+     1 | India
+     1 | melborn
+(7 rows)
+
+
+group by age
+
+	librarymanagementsystem=# select count(*), EXTRACT(YEAR FROM age(cast(date_of_birth as date))) as age from students group by age;
+	 count | age 
+	-------+-----
+	     2 |  18
+	     1 |  22
+	     4 |  21
+	     1 |  19
+	(4 rows)
+
+	librarymanagementsystem=# select  name,EXTRACT(YEAR FROM age(cast(date_of_birth as date))) as age from students group by age, name;
+	  name  | age 
+	--------+-----
+	 amita  |  19
+	 alex   |  18
+	 jacob  |  22
+	 ammy   |  18
+	 ashu   |  21
+	 jacob  |  21
+	 simran |  21
+	(7 rows)
+
