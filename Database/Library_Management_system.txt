@@ -312,3 +312,17 @@ to display the name of student with max issued books-
 	 amita
 	(1 row)
 
+to display the count of students from same address with name-
+
+	librarymanagementsystem=# select name,count (*) from students where address = 'Haryana' group by name,address;
+	  name  | count 
+	--------+-------
+	 simran |     2
+	(1 row)
+	
+	librarymanagementsystem=# select name,count (*) from students where address ilike '%haryana' group by name,address;
+	  name  | count 
+	--------+-------
+	 simran |     2
+	(1 row)
+
