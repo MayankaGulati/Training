@@ -419,3 +419,30 @@ query to display name with alphabet n in it-
 	  7 | simran
 	(2 rows)
 
+query to display the students who haven’t issued any book-
+
+	librarymanagementsystem=# select name from students where id!=(select distinct id from students inner join issued_books on students.id = issued_books.student_id);
+	ERROR:  more than one row returned by a subquery used as an expression
+
+	<’!=’ > can be used if the sub query returns one row or expression.
+
+
+	librarymanagementsystem=# select distinct id from students inner join issued_books on students.id = issued_books.student_id;
+	 id 
+	----
+	  2
+	  3
+	  5
+	  7
+	  8
+	(5 rows)
+
+
+	librarymanagementsystem=# select * from students where id not in (select distinct id from students inner join issued_books on students.id = issued_books.student_id);
+	 id |  name  | date_of_birth |  address   |   phone_no   | gender 
+	----+--------+---------------+------------+--------------+--------
+	  1 | alex   | 2003-06-19    | california | 918822330047 | M
+	  4 | jacob  | 1999-03-12    | agra       | 915527303927 | M
+	  6 | simran | 2000-09-25    | Haryana    | 919618643460 | F
+	(3 rows)
+
