@@ -1,0 +1,196 @@
+DATABASE ASSIGNMENT
+
+postgres=# \l
+                                     List of databases
+           Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+---------------------------+----------+----------+---------+-------+-----------------------
+ library_management_system | postgres | UTF8     | en_IN   | en_IN | 
+ librarymanagementsystem   | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                  | postgres | UTF8     | en_IN   | en_IN | 
+ template0                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                           |          |          |         |       | postgres=CTc/postgres
+(5 rows)
+
+
+postgres=# create database airline_flight_information;
+CREATE DATABASE
+
+
+postgres=# \l
+                                     List of databases
+            Name            |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+----------------------------+----------+----------+---------+-------+-----------------------
+ airline_flight_information | postgres | UTF8     | en_IN   | en_IN | 
+ library_management_system  | postgres | UTF8     | en_IN   | en_IN | 
+ librarymanagementsystem    | postgres | UTF8     | en_IN   | en_IN | 
+ postgres                   | postgres | UTF8     | en_IN   | en_IN | 
+ template0                  | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                            |          |          |         |       | postgres=CTc/postgres
+ template1                  | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+                            |          |          |         |       | postgres=CTc/postgres
+(6 rows)
+
+
+airline_flight_information=# create table flights(flno int primary key not null, source  text not null, destination text not null, distance int not null, departs time not null,arrives time not null, price int not null );
+CREATE TABLE
+
+airline_flight_information=# create table aircraft(aid int not null, aname text not null, cruisingrange int not null);
+CREATE TABLE
+
+airline_flight_information=# create table certified(eid int not null, aid int not null);
+CREATE TABLE
+
+airline_flight_information=# create table employees(eid int not null, ename text not null, salary decimal not null);
+CREATE TABLE
+
+
+adding values in employees table-
+
+airline_flight_information=# insert into employees(eid,ename,salary) values(1,'alex',20000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(2,'aman',45000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(3,'bash',32000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(4,'francis',28000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(5,'sachin',22000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(6,'saurabh',82000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(7,'ammy',72000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(8,'yash',65000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(9,'harshit',55000);
+INSERT 0 1
+airline_flight_information=# insert into employees(eid,ename,salary) values(10,'tanya',53000);
+INSERT 0 1
+
+airline_flight_information=# select * from employees;
+ eid |  ename  | salary 
+-----+---------+--------
+   1 | alex    |  20000
+   2 | aman    |  45000
+   3 | bash    |  32000
+   4 | francis |  28000
+   5 | sachin  |  22000
+   6 | saurabh |  82000
+   7 | ammy    |  72000
+   8 | yash    |  65000
+   9 | harshit |  55000
+  10 | tanya   |  53000
+(10 rows)
+
+
+added values to table aircraft-
+
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (01, 'indigo',8977);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (02, 'vistara',2846);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (03, 'airindia',8765);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (04, 'spicejet',5623);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (05, 'airasia',4598);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (06, 'gofirst',3908);
+INSERT 0 1
+airline_flight_information=# insert into aircraft (aid , aname , cruisingrange) values (07, 'airbus',4092);
+INSERT 0 1
+
+airline_flight_information=# select * from aircraft;
+ aid |  aname   | cruisingrange 
+-----+----------+---------------
+   1 | indigo   |          8977
+   2 | vistara  |          2846
+   3 | airindia |          8765
+   4 | spicejet |          5623
+   5 | airasia  |          4598
+   6 | gofirst  |          3908
+   7 | airbus   |          4092
+(7 rows)
+
+added values in flights table- 
+
+airline_flight_information=# insert into flights(flno,source,destination,distance,departs,arrives,price) values(111,'delhi','goa',1922,'18:17','21:21',4200);
+INSERT 0 1
+
+airline_flight_information=# insert into flights(flno,source,destination,distance,departs,arrives,price) values(112,'mumbai','karnataka',660,'12:56','15:01',3982);
+INSERT 0 1
+
+airline_flight_information=# insert into flights(flno,source,destination,distance,departs,arrives,price) values(113,'delhi','jammu',1800,'08:18','8:50',2500);
+INSERT 0 1
+
+airline_flight_information=# insert into flights(flno,source,destination,distance,departs,arrives,price) values(114,'goa','mumbai',602,'22:05','23:20',1800);
+INSERT 0 1
+
+airline_flight_information=# insert into flights(flno,source,destination,distance,departs,arrives,price) values(115,'hyderabad','kochi',1167,'14:38','18:03',5203);
+INSERT 0 1
+
+
+airline_flight_information=# select * from flights;
+
+ flno |  source   | destination | distance | departs  | arrives  | price 
+------+-----------+-------------+----------+----------+----------+-------
+  111 | delhi     | goa         |     1922 | 18:17:00 | 21:21:00 |  4200
+  112 | mumbai    | karnataka   |      660 | 12:56:00 | 15:01:00 |  3982
+  113 | delhi     | jammu       |     1800 | 08:18:00 | 08:50:00 |  2500
+  114 | goa       | mumbai      |      602 | 22:05:00 | 23:20:00 |  1800
+  115 | hyderabad | kochi       |     1167 | 14:38:00 | 18:03:00 |  5203
+(5 rows)
+
+
+added values in certified table-
+
+
+
+airline_flight_information=# insert into certified values(3,1);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(5,6);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(8,3);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(10,7);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(1,2);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(7,4);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(4,5);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(2,7);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(6,1);
+INSERT 0 1
+
+airline_flight_information=# insert into certified values(9,1);
+INSERT 0 1
+
+airline_flight_information=# select * from certified;
+
+ eid | aid 
+-----+-----
+   3 |   1
+   5 |   6
+   8 |   3
+  10 |   7
+   1 |   2
+   7 |   4
+   4 |   5
+   2 |   7
+   6 |   1
+   9 |   1
+(10 rows)
+
