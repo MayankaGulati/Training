@@ -493,3 +493,20 @@ query to display books issued in a particular month-
 	 OOPS
 	(4 rows)
 
+query to display books a student holds-
+
+	librarymanagementsystem=# select book_name from book_details where book_code in (select book_code from issued_books where student_id =5);
+	 book_name 
+	-----------
+	 DBMS
+	 Java
+	(2 rows)
+
+	librarymanagementsystem=# select book_name from book_details where book_code in (select book_code from issued_books where student_id =2);
+	    book_name     
+	------------------
+	 DBMS
+	 Network security
+	 OOPS
+	(3 rows)
+
