@@ -510,3 +510,36 @@ query to display books a student holds-
 	 OOPS
 	(3 rows)
 
+query to display the duration student kept the book-
+
+	librarymanagementsystem=# select student_id, age(date_of_return , date_of_issue) from issued_books as duration;
+	 student_id |  age   
+	------------+--------
+	          3 | 2 mons
+	          3 | 2 mons
+	          2 | 2 mons
+	          2 | 2 mons
+	          8 | 2 mons
+	          2 | 2 mons
+	          5 | 2 mons
+	          5 | 2 mons
+	          7 | 2 mons
+	          7 | 2 mons
+	(10 rows)
+
+	librarymanagementsystem=# select student_id, age(date_of_return , date_of_issue) as duration from issued_books ;
+	 student_id | duration 
+	------------+----------
+	          3 | 2 mons
+	          3 | 2 mons
+	          2 | 2 mons
+	          2 | 2 mons
+	          8 | 2 mons
+	          2 | 2 mons
+	          5 | 2 mons
+	          5 | 2 mons
+	          7 | 2 mons
+	          7 | 2 mons
+	(10 rows)
+
+
