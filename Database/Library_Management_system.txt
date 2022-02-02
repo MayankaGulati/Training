@@ -453,3 +453,43 @@ query to display books issued on the specified day-
 	 8hg09
 	 ku2@h
 	(2 rows)
+
+query to display books issued in a particular month-
+
+	librarymanagementsystem=# select extract(month from date_of_issue) from issued_books ;
+	 date_part 
+	-----------
+	        12
+	        12
+	        12
+	        12
+	        12
+	        12
+	        11
+	        11
+	        10
+	        10
+	        11
+	         1
+	(12 rows)
+
+	librarymanagementsystem=# select book_code from issued_books where extract(month from date_of_issue) = 12 ;
+	 book_code 
+	-----------
+	 8hg09
+	 ku2@h
+	 ku2@h
+	 @po56
+	 mm67s
+	 mm67s
+	(6 rows)
+	
+	librarymanagementsystem=# select book_name from book_details where book_code in (select book_code from issued_books where extract(month from date_of_issue) = 12) ;
+	    book_name     
+	------------------
+	 DBMS
+	 Network security
+	 Java
+	 OOPS
+	(4 rows)
+
