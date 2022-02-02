@@ -445,4 +445,11 @@ query to display the students who haven’t issued any book-
 	  4 | jacob  | 1999-03-12    | agra       | 915527303927 | M
 	  6 | simran | 2000-09-25    | Haryana    | 919618643460 | F
 	(3 rows)
+query to display books issued on the specified day-
 
+	librarymanagementsystem=# select book_code from issued_books where date_of_issue = timestamp'08-12-21';
+	 book_code 
+	-----------
+	 8hg09
+	 ku2@h
+	(2 rows)
