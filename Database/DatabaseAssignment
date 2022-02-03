@@ -294,3 +294,24 @@ maximum cruisingrange of the aircraft for which she or he is certified.
 	   7 |              8977
 	(2 rows)
 
+added values in table flights-
+
+	airline_flight_information=# insert into flights values(116,'los angeles','honolulu',550,'16:50','20:24',1000);
+	INSERT 0 1
+	airline_flight_information=# insert into flights values(117,'los angeles','honolulu',550,'15:39','18:57',1900);
+	INSERT 0 1
+	airline_flight_information=# insert into flights values(118,'los angeles','honolulu',550,'15:01','18:39',2000);
+	INSERT 0 1
+	airline_flight_information=# insert into flights values(119,'los angeles','honolulu',550,'07:05','11:15',1002);
+	INSERT 0 1
+
+added values in table employees-
+
+	airline_flight_information=# insert into employees values(11,'jatin', 820);
+	INSERT 0 1
+	airline_flight_information=# insert into employees values(12,'naman', 910);
+	INSERT 0 1
+	airline_flight_information=# insert into employees values(13,'priti', 500);
+	INSERT 0 1
+
+
