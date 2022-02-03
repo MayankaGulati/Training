@@ -315,3 +315,15 @@ added values in table employees-
 	INSERT 0 1
 
 
+C.Find the names of pilots whose salary is less than the price of the cheapest 
+route from Los Angeles to Honolulu.
+
+	airline_flight_information=# select ename from employees cross join flights where flights.source='los angeles' and flights.destination = 'honolulu' group by employees.ename,employees.salary having employees.salary < min(flights.price); 
+	 ename 
+	-------
+	 priti
+	 naman
+	 jatin
+	(3 rows)
+
+
