@@ -259,3 +259,38 @@ by using joins-
 	 indigo
 	(1 row)
 
+
+
+
+B.For each pilot who is certified for more than three aircraft, find the eid and the 
+maximum cruisingrange of the aircraft for which she or he is certified.
+
+	airline_flight_information=# select eid, max(cruisingrange) from certified inner join aircraft on certified.aid=aircraft.aid group by certified.eid;
+	 eid | max  
+	-----+------
+	   9 | 8977
+	   3 | 8977
+	   5 | 3908
+	   4 | 8977
+	  10 | 4092
+	   6 | 8977
+	   2 | 4092
+	   7 | 8977
+	   1 | 2846
+	   8 | 8765
+	(10 rows)
+
+	airline_flight_information=# select eid, max(cruisingrange) from certified inner join aircraft on certified.aid=aircraft.aid group by certified.eid having count(eid)>3 ;
+	 eid | max  
+	-----+------
+	   4 | 8977
+	   7 | 8977
+	(2 rows)
+
+	airline_flight_information=# select eid, max(cruisingrange) as max_cruisingrange from certified inner join aircraft on certified.aid=aircraft.aid group by certified.eid having count(eid)>3 ;
+	 eid | max_cruisingrange 
+	-----+-------------------
+	   4 |              8977
+	   7 |              8977
+	(2 rows)
+
