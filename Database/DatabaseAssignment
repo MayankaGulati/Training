@@ -194,3 +194,68 @@ airline_flight_information=# select * from certified;
    9 |   1
 (10 rows)
 
+
+adding employees cerfied for multiple aircraft-
+
+
+airline_flight_information=# insert into certified values(7,3);
+INSERT 0 1
+airline_flight_information=# insert into certified values(4,1);
+INSERT 0 1
+airline_flight_information=# insert into certified values(4,6);
+INSERT 0 1
+airline_flight_information=# insert into certified values(7,1);
+INSERT 0 1
+airline_flight_information=# insert into certified values(9,3);
+INSERT 0 1
+airline_flight_information=# insert into certified values(7,4);
+INSERT 0 1
+airline_flight_information=# insert into certified values(4,3);
+INSERT 0 1
+airline_flight_information=# insert into certified values(9,5);
+INSERT 0 1
+
+
+		QUERIES:
+
+A.Find the names of aircraft such that all pilots certified to operate them earn 
+more than $80,000. 
+
+
+by using sub query-
+
+	airline_flight_information=# select eid from employees where salary > 80000;
+	 eid 
+	-----
+	   6
+	(1 row)
+
+	airline_flight_information=# select aid from certified where eid in(select eid from employees where salary > 80000);
+	 aid 
+	-----
+	   1
+	(1 row)
+
+	airline_flight_information=# select aname from aircraft 
+	where aid in(select aid from certified where eid in
+	(select eid from employees where salary > 80000));
+	 
+	aname  
+	--------
+	 indigo
+	(1 row)
+
+
+by using joins-
+
+	airline_flight_information=# select aname from aircraft 
+	inner join certified on aircraft.aid = certified.aid 
+	inner join employees on certified.eid=employees.eid 
+	where salary >80000;
+
+
+	 aname  
+	--------
+	 indigo
+	(1 row)
+
