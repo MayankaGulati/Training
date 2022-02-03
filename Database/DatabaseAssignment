@@ -327,3 +327,55 @@ route from Los Angeles to Honolulu.
 	(3 rows)
 
 
+updated table aircraft-
+
+	airline_flight_information=# update aircraft set cruisingrange = 560 where aid=4;
+	UPDATE 1
+	airline_flight_information=# update aircraft set cruisingrange = 806 where aid=3;
+	UPDATE 1
+
+
+d.For all aircraft with cruisingrange over 1000 miles, find the name of the 
+aircraft and the average salary of all pilots certified for this aircraft.
+
+
+	airline_flight_information=# select aircraft.aname from aircraft inner join certified on aircraft.aid=certified.aid inner join employees on employees.eid=certified.eid where cruisingrange>1000; 
+	  aname  
+	---------
+	 vistara
+	 airbus
+	 indigo
+	 gofirst
+	 indigo
+	 airasia
+	 gofirst
+	 indigo
+	 indigo
+	 indigo
+	 airasia
+	 airbus
+	(12 rows)
+
+	airline_flight_information=# select aircraft.aname,avg(employees.salary) from aircraft inner join certified on aircraft.aid=certified.aid inner join employees on employees.eid=certified.eid  where cruisingrange>1000 group by aircraft.aname ; 
+	  aname  |        avg         
+	---------+--------------------
+	 airbus  | 49000.000000000000
+	 airasia | 41500.000000000000
+	 indigo  | 53800.000000000000
+	 gofirst | 25000.000000000000
+	 vistara | 20000.000000000000
+	(5 rows)
+
+
+updated value in aircraft-
+
+	airline_flight_information=# update aircraft set aname = 'boeing' where aid =6;
+	UPDATE 1
+
+
+	airline_flight_information=# update flights set source='los angeles' ,destination ='chicoge' where flno = 113;
+	UPDATE 1
+	airline_flight_information=# update flights set destination ='chicoge' where flno = 118;
+	UPDATE 1
+
+
