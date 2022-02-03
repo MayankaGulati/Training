@@ -378,4 +378,12 @@ updated value in aircraft-
 	airline_flight_information=# update flights set destination ='chicoge' where flno = 118;
 	UPDATE 1
 
+e.Find the names of pilots certified for some Boeing aircraft. 
+
+	airline_flight_information=# select employees.ename from employees inner join certified on employees.eid = certified.eid inner join aircraft on certified.aid = aircraft.aid where aname = 'boeing' ; 
+	  ename  
+	---------
+	 francis
+	 sachin
+	(2 rows)
 
