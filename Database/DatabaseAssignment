@@ -389,4 +389,29 @@ e.Find the names of pilots certified for some Boeing aircraft.
 
 
 
+f. Find the aids of all aircraft that can be used on routes from Los Angeles to 
+Chicago.
 
+
+	airline_flight_information=# select distance from flights where source ='los angeles'and destination ='chicoge'; 
+	 distance 
+	----------
+	     1800
+	      550
+	(2 rows)
+	
+	airline_flight_information=# select max(distance) from flights where source ='los angeles'and destination ='chicoge'; 
+	 max  
+	------
+	 1800
+	(1 row)
+
+	airline_flight_information=# select aid from aircraft where cruisingrange > (select max(distance) from flights where source ='los angeles'and destination ='chicoge'); 
+	 aid 
+	-----
+	   1
+	   2
+	   5
+	   7
+	   6
+	(5 rows)
