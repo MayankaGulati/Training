@@ -431,6 +431,40 @@ than 3000 miles but are not certified on any Boeing aircraft.
 	 tanya
 	(7 rows)
 
+
+i. A customer wants to travel from Madison to New York with no more than two 
+changes of flight. List the choice of departure times from Madison if the 
+customer wants to arrive in New York by 6 p.m. 
+
+
+updating values-
+
+airline_flight_information=# insert into flights values(120,'madison','new york',5600,'15:00','18:00', 30000);
+INSERT 0 1
+airline_flight_information=# insert into flights values(121,'madison','detroit',780,'06:02','09:42', 26000);
+INSERT 0 1
+airline_flight_information=# insert into flights values(122,'detroit','altlanta',3006,'11:10','12:32', 28900);
+INSERT 0 1
+airline_flight_information=# insert into flights values(123,'atlanta','new york',354,'12:40','14:00', 2800);
+INSERT 0 1
+airline_flight_information=# insert into flights values(124,'madison','alaska',4590,'13:50','15:32', 9430);
+INSERT 0 1
+airline_flight_information=# insert into flights values(125,'alaska','new york',3498,'15:45','18:00', 54000);
+INSERT 0 1
+airline_flight_information=# insert into flights values(126,'madison','chicago',3408,'16:08','18:32', 4902);
+INSERT 0 1
+airline_flight_information=# insert into flights values(127,'chicago','new york',8256,'19:00','21:20', 42502);
+INSERT 0 1
+airline_flight_information=# insert into flights values(128,'madison','charlotte',536,'04:00','06:00', 18502);
+INSERT 0 1
+airline_flight_information=# insert into flights values(129,'charlotte','chicago',3206,'6:30','7:00', 9502);
+INSERT 0 1
+airline_flight_information=# insert into flights values(130,'chicago','detroit',3284,'12:00','15:00', 19002);
+INSERT 0 1
+airline_flight_information=# insert into flights values(131,'detroit','new york',9204,'16:40','18:00', 98702);
+INSERT 0 1
+
+
 j.
 Compute the difference between the average salary of a pilot and the average 
 salary of all employees (including pilots).
