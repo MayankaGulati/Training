@@ -415,3 +415,19 @@ Chicago.
 	   7
 	   6
 	(5 rows)
+
+h.Print the enames of pilots who can operate planes with cruisingrange greater 
+than 3000 miles but are not certified on any Boeing aircraft.
+
+	airline_flight_information=# select ename from employees where eid in(select eid from certified where aid in(select aid from aircraft where cruisingrange > 3000 and aname!='boeing')) ;
+	  ename  
+	---------
+	 aman
+	 bash
+	 francis
+	 saurabh
+	 ammy
+	 harshit
+	 tanya
+	(7 rows)
+
