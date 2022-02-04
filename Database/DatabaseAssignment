@@ -495,3 +495,21 @@ $100,000.
 	 los angeles | honolulu
 	 los angeles | honolulu
 	 los angeles | chicoge
+
+
+l. Print the names of employees who are certified only on aircrafts with cruising 
+range longer than 1000 miles.
+
+	airline_flight_information=# select distinct ename from employees e inner join certified c on c.eid=e.eid inner join aircraft a on a.aid=c.aid where a.cruisingrange > 1000  ;
+	  ename  
+	---------
+	 francis
+	 sachin
+	 ammy
+	 bash
+	 harshit
+	 saurabh
+	 tanya
+	 alex
+	 aman
+	(9 rows)
