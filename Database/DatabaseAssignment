@@ -431,3 +431,26 @@ than 3000 miles but are not certified on any Boeing aircraft.
 	 tanya
 	(7 rows)
 
+j.
+Compute the difference between the average salary of a pilot and the average 
+salary of all employees (including pilots).
+
+
+	airline_flight_information=# select avg(salary) from employees;
+	        avg         
+	--------------------
+	 36633.076923076923
+	(1 row)
+
+
+	airline_flight_information=# select avg(salary) from employees inner join certified on employees.eid = certified.eid;
+	        avg         
+	--------------------
+	 49111.111111111111
+	(1 row)
+
+	airline_flight_information=# select (select avg(salary) from employees inner join certified on employees.eid = certified.eid) -(select avg(salary) from employees) as difference;
+	     difference     
+	--------------------
+	 12478.034188034188
+	(1 row)
