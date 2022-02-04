@@ -513,3 +513,32 @@ range longer than 1000 miles.
 	 alex
 	 aman
 	(9 rows)
+
+m.Print the names of employees who are certified only on aircrafts with cruising 
+range longer than 1000 miles, but on at least two such aircrafts.
+	
+	airline_flight_information=# select ename from employees e inner join certified c on c.eid=e.eid inner join aircraft a on a.aid=c.aid where a.cruisingrange > 1000;
+	  ename  
+	---------
+	 alex
+	 aman
+	 bash
+	 francis
+	 francis
+	 francis
+	 sachin
+	 saurabh
+	 ammy
+	 harshit
+	 harshit
+	 tanya
+	(12 rows)
+
+	airline_flight_information=# select ename from employees e inner join certified c on c.eid=e.eid inner join aircraft a on a.aid=c.aid where a.cruisingrange > 1000 group by ename having count(*)>1;
+	  ename  
+	---------
+	 francis
+	 harshit
+	(2 rows)
+
+
