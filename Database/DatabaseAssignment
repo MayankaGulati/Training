@@ -542,3 +542,13 @@ range longer than 1000 miles, but on at least two such aircrafts.
 	(2 rows)
 
 
+n.Print the names of employees who are certified only on aircrafts with cruising 
+range longer than 1000 miles and who are certified on some Boeing aircraft.
+
+	airline_flight_information=# select ename from employees e inner join certified c on c.eid=e.eid inner join aircraft a on a.aid=c.aid where a.cruisingrange > 1000 and a.aname ='boeing' ;
+	  ename  
+	---------
+	 francis
+	 sachin
+	(2 rows)
+
