@@ -455,6 +455,48 @@ salary of all employees (including pilots).
 	 12478.034188034188
 	(1 row)
 
+
+
+adding values-
+airline_flight_information=# insert into employees values(14,'raman',40000);
+INSERT 0 1
+airline_flight_information=# insert into employees values(15,'katty',49000);
+INSERT 0 1
+airline_flight_information=# insert into employees values(16,'preet',50000);
+INSERT 0 1
+
+Updating values-
+
+airline_flight_information=# update employees set salary = 99000 where ename ='preet';
+UPDATE 1
+airline_flight_information=# update employees set salary = 100600 where ename ='raman';
+UPDATE 1
+airline_flight_information=# update employees set salary = 100980 where ename ='katty';
+UPDATE 1
+
+
+
+
+k.Print the name and salary of every nonpilot whose salary is more than the 
+average salary for pilots.
+
+	airline_flight_information=# select avg(salary) from employees where eid in (select distinct(e.eid) from employees as e inner join certified as c on c.eid = e.eid);
+	        avg         
+	--------------------
+	 88400.000000000000
+	(1 row)
+
+	airline_flight_information=# select distinct ename, salary from employees e left outer join certified c on e.eid=c.eid where c.eid is null and  e.salary >( select avg(salary) from employees where eid in (select distinct(e.eid) from employees as e inner join certified as c on c.eid = e.eid));
+	 ename | salary 
+	-------+--------
+	 raman | 100600
+	 katty | 100980
+	 preet |  99000
+	(3 rows)
+
+
+
+
 g.Identify the routes that can be piloted by every pilot who makes more than 
 $100,000.
 
