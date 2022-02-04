@@ -454,3 +454,44 @@ salary of all employees (including pilots).
 	--------------------
 	 12478.034188034188
 	(1 row)
+
+g.Identify the routes that can be piloted by every pilot who makes more than 
+$100,000.
+
+	airline_flight_information=# update employees set salary = 160000 where eid=10;
+	UPDATE 1
+	airline_flight_information=# update employees set salary = 200000 where eid=2;
+	UPDATE 1
+
+
+	airline_flight_information=# select eid from employees where salary > 100000;
+	 eid 
+	-----
+	  10
+	   2
+	(2 rows)
+
+	airline_flight_information=# select aid from certified where eid in (select eid from employees where salary > 100000);
+	 aid 
+	-----
+	   7
+	   7
+	(2 rows)
+
+	airline_flight_information=# select cruisingrange from aircraft where aid in(select aid from certified where eid in (select eid from employees where salary > 100000));
+	 cruisingrange 
+	---------------
+	          4092
+	(1 row)
+
+	airline_flight_information=# select source, destination from flights where distance < (select cruisingrange from aircraft where aid in(select aid from certified where eid in (select eid from employees where salary > 100000)));
+	   source    | destination 
+	-------------+-------------
+	 delhi       | goa
+	 mumbai      | karnataka
+	 goa         | mumbai
+	 hyderabad   | kochi
+	 los angeles | honolulu
+	 los angeles | honolulu
+	 los angeles | honolulu
+	 los angeles | chicoge
