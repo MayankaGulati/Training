@@ -465,6 +465,22 @@ airline_flight_information=# insert into flights values(131,'detroit','new york'
 INSERT 0 1
 
 
+airline_flight_information=# select departs from flights as f
+where f.arrives='18:00' and f.source= 'madison' and f.destination = 'new york'
+union
+select f1.departs from flights f1,flights f2
+where f2.arrives ='18:00' and f1.arrives < f2.departs and f1.source = 'madison' and f1.destination =f2.source and f2.destination = 'new york'
+union
+select f1.departs from flights f1,flights f2, flights f3
+where f1.arrives ='18:00' and f1.arrives < f2.departs and f1.source = 'madison' and f1.destination =f2.source and f2.destination =f3.source and f1.arrives < f2.departs and f3.destination = 'new york';
+ departs  
+----------
+ 06:02:00
+ 13:50:00
+ 15:00:00
+(3 rows)
+
+
 j.
 Compute the difference between the average salary of a pilot and the average 
 salary of all employees (including pilots).
