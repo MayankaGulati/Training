@@ -121,4 +121,23 @@ postgres=# select * from restaurant_details ;
 (1 row)
 
 
+			
+		QUERIES:
+
+
+1.query to find all orders of a person-
+
+postgres=# select * from orders where customerid in (select id from customer where first_name = 'alex');
+ id | customerid |  status   
+----+------------+-----------
+  7 |          3 | confirmed
+(1 row)
+
+
+postgres=# select * from orders where customerid in (select id from customer where first_name='bash');
+ id | customerid |  status   
+----+------------+-----------
+  3 |          6 | pending
+  8 |          6 | confirmed
+(2 rows)
 
