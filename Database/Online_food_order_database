@@ -1,0 +1,124 @@
+Food ordering database
+
+postgres=# create database foodordering;
+CREATE DATABASE
+
+postgres=# \dt
+               List of relations
+ Schema |        Name        | Type  |  Owner   
+--------+--------------------+-------+----------
+ public | cart               | table | postgres
+ public | customer           | table | postgres
+ public | customer_address   | table | postgres
+ public | food_category      | table | postgres
+ public | food_items         | table | postgres
+ public | orders             | table | postgres
+ public | restaurant_details | table | postgres
+(7 rows)
+
+postgres=# select * from cart;
+ food_items_id | quantity | orders_id 
+---------------+----------+-----------
+             1 |        1 |         1
+             6 |        1 |         1
+             8 |        1 |         2
+             9 |        1 |         3
+            17 |        2 |         4
+            21 |        1 |         5
+            15 |        1 |         5
+            15 |        1 |         6
+            16 |        1 |         7
+             6 |        1 |         7
+(10 rows)
+
+postgres=# select * from customer;
+ id | first_name | last_name |   mobileno    |       email       |   password   
+----+------------+-----------+---------------+-------------------+--------------
+  1 | payal      | garg      | 9265759493    | payal@gmail.com   | ljnb^7
+  2 | pooja      | rathi     | 9293955493    | pooja@gmail.com   | lhegrue09
+  3 | alex       | stunn     | 90138247493   | alex@gmail.com    | ueifbe09
+  4 | samay      | bonk      | 77628247490   | samay@gmail.com   | 735gdrcv
+  5 | yash       | gera      | 88664247490   | yash@gmail.com    | 083287t5428
+  6 | bash       | fran      | 88624432521   | bash@gmail.com    | jqbwucr34858
+  7 | francis    | fran      | 851312342521  | francis@gmail.com | qoiy3885vh3
+  8 | chloe      | boyr      | 325752342521  | chloe@gmail.com   | 03cryx22
+  9 | ammy       | seea      | 0937824983521 | ammy@gmail.com    | 09349vt4r22
+ 10 | yashik     | chhabra   | 9274285723521 | yashik@gmail.com  | 92084cfj35
+ 11 | sahil      | kapoor    | 9930287521    | sahil@gmail.com   | 920j45c85
+(11 rows)
+
+postgres=# select * from customer_address;
+ id | customer_id | address_type 
+----+-------------+--------------
+  1 |           3 | home
+  2 |           6 | work
+  3 |           2 | work
+  4 |           8 | work
+  5 |           8 | home
+  6 |           9 | home
+  7 |           1 | home
+  8 |           7 | other
+  9 |           7 | work
+ 10 |           4 | home
+(10 rows)
+
+postgres=# select * from food_category;
+ id |       name       
+----+------------------
+  1 | starters
+  2 | breads
+  3 | chineese
+  4 | desserts
+  5 | coffee
+  6 | shakes/smoothies
+  7 | gravy
+  8 | italian
+  9 | dips
+(9 rows)
+
+postgres=# select * from food_items;
+ id |       item       | price | categoryid 
+----+------------------+-------+------------
+  1 | fries            |   130 |          1
+  3 | pasta            |   250 |          1
+  4 | corns            |   120 |          1
+  5 | sandwitch        |   150 |          1
+  6 | noodles          |   200 |          3
+  2 | pizza            |   300 |          8
+  7 | garlic bread     |   125 |          2
+  8 | oregano bread    |   130 |          2
+  9 | multigrain bread |   135 |          2
+ 10 | munchoorian      |   135 |          3
+ 11 | waffles          |   200 |          4
+ 12 | pancakes         |   250 |          4
+ 13 | pudding          |   220 |          4
+ 14 | brownie          |   180 |          4
+ 15 | latte            |   210 |          5
+ 16 | mocha            |   215 |          5
+ 17 | frappe           |   250 |          5
+ 18 | nutella shake    |   250 |          6
+ 19 | brownie shake    |   260 |          6
+ 20 | korma            |   296 |          7
+ 21 | butter chicken   |   350 |          7
+(21 rows)
+
+postgres=# select * from orders;
+ id | customerid |  status   
+----+------------+-----------
+  1 |          2 | confirmed
+  2 |          4 | confirmed
+  3 |          6 | pending
+  4 |          1 | pending
+  5 |          9 | confirmed
+  6 |          8 | confirmed
+  7 |          3 | confirmed
+(7 rows)
+
+postgres=# select * from restaurant_details ;
+ id |   name   | contact_no |       email       
+----+----------+------------+-------------------
+  1 | eat sure | 9966774442 | eatsure@gmail.com
+(1 row)
+
+
+
