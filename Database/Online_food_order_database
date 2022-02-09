@@ -312,3 +312,20 @@ foodordering=# select id from orders where status = 'confirmed';
 (6 rows)
 
 
+15. select food items for which order has been confirmed-
+
+foodordering=# select food_items.item from food_items inner join cart on food_items.id=cart.food_items_id where cart.orders_id in (select id from orders where status = 'confirmed');
+      item      
+----------------
+ fries
+ noodles
+ oregano bread
+ butter chicken
+ latte
+ latte
+ mocha
+ noodles
+ munchoorian
+(9 rows)
+
+
