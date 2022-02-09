@@ -245,3 +245,19 @@ foodordering=# select food_category.name,count(food_items.item) from food_catego
 (8 rows)
 
 
+10.display name of customers who ordered food before date ‘02-02-22’ -
+
+foodordering=# select customerid from orders where date_of_order < '02-02-22' ;
+ customerid 
+------------
+          3
+          6
+(2 rows)
+
+foodordering=# select first_name from customer where id in(select customerid from orders where date_of_order < '02-02-22' );
+ first_name 
+------------
+ alex
+ bash
+(2 rows)
+
