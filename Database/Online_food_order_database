@@ -281,6 +281,20 @@ foodordering=# select first_name from customer where id in(select customerid fro
 (2 rows)
 
 
+11.display all the customers who have placed orders with no of orders in descnding order-
+
+foodordering=# select customer.first_name,count(customerid) from customer inner join orders on customer.id=orders.customerid group by orders.customerid,customer.first_name order by count desc;
+ first_name | count 
+------------+-------
+ bash       |     2
+ samay      |     1
+ alex       |     1
+ ammy       |     1
+ payal      |     1
+ pooja      |     1
+ chloe      |     1
+(7 rows)
+
 12.select all orders whose price is more than 500-
 
 foodordering=# select orders_id from food_items inner join cart on food_items.id=cart.food_items_id group by orders_id having sum(food_items.price*cart.quantity)>500;
