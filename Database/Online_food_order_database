@@ -122,6 +122,25 @@ postgres=# select * from restaurant_details ;
 
 
 			
+updated orders table-
+
+foodordering=# select * from orders;
+ id | customerid |  status   | date_of_order 
+----+------------+-----------+---------------
+  1 |          2 | confirmed | 2022-02-16
+  2 |          4 | confirmed | 2022-02-16
+  3 |          6 | pending   | 2022-02-20
+  4 |          1 | pending   | 2022-02-18
+  5 |          9 | confirmed | 2022-02-07
+  6 |          8 | confirmed | 2022-02-02
+  7 |          3 | confirmed | 2022-01-10
+  8 |          6 | confirmed | 2022-01-20
+(8 rows)
+
+
+
+
+
 		QUERIES:
 
 
