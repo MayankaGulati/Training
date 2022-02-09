@@ -156,4 +156,22 @@ foodordering=# select first_name from customer where id in (select customerid fr
  bash
 (1 row)
 
+3.query to display all the food items from category name-
+
+foodordering=# select * from food_items where categoryid in(select id from food_category where name ='breads');
+ id |       item       | price | categoryid 
+----+------------------+-------+------------
+  7 | garlic bread     |   125 |          2
+  8 | oregano bread    |   130 |          2
+  9 | multigrain bread |   135 |          2
+(3 rows)
+
+4.display the category with max food_items in it-
+
+foodordering=# select * from food_category where id in(select categoryid from food_items group by categoryid order by count(categoryid) desc limit 1);
+ id |   name   
+----+----------
+  4 | desserts
+(1 row)
+
 
