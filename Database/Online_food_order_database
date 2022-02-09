@@ -184,3 +184,24 @@ foodordering=# select address_type from customer_address where customer_id in(se
 (1 row)
 
 
+
+6.query to find name of customer with max price order
+
+postgres=# select sum(a.price*quantity),orders_id from cart inner join food_items as a on food_items_id = id group by orders_id;
+ sum | orders_id 
+-----+-----------
+ 135 |         3
+ 560 |         5
+ 500 |         4
+ 210 |         6
+ 130 |         2
+ 415 |         7
+ 330 |         1
+(7 rows)
+
+foodordering=# select first_name from customer inner join orders on customer.id=orders.customerid where orders.id in(select orders_id from cart inner join food_items as a on food_items_id = id group by orders_id order by sum(a.price*quantity) desc limit 1);
+ first_name 
+------------
+ ammy
+(1 row)
+
