@@ -141,3 +141,19 @@ postgres=# select * from orders where customerid in (select id from customer whe
   8 |          6 | confirmed
 (2 rows)
 
+
+2.query to display the name of customer with max orders-
+
+foodordering=# select customerid from orders group by customerid order by count(customerid) desc limit 1;
+ customerid 
+------------
+          6
+(1 row)
+
+foodordering=# select first_name from customer where id in (select customerid from orders group by customerid order by count(customerid) desc limit 1);
+ first_name 
+------------
+ bash
+(1 row)
+
+
