@@ -374,3 +374,10 @@ foodordering=# select max(id) from orders group by extract(month from date_of_or
 (2 rows)
 
 
+19. query to display order id of the max order for week-
+
+foodordering=# select max(id) from orders group by extract(week from date_of_order) ;
+ max 
+-----
+   8
+   5
