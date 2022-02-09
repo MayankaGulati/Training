@@ -328,4 +328,14 @@ foodordering=# select food_items.item from food_items inner join cart on food_it
  munchoorian
 (9 rows)
 
+16. select no of different addresses -
+
+foodordering=# select count(id),address_type from customer_address group by address_type;
+ count | address_type 
+-------+--------------
+     4 | work
+     1 | other
+     5 | home
+(3 rows)
+
 
