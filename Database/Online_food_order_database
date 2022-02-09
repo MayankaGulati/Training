@@ -363,3 +363,14 @@ foodordering=# select status,count(status) from orders group by status;
  pending   |     2
 (2 rows)
 
+
+18. query to display order id of the max order for months-
+
+foodordering=# select max(id) from orders group by extract(month from date_of_order) ;
+ max 
+-----
+   6
+   8
+(2 rows)
+
+
