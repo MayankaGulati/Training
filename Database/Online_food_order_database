@@ -219,3 +219,13 @@ foodordering=# select first_name from customer where id not in (select customeri
 (4 rows)
 
 
+
+8.display name of food items ordered max no of times-
+
+foodordering=# select item from food_items where id in (select food_items_id from cart group by food_items_id order by count(food_items_id) desc limit 1);
+ item  
+-------
+ latte
+(1 row)
+
+
