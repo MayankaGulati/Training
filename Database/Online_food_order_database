@@ -205,3 +205,17 @@ foodordering=# select first_name from customer inner join orders on customer.id=
  ammy
 (1 row)
 
+
+
+7.display name of users who don’t have any order-
+
+foodordering=# select first_name from customer where id not in (select customerid from orders);
+ first_name 
+------------
+ yash
+ francis
+ yashik
+ sahil
+(4 rows)
+
+
