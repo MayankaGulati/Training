@@ -175,3 +175,12 @@ foodordering=# select * from food_category where id in(select categoryid from fo
 (1 row)
 
 
+5.query to display the address type of customer with id orderid=4
+
+foodordering=# select address_type from customer_address where customer_id in(select id from customer where id in (select customerid from orders where id = 4 ));
+ address_type 
+--------------
+ home
+(1 row)
+
+
