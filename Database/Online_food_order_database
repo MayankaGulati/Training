@@ -229,3 +229,19 @@ foodordering=# select item from food_items where id in (select food_items_id fro
 (1 row)
 
 
+9.display count of each food category-
+
+foodordering=# select food_category.name,count(food_items.item) from food_category inner join food_items on food_category.id=food_items.categoryid group by food_category.name,food_items.categoryid;
+       name       | count 
+------------------+-------
+ chineese         |     2
+ coffee           |     3
+ italian          |     1
+ shakes/smoothies |     2
+ gravy            |     2
+ desserts         |     4
+ starters         |     4
+ breads           |     3
+(8 rows)
+
+
