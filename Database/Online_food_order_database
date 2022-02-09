@@ -339,3 +339,13 @@ foodordering=# select count(id),address_type from customer_address group by addr
 (3 rows)
 
 
+17 find the no of confirmed and pending orders-
+
+
+foodordering=# select status,count(status) from orders group by status;
+  status   | count 
+-----------+-------
+ confirmed |     6
+ pending   |     2
+(2 rows)
+
