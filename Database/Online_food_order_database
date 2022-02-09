@@ -280,3 +280,20 @@ foodordering=# select first_name from customer where id in(select customerid fro
  bash
 (2 rows)
 
+
+12.select all orders whose price is more than 500-
+
+foodordering=# select orders_id from food_items inner join cart on food_items.id=cart.food_items_id group by orders_id having sum(food_items.price*cart.quantity)>500;
+ orders_id 
+-----------
+         5
+(1 row)
+
+13. select name of customers whose orders are above 500-
+
+foodordering=# select customer.first_name from customer inner join orders on customer.id=orders.customerid where orders.id in (select orders_id from food_items inner join cart on food_items.id=cart.food_items_id group by orders_id having sum(food_items.price*cart.quantity)>500);
+ first_name 
+------------
+ ammy
+(1 row)
+
