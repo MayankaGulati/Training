@@ -52,3 +52,40 @@ irb(main):062:0> end
 => :sum
 irb(main):063:0> sum
 => 50
+
+
+HERE document in ruby-
+
+irb(main):005:0' print <<'start'
+irb(main):006:0' display the line1
+irb(main):007:0' display the line2
+irb(main):008:0> start
+display the line1
+display the line2
+=> nil
+
+irb(main):039:0" print <<start
+irb(main):040:0" display the line1
+irb(main):041:0" display the line2
+irb(main):042:0> start
+display the line1
+display the line2
+=> nil
+
+irb(main):043:0" print <<"start"
+irb(main):044:0" display the line1
+irb(main):045:0" display the line2
+irb(main):046:0> start
+display the line1
+display the line2
+=> nil
+
+
+irb(main):034:0" print <<"one", <<"two"
+irb(main):035:0" this is first line
+irb(main):036:0" one
+irb(main):037:0" this is second line
+irb(main):038:0> two
+this is first line
+this is second line
+=> nil
