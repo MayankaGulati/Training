@@ -14,6 +14,24 @@ to view result-
 	ruby vim.rb
 
 
+irb(main):001:0> "mayanka".size
+=> 7
+irb(main):002:0> "mayanka".class
+=> String
+irb(main):003:0> 7.class
+=> Integer
+irb(main):011:0> [7, 9].class
+=> Array
+irb(main):020:0> c=[2,3,4]
+irb(main):021:0> c.class
+=> Array
+irb(main):022:0> c[1].class
+=> Integer
+irb(main):023:0> c[10].class
+=> NilClass
+
+
+
 1. code printing hello world
 irb(main):051:1* def hello
 irb(main):052:1*   o="hello world"
