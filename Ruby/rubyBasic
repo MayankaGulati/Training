@@ -1,1 +1,15 @@
-RUBY-
+			RUBY-
+
+
+to write ruby code in terminal use-
+	irb
+
+to exit out-
+	exit
+
+to write code in vim file-
+	write code in vim.rb 
+
+to view result-
+	ruby vim.rb
+
