@@ -24,4 +24,13 @@ irb(main):055:0> hello
 hello world
 => nil
 
-
+2. code printing sum
+irb(main):057:1* def sum
+irb(main):058:1*   a=20
+irb(main):059:1*   b=30
+irb(main):060:1*   c =a+b
+irb(main):061:1*   return c
+irb(main):062:0> end
+=> :sum
+irb(main):063:0> sum
+=> 50
