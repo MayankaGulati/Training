@@ -13,3 +13,15 @@ to write code in vim file-
 to view result-
 	ruby vim.rb
 
+
+1. code printing hello world
+irb(main):051:1* def hello
+irb(main):052:1*   o="hello world"
+irb(main):053:1*   puts o
+irb(main):054:0> end
+=> :hello
+irb(main):055:0> hello
+hello world
+=> nil
+
+
