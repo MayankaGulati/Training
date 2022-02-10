@@ -13,8 +13,15 @@ to write code in vim file-
 to view result-
 	ruby vim.rb
 
-to comment-
+to comment a line-
 	#comment line
+
+to comment more than a line-
+	=begin
+	comment line1
+	comment line2
+	comment line3
+	=end
 
 irb(main):001:0> "mayanka".size
 => 7
