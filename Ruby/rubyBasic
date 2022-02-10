@@ -89,3 +89,42 @@ irb(main):038:0> two
 this is first line
 this is second line
 => nil
+
+begin and end statement-
+the code will first read begin and last read the end statement
+
+example1-
+beryl@beryl-HP-Pavilion-Notebook:~$ vim new.rb 
+
+#!/usr/bin/ruby
+puts "statement1"
+END {
+   puts "statement2"
+}
+BEGIN {
+   puts "statement3"
+}
+
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb 
+statement3
+statement1
+statement2
+
+example2-
+beryl@beryl-HP-Pavilion-Notebook:~$ vim new.rb
+#!/usr/bin/ruby
+
+puts "This is main Ruby Program"
+
+END {
+   puts "Terminating Ruby Program"
+}
+BEGIN {
+   puts "Initializing Ruby Program"
+}
+ 
+
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb 
+Initializing Ruby Program
+This is main Ruby Program
+Terminating Ruby Program
