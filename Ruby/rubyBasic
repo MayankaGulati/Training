@@ -137,3 +137,16 @@ beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb
 Initializing Ruby Program
 This is main Ruby Program
 Terminating Ruby Program
+
+
+
+defining classes-
+
+class Customer
+	<variable>=<value>
+end
+
+
+creating objects-
+
+<variable>=Customer.new
