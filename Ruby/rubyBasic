@@ -264,4 +264,37 @@ Global variable in Class1 is 10
 Global variable in Class2 is 10
 
 
+INSTANCE VARIABLES-
+example
+#!/usr/bin/ruby
+$global_variable = 10
+class Customer
+  def initialize(id, name, addr)
+    @cust_id=id
+    @cust_name=name
+    @cust_addr=addr
+  end
+  def display_deets()
+    puts "id #@cust_id"
+    puts "name: #@cust_name"
+    puts "address: #@cust_addr"
+  end
+end
+
+obj1 = Customer.new("1" , "mayanka" , "sec9 faridabad")
+obj2 = Customer.new("2" , "john" , "sec9 faridabad")
+
+obj1.display_deets()
+obj2.display_deets()
+
+OUTPUT-
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb
+id 1
+name: mayanka
+address: sec9 faridabad
+id 2
+name: john
+address: sec9 faridabad
+
+
 
