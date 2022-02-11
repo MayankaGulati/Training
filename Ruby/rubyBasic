@@ -366,3 +366,26 @@ OUTPUT-
 2.5
 stringss
 
+
+USING HASH-
+
+hsh={"name" => "mayanka", "surname" => "gulati"}
+hsh.each do |key, value|
+   print key, " is ", value, "\n"
+end
+OUTPUT-
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby key.rb
+name is mayanka
+surname is gulati
+
+example2-
+#!/usr/bin/ruby
+hsh = colors = {"red" => 0xf00, "green" => 0x0f0, "yellow" => 0x00f}
+hsh.each do |key, value|
+  print key , "is" , value, "\n"
+end
+OUTPUT-
+redis3840
+greenis240
+yellowis15
+
