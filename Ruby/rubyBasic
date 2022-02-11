@@ -236,4 +236,32 @@ beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb
 mayanka
 sector9,faridabad
 
+GLOBAL VARIABLES-
+
+using global variable
+#!/usr/bin/ruby
+$global_variable = 10
+class First
+   def print_global
+      puts "Global variable in Class1 is #$global_variable"
+   end
+end
+class Second
+   def print_global
+      puts "Global variable in Class2 is #$global_variable"
+   end
+end
+
+firstobj = First.new
+firstobj.print_global
+secondobj = Second.new
+
+secondobj.print_global
+
+output-
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb
+Global variable in Class1 is 10
+Global variable in Class2 is 10
+
+
 
