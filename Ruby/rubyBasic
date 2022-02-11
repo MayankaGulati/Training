@@ -36,6 +36,33 @@ beryl@beryl-HP-Pavilion-Notebook:~$ rvm -v
 rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 
 
+TO INSTALL RUBY-
+
+rvm install ruby  or   rvm install <ruby version>
+
+TO DISPLAY VERSIONS OF RUBY IN RVM-
+COMMAND-rvm list
+EXAMPLE-
+beryl@beryl-HP-Pavilion-Notebook:~$ rvm list
+=> ruby-3.0.0 [ x86_64 ]
+ * ruby-3.0.1 [ x86_64 ]
+   ruby-3.1.0 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+
+
+
+TO SWITCH BETWEEN THE RUBY VERSIONS-
+COMMAND- rvm use <version>
+EXAMPLE-
+beryl@beryl-HP-Pavilion-Notebook:~$ rvm use 3.1.0
+Using /home/beryl/.rvm/gems/ruby-3.1.0
+beryl@beryl-HP-Pavilion-Notebook:~$ rvm list
+   ruby-3.0.0 [ x86_64 ]
+ * ruby-3.0.1 [ x86_64 ]
+=> ruby-3.1.0 [ x86_64 ]
 
 
 to write ruby code in terminal use-
