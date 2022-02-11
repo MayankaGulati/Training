@@ -110,4 +110,9 @@ git pull origin <branch name>
 	the file of <branch name> will be copied in the branch weare currently on.
 Fork from remote
 	creating a copy of remote repository on your github account.
-	
+git reset --hard HEAD~1
+	to delete the last commit
+git reset --hard <sha1-commit-id>
+	to delete a particular commit
+git push origin HEAD --force
+	if the commit is pushed	
