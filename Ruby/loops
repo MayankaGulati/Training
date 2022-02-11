@@ -124,4 +124,21 @@ Value of local variable is 2
 Value of local variable is 3
 Value of local variable is 4
 Value of local variable is 5
+
+
+BREAK STATEMENT-
+
+#!/usr/bin/ruby
+
+for i in 0..5
+  if i > 2
+    break
+  end
+  puts "value of i =#{i}"
+end
+
+OUTPUT-
+value of i =0
+value of i =1
+value of i =2
  
