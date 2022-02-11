@@ -211,6 +211,29 @@ class Customer
 end
 
 
-creating objects-
+CREATING OBJECT-
 
 <variable>=Customer.new
+
+EXAMPLE-
+class Customer
+    @@no_of_customer = 0;
+    def info(id, name, addr)
+      @cust_id =id
+      @cust_name=name
+      @cust_addr=addr
+      puts @cust_id,@cust_name,@cust_addr
+    end
+end
+
+cust1= Customer.new
+cust1.info("1","mayanka","sector9,faridabad")
+
+OUTPUT-
+beryl@beryl-HP-Pavilion-Notebook:~$ vim new.rb 
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby new.rb
+1
+mayanka
+sector9,faridabad
+
+
