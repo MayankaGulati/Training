@@ -90,4 +90,38 @@ inside the loop i = 3
 inside the loop i = 4 
 inside the loop i = 5 
 
+
+
+FOR LOOP-
+
+#!/usr/bin/ruby
+
+for i in 0..5
+  puts "the value of i = #{i}"
+end
+
+
+OUTPUT-
+the value of i = 0
+the value of i = 1
+the value of i = 2
+the value of i = 3
+the value of i = 4
+the value of i = 5
+
+example2-
+#!/usr/bin/ruby
+
+
+(0..5).each do |i|
+   puts "Value of local variable is #{i}"
+end
+
+OUTPUT-
+Value of local variable is 0
+Value of local variable is 1
+Value of local variable is 2
+Value of local variable is 3
+Value of local variable is 4
+Value of local variable is 5
  
