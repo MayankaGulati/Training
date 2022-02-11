@@ -346,3 +346,12 @@ output-
 beryl@beryl-HP-Pavilion-Notebook:~$ ruby again.rb
 writing a "\" sentence "\" for the string val'ue
 
+
+USING NOTATIONS-
+puts "writing \a a sentence \n using different \r  notations \e of string represented \f  here"
+Output-
+writing  a sentence 
+  notations f string represented 
+                                   here
+
+
