@@ -19,4 +19,26 @@ OUTPUT-
  inside the loop i = 1 
  inside the loop i = 2 
  inside the loop i = 3 
- inside the loop i = 4 
+ inside the loop i = 4
+
+
+WHILE MODIFIER-
+
+#!bin/usr/ruby
+
+$i=0
+$num=5
+
+begin
+  puts"inside the loop i = #$i"
+  $i+=1
+
+end  while $i < $num
+
+OUTPUT-
+inside the loop i = 0
+inside the loop i = 1
+inside the loop i = 2
+inside the loop i = 3
+inside the loop i = 4
+ 
