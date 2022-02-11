@@ -159,4 +159,26 @@ OUTPUT-
 value of i = 0
 value of i = 1
 value of i = 2
- 
+
+
+REDO STATEMENT-
+
+#!/usr/bin/ruby
+
+for i in 0..5
+   if i < 2 then
+      puts "Value of local variable is #{i}"
+      redo
+   end
+end
+
+OUTPUT-
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+Value of local variable is 0
+... 
