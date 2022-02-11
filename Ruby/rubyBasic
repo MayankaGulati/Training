@@ -297,4 +297,43 @@ name: john
 address: sec9 faridabad
 
 
+CLASS VARIABLES-
+
+#!/usr/bin/ruby
+$global_variable = 10
+class Customer
+  @@no_of_customer = 0
+  def initialize(id, name, addr)
+    @cust_id=id
+    @cust_name=name
+    @cust_addr=addr
+  end
+  def display_deets()
+    puts "id #@cust_id"
+    puts "name: #@cust_name"
+    puts "address: #@cust_addr"
+  end
+  def total_customer()
+    @@no_of_customer +=1
+    puts"total no of customers are #@@no_of_customer"
+  end
+end
+
+obj1 = Customer.new("1" , "mayanka" , "sec9 faridabad")
+obj2 = Customer.new("2" , "john" , "sec9 faridabad")
+obj1.display_deets()
+obj2.display_deets()
+
+obj1.total_customer()
+obj2.total_customer()
+
+OUTPUT-
+id 1
+name: mayanka
+address: sec9 faridabad
+id 2
+name: john
+address: sec9 faridabad
+total no of customers are 1
+total no of customers are 2
 
