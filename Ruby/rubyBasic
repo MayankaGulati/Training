@@ -354,4 +354,15 @@ writing  a sentence
   notations f string represented 
                                    here
 
+USING ARRAY CODE-
+#!/usr/bin/ruby
+arr = [1,2.5,"stringss"]
+arr.each do|i|
+  puts i
+end
+
+OUTPUT-
+1
+2.5
+stringss
 
