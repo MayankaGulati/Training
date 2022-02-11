@@ -337,3 +337,12 @@ address: sec9 faridabad
 total no of customers are 1
 total no of customers are 2
 
+
+USING BACKSLASH IN STRINGS-
+
+CODE-
+puts 'writing a "\\" sentence "\" for the string val\'ue'
+output-
+beryl@beryl-HP-Pavilion-Notebook:~$ ruby again.rb
+writing a "\" sentence "\" for the string val'ue
+
