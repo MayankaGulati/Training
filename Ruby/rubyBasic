@@ -389,3 +389,24 @@ redis3840
 greenis240
 yellowis15
 
+
+RUBY RANGES-
+
+example1-
+#!/usr/bin/ruby
+(1..5).each do |n|
+  print n, ' '
+end
+OUTPUT-
+1 2 3 4 5
+
+example2-
+#!/usr/bin/ruby
+(1...5).each do |n|
+  print n, ' '
+end
+  OUTPUT-
+1 2 3 4
+
+
+
