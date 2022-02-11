@@ -409,4 +409,18 @@ end
 1 2 3 4
 
 
+IF ELSE
+
+#!usr/bin/ruby
+$x=5
+if($x<3)
+  puts "#$x is less than 3"
+elsif($x>3)
+  puts "#$x is greator than 3"
+else($x==3)
+  puts "#$x is equal to 3"
+end
+
+OUTPUT-
+5 is greator than 3
 
