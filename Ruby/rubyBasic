@@ -448,3 +448,16 @@ end
 OUTPUT-
 x is greater than 5
 
+
+example2-
+#!usr/bin/ruby
+$var = 1
+print "if statement when true\n" if $var
+print "unless statement when true\n" unless $var
+$var = false
+print "unless statement when false\n" unless $var
+
+OUTPUT-
+if statement when true
+unless statement when false
+
