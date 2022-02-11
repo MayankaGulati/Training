@@ -424,3 +424,16 @@ end
 OUTPUT-
 5 is greator than 3
 
+
+
+IF MODIFIER-
+
+#!usr/bin/ruby
+$var=1
+print "approved \n"   if   $var   
+
+OUTPUT-
+approved 
+
+
+
