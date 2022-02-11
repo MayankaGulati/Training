@@ -41,4 +41,53 @@ inside the loop i = 1
 inside the loop i = 2
 inside the loop i = 3
 inside the loop i = 4
+
+
+UNTIL STATEMENT-
+
+#!/usr/bin/ruby
+
+
+$i=0
+$num=5
+
+until $i > $num do
+
+  puts "the value of i = #$i"
+
+  $i +=1;
+
+end
+
+
+OUTPUT-
+the value of i = 0
+the value of i = 1
+the value of i = 2
+the value of i = 3
+the value of i = 4
+the value of i = 5
+
+
+UNTIL MODIFIER-
+
+#!/usr/bin/ruby
+$i=0
+$num=5
+
+begin
+  puts "inside the loop i = #$i "
+
+  $i +=1
+  end until $i > $num
+
+
+OUTPUT-
+inside the loop i = 0 
+inside the loop i = 1 
+inside the loop i = 2 
+inside the loop i = 3 
+inside the loop i = 4 
+inside the loop i = 5 
+
  
