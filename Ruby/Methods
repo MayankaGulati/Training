@@ -113,3 +113,25 @@ the paramaeter is: 18
 the paramaeter is: M
 
 
+
+Methods in classes-
+
+example-
+
+#!/usr/bin/ruby
+
+class Major
+  def details
+  end
+  def Major.salary(var1,var2)
+    sal = var1/var2
+    return sal
+  end
+end
+
+sal=Major.salary(300000,12)
+puts "#{sal}"
+
+OUTPUT-
+25000
+
