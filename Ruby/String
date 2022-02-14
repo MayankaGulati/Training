@@ -73,3 +73,44 @@ SELF-
 3.0.1 :014 > self.class
  => Object 
 
+PUBLIC instance method-
+
+string%object :
+
+3.0.1 :001 > "%05d" %123
+ => "00123" 
+3.0.1 :002 > "%09d" %123
+ => "000000123" 
+3.0.1 :003 > "%05s: %016x " % ["ID" , self.object_id]
+ => "   ID: 0000000000000104 " 
+3.0.1 :004 > "foo = %{foo}" % {foo: 'bar'}
+ => "foo = bar" 
+3.0.1 :005 > "foo = %{foo} , baz = %{baz}" % {foo: 'bar' , baz:'bat'}
+ => "foo = bar , baz = bat" 
+
+string * integer :
+
+3.0.1 :008 > "HO!" * 6
+ => "HO!HO!HO!HO!HO!HO!" 
+3.0.1 :009 > "HO!" * 0
+ => "" 
+
+string + another string :
+
+3.0.1 :011 > "hello from " + self.to_s
+ => "hello from main" 
+
+3.0.1 :016 > "hey there " + "good morning!"
+ => "hey there good morning!" 
+
+
+string<< object :
+
+3.0.1 :019 > s="foo"
+ => "foo" 
+3.0.1 :020 > s<< 'bar'
+ => "foobar" 
+3.0.1 :021 > s
+ => "foobar" 
+
+
