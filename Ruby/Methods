@@ -208,4 +208,18 @@ mayanka
 age and height
 22  5'3
 
+BEGIN AND END BLOCK -
 
+example-
+#!/usr/bin/ruby
+
+BEGIN{puts"begin code block"}
+
+END{puts "end code block"}
+puts "main code block"
+
+
+output-
+begin code block
+main code block
+end code block
