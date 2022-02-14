@@ -1,4 +1,56 @@
 METHODS:
 
 
+Methods are similar to functions in any programming language.
+Method names should begin with a lowercase letter.
+
+Syntax-
+def <function/method name> (<arguments>,<arguments>)
+	expressions..
+end
+
+example- 
+
+#!/usr/bin/ruby
+def test (a,b)
+  puts"first subject marks #{a}"
+  puts"second subject marks #{b}"
+end
+
+test 9 , 10
+
+OUTPUT-
+
+first subject marks 9
+second subject marks 10
+
+
+EXAMPLE 2-
+
+#!/usr/bin/ruby
+def test (var1 = "ruby", var2 = "rails")
+          puts"the programming language #{var1}"
+          puts"the programming language #{var2}"
+end
+test
+test "C" , "C++"
+
+OUTPUT-
+the programming language ruby
+the programming language rails
+the programming language C
+the programming language C++ 
+
+EXAMPLE3-
+
+#!/usr/bin/ruby
+def sum(var1,var2,var3)
+  puts"sum is : #{var1+var2+var3}"
+end
+
+sum 7,8,9
+
+OUTPUT-
+sum is : 24
+
 
