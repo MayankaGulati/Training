@@ -54,3 +54,62 @@ OUTPUT-
 sum is : 24
 
 
+
+
+Methods with return type-
+
+example1-
+#!/usr/bin/ruby
+def name()
+  return "Mayanka"
+end
+
+name = name()
+print "my name is : #{name} \n"
+
+OUTPUT-
+my name is : Mayanka 
+
+
+example2-
+
+#!/usr/bin/ruby
+def variable
+  i=10
+  j=20
+  k=30
+return i,j,k
+end
+
+var = variable
+puts var
+
+OUTPUT-
+10
+20
+30
+
+example3-
+#!/usr/bin/ruby
+
+def sample(*test)
+  puts "the no of parameters is #{test.length}"
+  for i in 0...test.length
+    puts "the paramaeter is: #{test[i]}"
+  end
+end
+
+sample "alex" , "16" , "M"
+sample "jackob" , "18" , "M"
+
+OUTPUT-
+the no of parameters is 3
+the paramaeter is: alex
+the paramaeter is: 16
+the paramaeter is: M
+the no of parameters is 3
+the paramaeter is: jackob
+the paramaeter is: 18
+the paramaeter is: M
+
+
