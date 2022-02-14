@@ -9,3 +9,16 @@ substitution of variables in string -
 	var = 8
 	puts “the variable is #{var}”
 
+
+string build in methods-
+
+example-
+
+#!/usr/bin/ruby
+
+myStr = String.new("THIS IS TEST")
+foo = myStr.downcase
+
+puts "#{foo}"
+output-
+this is test
