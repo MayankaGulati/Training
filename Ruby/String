@@ -1,0 +1,11 @@
+STRINGS-
+
+
+An example of string-
+	‘more than one characters between inverted commas is a string ’
+substitution of variables in string -
+	“the string #{variable_name}”
+	example-
+	var = 8
+	puts “the variable is #{var}”
+
