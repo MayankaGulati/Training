@@ -135,3 +135,77 @@ puts "#{sal}"
 OUTPUT-
 25000
 
+
+BLOCKS-
+
+
+blocks are the chunk of code which has same name as the method or function in which they’re called.
+
+Syntax-
+
+block_name {
+   statement1
+   statement2
+   ..........
+}
+Example-
+
+#!/usr/bin/ruby
+
+def test
+  puts "statement of function"
+  yield
+  puts "statement of function"
+  yield
+end
+
+test{puts"statement of block"}
+
+
+OUTPUT-
+statement of function
+statement of block
+statement of function
+statement of block
+
+
+passing values in block statements-
+
+#!/usr/bin/ruby
+
+def test
+  puts "start count"
+  yield 1
+  puts "skip 1"
+  yield 3
+
+end
+
+test{ |i| puts"#{i}"}
+
+OUTPUT-
+start count
+1
+skip 1
+3
+
+
+example-
+#!/usr/bin/ruby
+
+def test
+  puts "name"
+  yield "mayanka"
+  puts "age and height"
+  yield 22,"5'3"
+end
+
+test{|a,b| puts "#{a}  #{b}" }
+
+OUTPUT-
+name
+mayanka  
+age and height
+22  5'3
+
+
