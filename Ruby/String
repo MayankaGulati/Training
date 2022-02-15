@@ -758,4 +758,33 @@ returns array of words
 3.0.1 :033 > "hello".rpartition('e')
  => ["h", "e", "llo"] 
 3.0.1 :034 > "hello".rpartition('x')
- => ["", "", "hello"]     
+ => ["", "", "hello"]
+
+.rstrip method-
+	removes right whitespace.
+3.0.1 :035 > "hello".rstrip
+ => "hello" 
+3.0.1 :036 > "   hello   ".rstrip
+ => "   hello" 
+
+.rstrip! Method-
+3.0.1 :037 > "   hello   ".rstrip!
+ => "   hello" 
+3.0.1 :038 > "hello".rstrip!
+ => nil 
+
+.scan method-
+3.0.1 :039 > a="mayanka gulati"
+ => "mayanka gulati" 
+3.0.1 :045 > a.scan(/./)
+ => ["m", "a", "y", "a", "n", "k", "a", " ", "g", "u", "l", "a", "t", "i"] 
+3.0.1 :046 > a.scan(/../)
+ => ["ma", "ya", "nk", "a ", "gu", "la", "ti"] 
+3.0.1 :047 > a.scan(/.../)
+ => ["may", "ank", "a g", "ula"] 
+3.0.1 :048 > a.scan(/(..)(..)/)
+ => [["ma", "ya"], ["nk", "a "], ["gu", "la"]] 
+3.0.1 :049 > a.scan(/(.)(.)/){|c| print c}
+["m", "a"]["y", "a"]["n", "k"]["a", " "]["g", "u"]["l", "a"]["t", "i"] => "mayanka gulati" 
+
+     
