@@ -145,4 +145,16 @@ using == :
 3.0.1 :012 > s=='food'
  => true  
 
+using =~  :
 
+it’ll display the position of the character.
+
+3.0.1 :001 > 'foo' =~ /f/
+ => 0 
+3.0.1 :002 > 'foo' =~ /o/
+ => 1 
+3.0.1 :003 > 'foo' =~ /m/
+ => nil
+
+
+ 
