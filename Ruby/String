@@ -208,4 +208,127 @@ it’ll display the index value from the string and the range if given.
  => "anka" 
 3.0.1 :008 > s.byteslice(0,3)
  => "May" 
-  
+
+
+.encoding method-
+
+3.0.1 :016 > s.encoding
+ => #<Encoding:UTF-8> 
+3.0.1 :017 > s.byteslice(5).encoding
+ => #<Encoding:UTF-8> 
+3.0.1 :018 > s.bytesize.encoding
+
+.capitalize method & .capitalize!
+
+capitalize nethod will change the first char in capital and rest in downcase.
+.capitalize! Will do the capitalize method changes and if it dosen’t change anything it returns nil.
+
+3.0.1 :022 > 'mayanka gulati'.capitalize!
+ => "Mayanka gulati" 
+3.0.1 :023 > 'mayanka gulati'.capitalize
+ => "Mayanka gulati" 
+3.0.1 :024 > 'mayanka GULATI'.capitalize
+ => "Mayanka gulati" 
+3.0.1 :025 > 'mayanka GULATI'.capitalize!
+ => "Mayanka gulati" 
+3.0.1 :026 > 'Mayanka gulati'.capitalize!
+ => nil 
+
+
+.casecmp method -
+it comapares self.downcase and otherstring.downcase
+
+    1. -1 if other_string.downcase is larger.
+    2. 0 if the two are equal.
+    3. 1 if other_string.downcase is smaller.
+    4. nil if the two are incomparable.
+
+3.0.1 :027 > 'mayanka'.casecmp('mayanka')
+ => 0 
+3.0.1 :028 > 'mayanka'.casecmp('Mayanka')
+ => 0 
+3.0.1 :029 > 'mayanka'.casecmp('MAYANKA')
+ => 0 
+3.0.1 :030 > 'MAYANKA'.casecmp('mayanka')
+ => 0 
+3.0.1 :031 > 'MAYANKA'.casecmp('mayan')
+ => 1 
+3.0.1 :032 > 'maya'.casecmp('mayanka')
+ => -1 
+
+
+.casecmp? Method-
+
+3.0.1 :033 > 'mayanka'.casecmp?('mayanka')
+ => true 
+3.0.1 :034 > 'mayanka'.casecmp?('Mayanka')
+ => true 
+3.0.1 :035 > 'mayanka'.casecmp?('MAYANKA')
+ => true 
+3.0.1 :036 > 'maya'.casecmp?('mayanka')
+ => false 
+3.0.1 :037 > 'MAYANKA'.casecmp?('mayan')
+ => false  
+
+.center method-
+
+it’ll take space of the index provided with string in the middle
+
+3.0.1 :039 > 'mayanka'.center(5)
+ => "mayanka" 
+3.0.1 :040 > 'mayanka'.center(10)
+ => " mayanka  " 
+3.0.1 :041 > 'mayanka'.center(20)
+ => "      mayanka       " 
+3.0.1 :086 > "mayanka".center(20,'0')
+ => "000000mayanka0000000" 
+
+
+.chomp method-
+
+3.0.1 :061 > "mayanka".chomp
+ => "mayanka" 
+3.0.1 :062 > "mayanka\n\r".chomp
+ => "mayanka\n" 
+3.0.1 :063 > "mayanka\r\n".chomp
+ => "mayanka" 
+3.0.1 :064 > "mayanka\n".chomp
+ => "mayanka" 
+3.0.1 :065 > "mayanka\r".chomp
+ => "mayanka" 
+3.0.1 :066 > "mayanka".chomp('ka')
+ => "mayan" 
+3.0.1 :067 > "mayanka\n\r\n\r".chomp('')
+ => "mayanka\n\r\n\r" 
+3.0.1 :068 > "mayanka\r\n\r\n".chomp('')
+ => "mayanka" 
+3.0.1 :069 > "mayanka \n gulati".chomp
+ => "mayanka \n gulati" 
+3.0.1 :070 > "mayanka \r gulati".chomp
+ => "mayanka \r gulati" 
+3.0.1 :071 > "mayanka \r\n gulati".chomp
+ => "mayanka \r\n gulati" 
+
+
+.chomp! Method-
+3.0.1 :073 > "mayanka".chomp!
+ => nil 
+3.0.1 :074 > "mayanka\n".chomp!
+ => "mayanka" 
+
+
+.chop method-
+
+3.0.1 :077 > "mayanka".chop
+ => "mayank" 
+3.0.1 :078 > "mayanka\n".chop
+ => "mayanka" 
+3.0.1 :079 > "mayanka\r".chop
+ => "mayanka" 
+3.0.1 :080 > "mayanka\r\n".chop
+ => "mayanka" 
+3.0.1 :081 > "mayanka\n\r".chop
+ => "mayanka\n" 
+3.0.1 :082 > "mayanka".chop.chop
+ => "mayan" 
+ 
