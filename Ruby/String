@@ -183,4 +183,29 @@ to display string’s char from index value and length
 3.0.1 :014 > 'Mayanka'[-4,0]
  => "" 
 3.0.1 :015 > 'Mayanka'[3,-1]
- => nil  
+ => nil
+
+.bytesize method -
+
+it’ll display the size of the string.
+
+3.0.1 :002 > "Mayanka".bytesize
+ => 7 
+3.0.1 :003 > "food".bytesize
+ => 4 
+
+.byteslice method- 
+
+it’ll display the index value from the string and the range if given.
+
+3.0.1 :004 > "Mayanka".byteslice(3)
+ => "a" 
+3.0.1 :005 > s='Mayanka'
+ => "Mayanka" 
+3.0.1 :006 > s.byteslice(3)
+ => "a" 
+3.0.1 :007 > s.byteslice(3,7)
+ => "anka" 
+3.0.1 :008 > s.byteslice(0,3)
+ => "May" 
+  
