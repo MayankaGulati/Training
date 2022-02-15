@@ -702,4 +702,26 @@ returns array of words
 3.0.1 :139 > "-377".oct
  => -255  
 3.0.1 :141 > "0377bad".oct
- => 255    
+ => 255
+
+.ord method-
+3.0.1 :001 > "a".ord
+ => 97 
+3.0.1 :002 > "b".ord
+ => 98 
+3.0.1 :003 > "m".ord
+ => 109 
+3.0.1 :004 > "z".ord
+ => 122 
+
+.partition method-
+3.0.1 :006 > "hello".partition("l")
+ => ["he", "l", "lo"] 
+3.0.1 :007 > "hello".partition("e")
+ => ["h", "e", "llo"] 
+3.0.1 :008 > "hello".partition("o")
+ => ["hell", "o", ""] 
+3.0.1 :009 > "hello".partition("v")
+ => ["hello", "", ""] 
+
+    
