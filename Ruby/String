@@ -470,4 +470,27 @@ world => "hello \nworld"
 3.0.1 :009 > s.empty?
  => true 
 
- 
+.end_with? Method-
+
+3.0.1 :010 > s="hello"
+ => "hello" 
+3.0.1 :011 > s.end_with? 
+ => false 
+3.0.1 :012 > s.end_with? ("lo")
+ => true 
+3.0.1 :013 > s.end_with? ("ll")
+ => false 
+3.0.1 :014 > s.end_with? ("do")
+ => false 
+
+
+.eql? Method-
+
+3.0.1 :017 > s
+ => "hello" 
+3.0.1 :018 > s.eql?("hello")
+ => true 
+3.0.1 :019 > s.eql?("llo")
+ => false 
+3.0.1 :020 > s.eql?("HELLO")
+ => false  
