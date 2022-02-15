@@ -597,4 +597,36 @@ world => "hello \nworld"
 3.0.1 :092 > s.inspect
  => "\"mayanka\"" 
 
-  
+.intern method-
+3.0.1 :093 > s
+ => "mayanka" 
+3.0.1 :094 > s.intern
+ => :mayanka 
+3.0.1 :095 > s
+ => "mayanka" 
+3.0.1 :096 > s.to_sym
+ => :mayanka 
+
+
+.length method-
+3.0.1 :097 > s.length
+ => 7 
+
+.lines method-
+returns array of words
+
+3.0.1 :101 > s.lines(' ')
+ => ["Mayanka ", "gulati"] 
+3.0.1 :102 > s.lines
+ => ["Mayanka gulati"] 
+
+
+.ljust method-
+ 3.0.1 :103 > s
+ => "Mayanka gulati" 
+3.0.1 :104 > s.ljust(20)
+ => "Mayanka gulati      " 
+3.0.1 :105 > s.ljust(40)
+ => "Mayanka gulati                          " 
+3.0.1 :106 > s.ljust(30)
+ => "Mayanka gulati                "   
