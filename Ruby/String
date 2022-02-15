@@ -157,4 +157,30 @@ it’ll display the position of the character.
  => nil
 
 
- 
+to display string’s char from index value-
+
+3.0.1 :004 > 'food'[3]
+ => "d" 
+3.0.1 :005 > 'Mayanka'[5]
+ => "k" 
+3.0.1 :006 > 'Mayanka'[8]
+ => nil 
+3.0.1 :007 > 'Mayanka'[-2]
+ => "k" 
+3.0.1 :008 > 'Mayanka'[-8]
+ => nil 
+
+to display string’s char from index value and length 
+
+3.0.1 :009 > 'Mayanka'[4,3]
+ => "nka" 
+3.0.1 :010 > 'Mayanka'[-2,3]
+ => "ka" 
+3.0.1 :011 > 'Mayanka'[-5,3]
+ => "yan" 
+3.0.1 :012 > 'Mayanka'[1,7]
+ => "ayanka"
+3.0.1 :014 > 'Mayanka'[-4,0]
+ => "" 
+3.0.1 :015 > 'Mayanka'[3,-1]
+ => nil  
