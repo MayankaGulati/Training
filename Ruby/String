@@ -532,4 +532,69 @@ world => "hello \nworld"
 3.0.1 :042 > s.include?('nka')
  => true 
 
+.index Method
+
+3.0.1 :044 > s.index('a')
+ => 1 
+3.0.1 :045 > s.index('k')
+ => 5 
+
+3.0.1 :069 > s='food'
+ => "food" 
+3.0.1 :070 > s.index('o',0)
+ => 1 
+3.0.1 :071 > s.index('o',1)
+ => 1 
+3.0.1 :072 > s.index('o',2)
+ => 2 
+3.0.1 :073 > s.index('o',3)
+ => nil 
+
+
+3.0.1 :074 > s='Mayanka'
+ => "Mayanka" 
+3.0.1 :075 > s.index('a',1)
+ => 1 
+3.0.1 :076 > s.index('a',2)
+ => 3 
+3.0.1 :077 > s.index('a',3)
+ => 3 
+3.0.1 :078 > s.index('a',4)
+ => 6 
+3.0.1 :079 > s.index('a',5)
+ => 6 
+3.0.1 :080 > s.index('a',6)
+ => 6 
+3.0.1 :081 > s.index('a',7)
+ => nil 
+
+
+
+.replace method-
+
+3.0.1 :082 > s
+ => "Mayanka" 
+3.0.1 :083 > s.replace('gulati')
+ => "gulati" 
+3.0.1 :084 > s
+ => "gulati"
+
+.insert method-
+
+3.0.1 :084 > s
+ => "gulati" 
+3.0.1 :086 > s.insert(0,'mayanka')
+ => "mayankagulati" 
+3.0.1 :088 > s="Mayanka"
+ => "Mayanka" 
+3.0.1 :089 > s.insert(3,' gulati ')
+ => "May gulati anka" 
+
+
+.inspect method
+3.0.1 :091 > s="mayanka"
+ => "mayanka" 
+3.0.1 :092 > s.inspect
+ => "\"mayanka\"" 
+
   
