@@ -331,4 +331,42 @@ it’ll take space of the index provided with string in the middle
  => "mayanka\n" 
 3.0.1 :082 > "mayanka".chop.chop
  => "mayan" 
+
+
+.chr method-
+
+3.0.1 :089 > "mayanka".chr
+ => "m" 
+
+.clear method-
+
+3.0.1 :090 > "mayanka".clear
+ => "" 
+
+.concat method-
+
+3.0.1 :091 > "mayanka".concat("gulati")
+ => "mayankagulati" 
+3.0.1 :093 > 'mayanka'.concat(32,'gulati')
+ => "mayanka gulati" 
+3.0.1 :097 > s="mayanka"
+ => "mayanka" 
+3.0.1 :098 > s.concat(32,"gulati")
+ => "mayanka gulati" 
+
+
+.count method-
+
+3.0.1 :100 > "mayanka".count "a"
+ => 3 
+3.0.1 :101 > "mayanka".count "aeiou"
+ => 3 
+3.0.1 :102 > "mayanka gulati".count "aeiou"
+ => 6 
+3.0.1 :105 > "mayanka gulati".count "ka" "a" 
+ => 5 
+3.0.1 :106 > "mayanka^gulati".count "ka" 
+ => 5 
+
+
  
