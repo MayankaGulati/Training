@@ -787,4 +787,34 @@ returns array of words
 3.0.1 :049 > a.scan(/(.)(.)/){|c| print c}
 ["m", "a"]["y", "a"]["n", "k"]["a", " "]["g", "u"]["l", "a"]["t", "i"] => "mayanka gulati" 
 
+.slice method-
+3.0.1 :061 > "mayanka".slice(2)
+ => "y" 
+3.0.1 :062 > "mayanka".slice(2..6)
+ => "yanka" 
+3.0.1 :064 > "mayanka".slice(/s.*t/)
+ => nil 
+3.0.1 :066 > "mayanka".slice(/m.*k/)
+ => "mayank" 
+3.0.1 :067 > "mayanka".slice(/m.*y/)
+ => "may" 
+
+.split method-
+3.0.1 :068 > "now is the time".split
+ => ["now", "is", "the", "time"] 
+3.0.1 :070 > "1,2,3,4,5,6,7,8".split(',')
+ => ["1", "2", "3", "4", "5", "6", "7", "8"] 
+3.0.1 :071 > "now is the time".split(//)
+ => ["n", "o", "w", " ", "i", "s", " ", "t", "h", "e", " ", "t", "i", "m", "e"]  
+
+
+
+.squeeze method-
+3.0.1 :072 > "pleseeeeee".squeeze
+ => "plese" 
+3.0.1 :073 > "   plesee eeee      ".squeeze
+ => " plese e " 
+3.0.1 :074 > "   pleseeeeee      ".squeeze
+ => " plese " 
+
      
