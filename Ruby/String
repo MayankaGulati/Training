@@ -629,4 +629,64 @@ returns array of words
 3.0.1 :105 > s.ljust(40)
  => "Mayanka gulati                          " 
 3.0.1 :106 > s.ljust(30)
- => "Mayanka gulati                "   
+ => "Mayanka gulati                "
+
+.lstrip method-
+	deletes the left blank space.
+
+3.0.1 :109 > s="     mayanka"
+ => "     mayanka" 
+3.0.1 :110 > s.lstrip
+ => "mayanka" 
+3.0.1 :111 > s="     mayanka      "
+ => "     mayanka      " 
+3.0.1 :112 > s.lstrip
+ => "mayanka      " 
+3.0.1 :118 > s="   mayanka      gulati "
+ => "   mayanka      gulati " 
+3.0.1 :119 > s.lstrip
+ => "mayanka      gulati " 
+
+.lstrip! Method-
+3.0.1 :113 > s.lstrip!
+ => "mayanka      " 
+3.0.1 :114 > s="     mayanka"
+ => "     mayanka" 
+3.0.1 :115 > s.lstrip!
+ => "mayanka" 
+3.0.1 :116 > s="mayanka    "
+ => "mayanka    " 
+3.0.1 :117 > s.lstrip!
+ => nil 
+
+
+.match method-
+3.0.1 :120 > s.match('mayanka')
+ => #<MatchData "mayanka"> 
+3.0.1 :121 > s.match('may')
+ => #<MatchData "may"> 
+3.0.1 :122 > s.match('hello')
+ => nil 
+
+.match? Method-
+3.0.1 :123 > s.match?('mayanka')
+ => true 
+3.0.1 :124 > s.match?('may')
+ => true 
+3.0.1 :125 > s.match?('hello')
+ => false 
+
+.succ method-
+3.0.1 :128 > s=1234
+ => 1234 
+3.0.1 :129 > s.succ
+ => 1235 
+3.0.1 :131 > s='abc'
+ => "abc" 
+3.0.1 :132 > s.succ
+ => "abd" 
+
+.succ!
+3.0.1 :133 > s.succ!
+ => "abd" 
+   
