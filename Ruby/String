@@ -852,4 +852,24 @@ swapcase!
 3.0.1 :088 > "mayanka".tr('aeiou','*')
  => "m*y*nk*" 
 3.0.1 :089 > "mayanka".tr('k','$')
- => "mayan$a"      
+ => "mayan$a"     
+
+basic string methods-
+
+3.0.1 :053 > "mayanka"[2]
+ => "y" 
+3.0.1 :054 > "mayanka"[-2]
+ => "k" 
+3.0.1 :055 > "mayanka"[-2.3]
+ => "k" 
+3.0.1 :056 > "mayanka"[-2,3]
+ => "ka" 
+3.0.1 :057 > "mayanka"[-5,4]
+ => "yank" 
+3.0.1 :058 > "mayanka"[1..4]
+ => "ayan" 
+3.0.1 :059 > "mayanka"['anka']
+ => "anka" 
+3.0.1 :060 > "mayanka"['cdf']
+ => nil 
+ 
