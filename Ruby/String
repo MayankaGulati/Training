@@ -689,4 +689,17 @@ returns array of words
 .succ!
 3.0.1 :133 > s.succ!
  => "abd" 
-   
+
+
+.oct method-
+	will change the input in octal digits.
+3.0.1 :136 > "123".oct
+ => 83 
+3.0.1 :137 > "may".oct
+ => 0 
+3.0.1 :138 > "-873".oct
+ => 0 
+3.0.1 :139 > "-377".oct
+ => -255  
+3.0.1 :141 > "0377bad".oct
+ => 255    
