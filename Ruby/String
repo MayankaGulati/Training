@@ -493,4 +493,43 @@ world => "hello \nworld"
 3.0.1 :019 > s.eql?("llo")
  => false 
 3.0.1 :020 > s.eql?("HELLO")
- => false  
+ => false
+
+.getbyte method-
+
+3.0.1 :027 > s="Mayanka"
+ => "Mayanka" 
+3.0.1 :028 > s.getbyte(0)
+ => 77 
+3.0.1 :029 > s.getbyte(1)
+ => 97 
+3.0.1 :030 > s.getbyte(2)
+ => 121 
+3.0.1 :031 > s.getbyte(3)
+ => 97 
+3.0.1 :032 > s.getbyte(4)
+ => 110 
+
+
+.hash and .hex method-
+
+3.0.1 :034 > s.hash
+ => -2035436181399274570 
+3.0.1 :035 > s.hex
+ => 0 
+3.0.1 :036 > "-928s".hex
+=> -2344 
+
+
+.include? Method-
+
+3.0.1 :039 > s
+ => "Mayanka" 
+3.0.1 :040 > s.include?('a')
+ => true 
+3.0.1 :041 > s.include?('na')
+ => false 
+3.0.1 :042 > s.include?('nka')
+ => true 
+
+  
