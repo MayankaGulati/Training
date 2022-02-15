@@ -817,4 +817,39 @@ returns array of words
 3.0.1 :074 > "   pleseeeeee      ".squeeze
  => " plese " 
 
-     
+.start_with? Method-
+3.0.1 :075 > "hello".start_with? ('h')
+ => true 
+3.0.1 :076 > "hello".start_with? ('hek')
+ => false 
+
+.sum method-
+3.0.1 :078 > "hello".sum
+ => 532 
+3.0.1 :079 > "18,10".sum
+ => 246 
+3.0.1 :080 > "hello".sum(12)
+ => 532 
+
+
+.swapcase method-
+3.0.1 :082 > "MayaNKA".swapcase
+ => "mAYAnka" 
+3.0.1 :083 > "Mayanka Gulati".swapcase
+ => "mAYANKA gULATI" 
+
+swapcase!
+3.0.1 :084 > "MayaNKA".swapcase!
+ => "mAYAnka" 
+3.0.1 :085 > "Mayanka Gulati".swapcase!
+ => "mAYANKA gULATI" 
+3.0.1 :086 > ''.swapcase!
+ => nil 
+
+
+
+.tr method-
+3.0.1 :088 > "mayanka".tr('aeiou','*')
+ => "m*y*nk*" 
+3.0.1 :089 > "mayanka".tr('k','$')
+ => "mayan$a"      
