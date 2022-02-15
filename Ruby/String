@@ -430,4 +430,44 @@ it’ll take space of the index provided with string in the middle
 3.0.1 :138 > s.downcase!
  => nil 
 
+.dump method-
+
+3.0.1 :001 > "hello".dump
+ => "\"hello\"" 
+3.0.1 :002 > "//he^llo//".dump
+ => "\"//he^llo//\"" 
+
+.each_byte method-
+
+3.0.1 :012 > "hello".each_byte{|c| print c, ''}
+104101108108111 => "hello" 
+3.0.1 :013 > "hello there".each_byte{|c| print c, ''}
+10410110810811132116104101114101 => "hello there" 
+3.0.1 :014 > "hello there".each_byte{|c| print c, '<>'}
+104<>101<>108<>108<>111<>32<>116<>104<>101<>114<>101<> => "hello there" 
+
+.each_char method-
+
+3.0.1 :001 > "hello there".each_char{|c| print c,''}
+hello there => "hello there" 
+3.0.1 :002 > "hello there".each_char{|m| print m,''}
+hello there => "hello there" 
+
+.each_line method-
+3.0.1 :003 > "hello world".each_line{|c| print c, ''}
+hello world => "hello world" 
+3.0.1 :005 > "hello \nworld".each_line{|c| print c, ''}
+hello 
+world => "hello \nworld" 
+
+.empty method-
+3.0.1 :006 > "hello".empty?
+ => false 
+3.0.1 :007 > "".empty?
+ => true 
+3.0.1 :008 > s=""
+ => "" 
+3.0.1 :009 > s.empty?
+ => true 
+
  
