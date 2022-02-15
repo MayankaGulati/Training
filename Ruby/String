@@ -369,4 +369,65 @@ it’ll take space of the index provided with string in the middle
  => 5 
 
 
+
+.delete method-
+3.0.1 :109 > "mayanka".delete "aeiou"
+ => "mynk" 
+3.0.1 :110 > "mayanka".delete "a"
+ => "mynk" 
+3.0.1 :111 > "mayanka".delete "ka"
+ => "myn" 
+3.0.1 :112 > "mayanka".delete ""
+ => "mayanka" 
+3.0.1 :117 > "mayanka".delete "ej-m"
+ => "ayana" 
+3.0.1 :118 > "hello".delete "ej-m"
+ => "ho" 
+3.0.1 :119 > "hello there mayanka".delete "a-h"
+ => "llo tr mynk" 
+
+
+.delete! Method-
+
+3.0.1 :120 > "mayanka".delete! ""
+ => nil 
+3.0.1 :121 > "mayanka".delete! "a"
+ => "mynk" 
+
+.delete_prefix-
+3.0.1 :123 > "mayanka".delete_prefix("ma")
+ => "yanka" 
+
+.delete_prefix!
+3.0.1 :130 > "mayanka".delete_prefix!("ma")
+ => "yanka" 
+3.0.1 :131 > "mayanka".delete_prefix!("")
+ => nil 
+
+.delete_suffix-
+3.0.1 :126 > "mayanka".delete_suffix("ka")
+ => "mayan" 
+
+.delete_suffix!
+3.0.1 :127 > "mayanka".delete_suffix!("ka")
+ => "mayan" 
+3.0.1 :128 > "mayanka".delete_suffix!("")
+ => nil 
+
+
+.downcase method and downcase! -
+
+3.0.1 :133 > "MAYANKA".downcase
+ => "mayanka" 
+3.0.1 :134 > "MAYANKA".downcase!
+ => "mayanka" 
+3.0.1 :135 > "mayanka".downcase!
+ => nil 
+3.0.1 :136 > s="hello"
+ => "hello" 
+3.0.1 :137 > s.downcase
+ => "hello" 
+3.0.1 :138 > s.downcase!
+ => nil 
+
  
