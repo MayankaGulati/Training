@@ -236,3 +236,43 @@ any method-
 3.0.1 :007 > ['food','bar'].any?(/bet/)
  => false 
 
+assoc method-
+3.0.1 :008 > arrob=[{of:0},[4,5,6],[8,9,0],['p','l','k']]
+ => [{:of=>0}, [4, 5, 6], [8, 9, 0], ["p", "l", "k"]] 
+3.0.1 :011 > arrob.assoc(4)
+ => [4, 5, 6] 
+3.0.1 :012 > arrob.assoc(2)
+ => nil 
+3.0.1 :013 > arrob.assoc('p')
+ => ["p", "l", "k"] 
+
+none method-
+3.0.1 :014 > arr
+ => [1, 2, 3, 4, 5, 6, 7, 8] 
+3.0.1 :015 > arr.none?(10)
+ => true 
+3.0.1 :016 > arr.none?(6)
+ => false 
+
+3.0.1 :017 > ['food','grapes'].none?(/food/)
+ => false 
+3.0.1 :018 > ['food','grapes'].none?(/foo/)
+ => false 
+3.0.1 :019 > ['food','grapes'].none?(/ft/)
+ => true 
+
+one method-
+it displays when only one element meets the criteria.
+3.0.1 :020 > arr
+ => [1, 2, 3, 4, 5, 6, 7, 8] 
+3.0.1 :021 > arr.one?{|a| a >9}
+ => false 
+3.0.1 :022 > arr.one?{|a| a >8}
+ => false 
+3.0.1 :023 > arr.one?{|a| a >7}
+ => true 
+3.0.1 :024 > arr.one?{|a| a <7}
+ => false 
+
+
+
