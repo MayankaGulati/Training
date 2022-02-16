@@ -31,6 +31,19 @@ Basic -
  => 4 
 
 
+methods to initialise an array-
+
+3.0.1 :023 > Array.[](1,'ghf',9.0)
+ => [1, "ghf", 9.0] 
+3.0.1 :024 > Array[2,'mnb',89.7]
+ => [2, "mnb", 89.7] 
+3.0.1 :025 > a=Array.new([:wer,23,'fr'])
+ => [:wer, 23, "fr"] 
+3.0.1 :027 > b=Array.new(3,'x')
+ => ["x", "x", "x"] 
+3.0.1 :028 > c=Array.new(4){|index| "#{index}"}
+ => ["0", "1", "2", "3"] 
+
 first and last-
 
 3.0.1 :034 > arr=[1,2,3,4,5,6,7,8]
