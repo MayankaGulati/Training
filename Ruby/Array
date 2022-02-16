@@ -191,3 +191,48 @@ delete_if method-
  => [1, 2, 3, 4, 5, 6] 
 
 
+keep_if method-
+3.0.1 :019 > arr
+ => [1, 2, 3, 4, 5, 6] 
+3.0.1 :020 > arr.keep_if{|a| a>3}
+ => [4, 5, 6] 
+
+
+all method-
+3.0.1 :003 > [1,'bv',23.8].all?
+ => true 
+3.0.1 :004 > [2,'6yh',121].all?
+ => true 
+3.0.1 :001 > [1,'bv',nil].all?
+ => false 
+
+3.0.1 :006 > [1,2,3,4,5,6].all?{|a| a>9}
+ => false 
+3.0.1 :007 > [1,2,3,4,5,6].all?{|a| a<9}
+ => true 
+3.0.1 :009 > ['food','fool','foot'].all?(/foo/)
+ => true 
+3.0.1 :010 > ['food','fool','foot'].all?(/bar/)
+ => false 
+
+3.0.1 :011 > [1,1,1,1].all?(1)
+ => true 
+3.0.1 :012 > [1,0,1,0].all?(0)
+ => false 
+
+any method-
+3.0.1 :001 > arr=[1,2,3,4,5,6,7,8]
+ => [1, 2, 3, 4, 5, 6, 7, 8] 
+3.0.1 :002 > arr.any? {|a| a>5}
+ => true 
+3.0.1 :003 > arr.any? {|a| a<5}
+ => true 
+3.0.1 :004 > arr.any? {|a| a>10}
+ => false 
+3.0.1 :005 > ['food','bar'].any?(/foo/)
+ => true 
+3.0.1 :006 > ['food','bar'].any?(/bar/)
+ => true 
+3.0.1 :007 > ['food','bar'].any?(/bet/)
+ => false 
+
