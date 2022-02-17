@@ -570,4 +570,21 @@ minmax method-
  => [1, 2, 3, 4, 5] 
 3.0.1 :035 > arr.minmax
  => [1, 5] 
+
+
+bsearch method-
+3.0.1 :037 > arr
+ => [1, 2, 3, 4, 5] 
+3.0.1 :038 > arr.bsearch{|a| a>4}
+ => 5 
+3.0.1 :039 > arr.bsearch{|a| a<4}
+ => 1 
+3.0.1 :042 > arr=['as','pas','sas','vcd']
+ => ["as", "pas", "sas", "vcd"] 
+3.0.1 :043 > arr.bsearch{|a| a=='sas'}
+ => "sas" 
+
+bsearch_index method-
+3.0.1 :046 >     arr.bsearch_index{|a| a=='sas' }
+ => 2 
  
