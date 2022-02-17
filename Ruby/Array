@@ -522,4 +522,29 @@ fetch method-
 value of -7
  => nil 
 
+fill method-
+3.0.1 :002 > arr=['a','b','c','d']
+ => ["a", "b", "c", "d"] 
+3.0.1 :003 > arr.fill('f')
+ => ["f", "f", "f", "f"] 
+3.0.1 :005 > arr
+ => ["f", "f", "f", "f"] 
+3.0.1 :006 > arr.fill('a',2)
+ => ["f", "f", "a", "a"] 
+3.0.1 :015 > arr=[1,2,3,4,5,6,7,8]
+ => [1, 2, 3, 4, 5, 6, 7, 8] 
+3.0.1 :016 > arr.fill(:x,1,2)
+ => [1, :x, :x, 4, 5, 6, 7, 8] 
+3.0.1 :017 > arr.fill(:l,5,3)
+ => [1, :x, :x, 4, 5, :l, :l, :l] 
+3.0.1 :018 > arr.fill(:p,(3..6))
+ => [1, :x, :x, :p, :p, :p, :p, :l] 
 
+
+reverse_each method-
+3.0.1 :024 > a.reverse_each{|element| puts"#{element.class} #{element}"}
+Integer 4
+Integer 3
+Integer 2
+Integer 1
+ => [1, 2, 3, 4] 
