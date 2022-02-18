@@ -220,3 +220,44 @@ puts Adding.new.sum(2,3)
 output-
 
   5
+
+
+--------------febonacci program----------
+
+
+  #!usr/bin/ruby
+
+
+class Fibonacci
+  @@var1=0
+  @@var2=1
+  @@var3
+
+  def calculate()
+    puts "#{@@var1} \n#{@@var2} "
+
+    for i in 2...10
+      @@var3 = @@var1+ @@var2
+      puts "#{@@var3}"
+      @@var1=@@var2
+      @@var2=@@var3
+    end
+  end
+end
+
+cal=Fibonacci.new.calculate
+
+
+output-
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+
