@@ -1,0 +1,94 @@
+#!usr/bin/ruby
+
+class Operations
+
+  def initialize(a,b)
+    @@var1=a
+    @@var2=b
+  end
+
+  def sum()
+    puts" #{@@var1+@@var2} "
+  end
+
+end
+
+sum1=Operations.new(4,5)
+sum1.sum()
+
+sum2=Operations.new(4,6)
+sum2.sum()
+
+sum3=Operations.new(4,7)
+sum3.sum()
+
+sum4=Operations.new(4,8)
+sum4.sum()
+
+sum5=Operations.new(4,9)
+sum5.sum()
+                                                                                           
+output-
+ 9 
+ 10 
+ 11 
+ 12 
+ 13 
+
+
+
+#!usr/bin/ruby
+
+class Operations
+
+  def initialize
+  end
+
+  def product(var1,var2)
+    return var1*var2
+  end
+
+end
+
+prod1=Operations.new
+puts prod1.product(2,3)
+
+prod1=Operations.new
+puts prod1.product(2,4)
+
+prod1=Operations.new
+puts prod1.product(2,5)
+
+
+output-
+6
+8
+10
+
+------------------or---------------------
+
+#!usr/bin/ruby
+
+
+class Operations
+
+
+  def sum()
+    puts" #{@@var1+@@var2} "
+  end
+
+  def product(var1,var2)
+    return var1*var2
+  end
+
+end
+
+
+prod1=Operations.new
+puts prod1.product(2,3)
+
+prod1=Operations.new
+puts prod1.product(2,4)
+
+prod1=Operations.new
+puts prod1.product(2,5)
