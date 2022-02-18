@@ -92,3 +92,76 @@ puts prod1.product(2,4)
 
 prod1=Operations.new
 puts prod1.product(2,5)
+
+
+-------------example of class and objects----------
+
+#!usr/bin/ruby
+
+$school_name ='anthonys school'
+
+class Students
+
+  @@no_of_students=0
+
+  def initialize(id,name,standard)
+    @student_id=id
+    @student_name=name
+    @class_standard=standard
+      puts "id: #{@student_id}, name: #{@student_name} , class: #{@class_standard}"
+      @@no_of_students += 1
+      puts "student count #{@@no_of_students}"
+  end
+
+end
+
+student1=Students.new(1,'mayanka','6th class')
+student2=Students.new(2,'ammy','2th class')
+student3=Students.new(3,'alex','9th class')
+student4=Students.new(4,'ray','8th class')
+student5=Students.new(5,'katty','6th class')
+student6=Students.new(6,'tamy','3th class')
+
+output-
+id: 1, name: mayanka , class: 6th class
+student count 1
+id: 2, name: ammy , class: 2th class
+student count 2
+id: 3, name: alex , class: 9th class
+student count 3
+id: 4, name: ray , class: 8th class
+student count 4
+id: 5, name: katty , class: 6th class
+student count 5
+id: 6, name: tamy , class: 3th class
+student count 6
+
+
+ -------inspect with objects--------
+
+#!usr/bin/ruby
+
+$school_name ='anthonys school'
+
+class Students
+
+  @@no_of_students=0
+
+  def initialize(id,name,standard)
+    @student_id=id
+    @student_name=name
+    @class_standard=standard
+  end
+
+end
+
+student1=Students.new(1,'mayanka','6th class')
+
+puts student1.inspect
+
+output-
+
+#<Students:0x0000564fe384b0a0 @student_id=1, @student_name="mayanka", @class_standard="6th class">
+
+
+
