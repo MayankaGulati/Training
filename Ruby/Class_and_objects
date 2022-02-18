@@ -194,3 +194,29 @@ output-
  5
  6
  7
+
+
+-------------------class and object using overloading-------
+
+  #!usr/bin/ruby
+
+class Adding
+
+  def sum(*args)
+
+    case args.size
+    when 1
+        return args[0]
+    when 2
+      return args[0] + args[1]
+    end
+
+  end
+end
+
+puts Adding.new.sum(2,3)
+
+
+output-
+
+  5
