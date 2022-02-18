@@ -303,4 +303,31 @@ output-
 34
 55
 
+-------------prime number program--------
 
+  #!/usr/bin/ruby
+
+class Primenumber
+  @@count=0
+
+  def isit(var)
+    for i in 1...var
+
+    if var%i == 0
+      @@count +=1
+    end
+  end
+    if @@count>2
+      puts"it's not a prime number"
+    else
+      puts"it's a prime number"
+    end
+  end
+end
+
+prime1=Primenumber.new.isit(13)
+
+
+output-
+
+  it's a prime number
