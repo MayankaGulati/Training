@@ -164,4 +164,33 @@ output-
 #<Students:0x0000564fe384b0a0 @student_id=1, @student_name="mayanka", @class_standard="6th class">
 
 
+------------------class and object without using return-----------
 
+#!usr/bin/ruby
+
+
+class Operations
+
+
+  def sum(var1,var2)
+    puts" #{var1+var2} "
+  end
+
+end
+
+
+
+sum1=Operations.new
+sum1.sum(2,3)
+
+sum2=Operations.new
+sum2.sum(2,4)
+
+sum3=Operations.new
+sum3.sum(2,5)
+
+
+output-
+ 5
+ 6
+ 7
