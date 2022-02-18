@@ -260,4 +260,47 @@ output-
 21
 34
 
+---------using recursion----
+
+  #!usr/bin/ruby
+
+
+class Fibonacci
+  @@var1=0
+  @@var2=1
+  @@var3
+  @@count=0
+
+  puts "#{@@var1} \n#{@@var2} "
+
+  def calculate()
+      @@var3 = @@var1+ @@var2
+      puts "#{@@var3}"
+
+      @@count +=1
+      @@var1=@@var2
+      @@var2=@@var3
+
+      if @@count<=8
+        calculate
+      end
+  end
+end
+
+cal=Fibonacci.new.calculate
+
+
+output-
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+
 
