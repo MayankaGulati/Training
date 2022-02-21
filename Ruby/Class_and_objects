@@ -499,3 +499,38 @@ output-
 9    
 362880
 
+
+--------factorial using recursion-----
+
+
+  #!usr/bin/ruby
+
+class Factorial
+    @@var2 =1
+  def cal(input)
+    @var1 = input
+    @@var2 *= @var1
+    input  = input-1
+    if input>1
+      cal(input)
+    else
+      puts "#{@@var2}"
+    end
+
+  end
+
+end
+
+obj1=Factorial.new.cal(Integer(gets))
+
+
+
+output-
+
+3
+6
+
+
+4
+24
+
