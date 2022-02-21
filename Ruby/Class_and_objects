@@ -631,4 +631,49 @@ output-
 1234
 12345
 
+-----------using gets for range----
+
+  
+#!usr/bin/ruby
+
+
+class Triangles
+
+  def cal(input)
+
+    for i in 1..input
+      for j in 1..i
+        print j
+      end
+      puts "\n"
+    end
+  end
+end
+
+obj=Triangles.new.cal(Integer(gets))
+
+
+input-
+6
+output-
+
+1
+12
+123
+1234
+12345
+123456
+
+input-
+8
+
+output-
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
 
