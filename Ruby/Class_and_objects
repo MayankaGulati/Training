@@ -534,3 +534,40 @@ output-
 4
 24
 
+
+-----------Armstrong number-----------
+
+  #!usr/bin/ruby
+
+class Armstrong
+  @@var=1
+  @@sum=0
+  def cal(input)
+    @n = input
+    while(input>0)
+      @@var =input%10
+      @@sum += @@var*@@var*@@var
+      input /= 10
+    end
+
+   if @n == @@sum
+     puts "it is an armstrong number"
+   else
+     puts "it is not an armstrong number"
+   end
+
+  end
+end
+
+obj = Armstrong.new.cal(Integer(gets))
+
+
+output-
+
+371
+it is an armstrong number
+
+
+543
+it is not an armstrong number
+
