@@ -600,3 +600,35 @@ output-
   4
   3
 
+
+
+---------triangle of numbers----------
+
+#!usr/bin/ruby
+
+
+class Triangles
+
+  def cal(input)
+
+    for i in 1..input
+      for j in 1..i
+        print j
+      end
+      puts "\n"
+    end
+  end
+end
+
+obj=Triangles.new.cal(5)
+
+
+output-
+
+1
+12
+123
+1234
+12345
+
+
