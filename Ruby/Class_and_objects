@@ -571,3 +571,32 @@ it is an armstrong number
 543
 it is not an armstrong number
 
+
+--------swap numbers without using third variable------
+
+
+  #!/usr/bin/ruby
+
+class Swap
+
+  def cal(var1,var2)
+  var1=var1+var2
+  var2=var1-var2
+  var1=var1-var2
+
+  return var1,var2
+  end
+end
+a=Integer(gets)
+b=Integer(gets)
+obj = Swap.new.cal(a,b)
+puts obj
+
+
+input-
+  3
+  4
+output-
+  4
+  3
+
