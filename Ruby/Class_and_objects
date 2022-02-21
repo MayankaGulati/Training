@@ -677,3 +677,53 @@ output-
 1234567
 12345678
 
+
+------another number triangle------
+
+#!usr/bin/ruby
+
+
+class Triangles
+
+  def cal(input)
+
+    for i in 1..input
+      for j in 1..i
+        print i
+      end
+      puts "\n"
+    end
+  end
+end
+
+obj=Triangles.new.cal(Integer(gets))
+
+
+i/p-
+5
+o/p-
+1
+22
+333
+4444
+55555
+
+i/p-
+6
+o/p-
+1
+22
+333
+4444
+55555
+666666
+
+i/p-
+4
+o/p-
+1
+22
+333
+4444
+
+
