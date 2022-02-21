@@ -392,3 +392,41 @@ ob1= Palindrome.new.cal(12321876)
 
 output- the number is not palindrome
 
+
+-------using gets 
+
+#!/usr/bin/ruby
+
+class Palindrome
+
+  def cal(input)
+
+    @var=input
+    @one =0
+    while @var!=0 do
+      @rem=@var%10
+      @one *= 10
+      @one += @rem
+      @var /=10
+    end
+    if @one == input
+      puts "the number is palindrome"
+    else
+      puts "the number is not palindrome"
+    end
+
+  end
+end
+@var = gets
+ob1= Palindrome.new.cal(Integer(@var))
+
+
+
+output-
+
+12321
+the number is palindrome
+
+12345
+the number is not palindrome
+
