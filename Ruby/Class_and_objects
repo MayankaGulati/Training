@@ -459,3 +459,43 @@ string is not palindrome
 maam
 string is palindrome
 
+
+
+---------------factorial-----------------
+
+
+  #!/usr/bin/ruby
+
+class Factorial
+  @@var=1
+
+  def cal(input)
+    for i in 1..input
+
+     @@var = i*@@var
+
+    end
+    return @@var
+  end
+
+end
+
+input=Integer(gets)
+obj=Factorial.new.cal(input)
+puts obj
+
+
+
+output-
+
+3
+6
+
+
+5
+120
+
+
+9    
+362880
+
