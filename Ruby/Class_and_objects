@@ -318,9 +318,9 @@ class Primenumber
     end
   end
     if @@count>2
-      puts"it's not a prime number"
+      puts"its not a prime number"
     else
-      puts"it's a prime number"
+      puts"its a prime number"
     end
   end
 end
@@ -330,4 +330,65 @@ prime1=Primenumber.new.isit(13)
 
 output-
 
-  it's a prime number
+  its a prime number
+
+---------palindrome or not-------
+
+#!/usr/bin/ruby
+
+class Palindrome
+
+  def cal(input)
+
+    @var=input
+    @one =0
+    while @var!=0 do
+      @rem=@var%10
+      @one *= 10
+      @one += @rem
+      @var /=10
+    end
+    if @one == input
+      puts "the number is palindrome"
+    else
+      puts "the number is not palindrome"
+    end
+
+  end
+end
+
+ob1= Palindrome.new.cal(12321)
+
+
+Output- the number is palindrome.
+
+
+  
+  
+#!/usr/bin/ruby
+
+class Palindrome
+
+  def cal(input)
+
+    @var=input
+    @one =0
+    while @var!=0 do
+      @rem=@var%10
+      @one *= 10
+      @one += @rem
+      @var /=10
+    end
+    if @one == input
+      puts "the number is palindrome"
+    else
+      puts "the number is not palindrome"
+    end
+
+  end
+end
+
+ob1= Palindrome.new.cal(12321876)
+
+output- the number is not palindrome
+
