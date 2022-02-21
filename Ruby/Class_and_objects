@@ -430,3 +430,32 @@ the number is palindrome
 12345
 the number is not palindrome
 
+
+------palindrome in string
+
+#!usr/bin/ruby
+
+class Palindrome
+
+  def cal(input)
+    @var1= input.to_s
+    @var2=@var1.reverse
+    if @var1==@var2
+      puts"string is palindrome"
+    else
+      puts "string is not palindrome"
+    end
+  end
+end
+
+obj=Palindrome.new.cal(gets.chomp)
+
+
+output-
+
+variable
+string is not palindrome
+
+maam
+string is palindrome
+
