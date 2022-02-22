@@ -1,0 +1,31 @@
+Program to return only integer values from an array of string and integer values when passed to a function-
+
+#!/usr/bin/ruby
+
+
+#!/usr/bin/ruby
+
+
+class Convert
+
+  def con(input)
+
+    for i in 0..input.length
+    if input[i].class != Integer
+      input.delete_at(i)
+    end
+    end
+    return input
+  end
+end
+
+input = [23,'ntjr',98, 98,354,'mnhr']
+obj1 = Convert.new.con(input)
+
+print obj1
+
+output-
+
+[23, 98, 98, 354]
+
+
