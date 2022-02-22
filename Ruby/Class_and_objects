@@ -777,4 +777,50 @@ o/p-
  22
 333
 
+------------another triangle----
+
+
+#!usr/bin/ruby
+
+
+class Triangles
+
+  def cal(input)
+    @var=input
+
+    for i in 1..@var
+
+      print (" " * (@var-i) )
+
+    for j in 1..i
+      print i
+      print " "
+    end
+    puts ""
+    end
+
+  end
+end
+
+obj=Triangles.new.cal(Integer(gets))
+
+i/p-
+4
+o/p-
+
+   1 
+  2 2 
+ 3 3 3 
+4 4 4 4 
+
+i/p-
+5
+o/p-
+
+    1 
+   2 2 
+  3 3 3 
+ 4 4 4 4 
+5 5 5 5 5 
+
 
