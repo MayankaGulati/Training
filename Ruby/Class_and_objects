@@ -824,3 +824,48 @@ o/p-
 5 5 5 5 5 
 
 
+-----------printing pattern----
+
+#!usr/bin/ruby
+
+
+class Triangles
+
+  def cal(input)
+    @var=input
+    @one=1
+
+    for i in 1..@var
+
+      print (" " * (@var-i) )
+
+    for j in 1..i
+      print @one
+      print " "
+      @one +=1
+    end
+    puts ""
+    end
+
+  end
+end
+
+obj=Triangles.new.cal(Integer(gets))
+
+
+i/p-
+3
+o/p-
+
+  1 
+ 2 3 
+4 5 6 
+
+i/p-
+4
+o/p-
+   1 
+  2 3 
+ 4 5 6 
+7 8 9 10 
+
