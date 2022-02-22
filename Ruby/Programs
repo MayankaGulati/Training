@@ -29,3 +29,33 @@ output-
 [23, 98, 98, 354]
 
 
+
+
+Write a function to return reverse of a string using recursion.
+
+
+#!bin/usr/ruby
+
+class Reverse
+
+  def cal(input)
+    @var = ''
+    n=input.length - 1
+
+    for i in 0..n
+      @var.insert(i,input[n-i])
+    end
+  return @var
+  end
+
+end
+
+input='mayanka'
+obj1=Reverse.new.cal(input)
+
+puts obj1
+
+
+output-
+
+aknayam
