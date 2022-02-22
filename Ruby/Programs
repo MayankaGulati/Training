@@ -92,4 +92,51 @@ o/p-
 italug
 
 
+---------printing all the vowels in the string-----
 
+#!/usr/bin/ruby
+
+
+class VowelReverse
+  @@vowel = ['a','e','i','o','u']
+
+  def cal(input)
+    n=input.length-1
+    for i in 0..n
+      if @@vowel.include?(input[i])
+       puts input[i]
+      end
+    end
+  end
+
+end
+
+obj1=VowelReverse.new.cal(gets)
+
+i/p-
+assignment
+
+o/p-
+a
+i
+e
+
+i/p-
+anamika
+
+o/p-
+a
+a
+i
+a
+
+i/p-
+mayanka
+
+o/p-
+a
+a
+a
+
+
+------------
