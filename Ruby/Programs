@@ -59,3 +59,37 @@ puts obj1
 output-
 
 aknayam
+
+
+----------using dynamic input----
+
+#!bin/usr/ruby
+
+class Reverse
+
+  def cal(input)
+    @var = ''
+    n=input.length - 1
+
+    for i in 0..n
+      @var.insert(i,input[n-i])
+    end
+  return @var
+  end
+
+end
+
+
+obj1=Reverse.new.cal(gets)
+
+puts obj1
+
+
+i/p-
+gulati
+
+o/p-
+italug
+
+
+
