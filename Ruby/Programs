@@ -139,4 +139,39 @@ a
 a
 
 
-------------
+------------progran to reverse the vowels in a string----
+
+#!/usr/bin/ruby
+
+class ReverseVowel
+
+  def Rev(str)
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    @temp=0
+    @len=str.length-1
+    new_len = @len
+
+    for i in 0..@len/2
+      if vowels.include?str[i]
+
+        for j in (new_len) .downto(@len/2)
+          if vowels.include?str[j]
+            @temp=str[j]
+            str[j]=str[i]
+            str[i]=@temp
+            new_len=j
+          end
+          puts str
+          break
+        end
+
+      end
+    end
+  end
+end
+
+obj1=ReverseVowel.new.Rev('assignment')
+puts obj1
+
+
+##resolve error
