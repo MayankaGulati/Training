@@ -166,4 +166,43 @@ eql? Method-
 3.0.1 :053 > h1
  => {:foo=>0, :bar=>1, :baz=>2} 
 3.0.1 :054 > h1.keep_if{|key,value|key.start_with?('b')}
- => {:bar=>1, :baz=>2}  
+ => {:bar=>1, :baz=>2}
+
+
+.merge method-
+
+3.0.1 :001 > a={name:'mayanka',age:23,marks:98}
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :002 > b={attendance:49,semester:5}
+ => {:attendance=>49, :semester=>5} 
+3.0.1 :004 > a.merge b
+ => {:name=>"mayanka", :age=>23, :marks=>98, :attendance=>49, :semester=>5} 
+
+3.0.1 :008 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :009 > b
+ => {:attendance=>49, :semester=>5} 
+3.0.1 :010 > c
+ => {:subject=>"english"} 
+3.0.1 :011 > a.merge(b,c)
+ => {:name=>"mayanka", :age=>23, :marks=>98, :attendance=>49, :semester=>5, :subject=>"english"} 
+
+
+.length method-
+
+3.0.1 :012 > a.length
+ => 3 
+3.0.1 :013 > b.length
+ => 2 
+3.0.1 :014 > c.length
+ => 1 
+
+.keys method-
+
+3.0.1 :015 > a.keys
+ => [:name, :age, :marks] 
+3.0.1 :016 > b.keys
+ => [:attendance, :semester] 
+3.0.1 :017 > c.keys
+ => [:subject] 
+  
