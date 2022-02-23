@@ -205,4 +205,22 @@ eql? Method-
  => [:attendance, :semester] 
 3.0.1 :017 > c.keys
  => [:subject] 
+
+
+key value method-
+
+3.0.1 :018 > a.key(23)
+ => :age 
+3.0.1 :019 > a.key(49)
+ => nil 
+3.0.1 :020 > a.key(98)
+ => :marks 
+
+
+.reject method-
+
+3.0.1 :027 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :028 > a.reject {|key,value| key.start_with?('m')}
+ => {:name=>"mayanka", :age=>23} 
   
