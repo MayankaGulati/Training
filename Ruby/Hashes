@@ -317,4 +317,50 @@ key value method-
 3.0.1 :082 > ah.flatten(2)
  => [:mn, 0, :kn, {:ln=>[{:bn=>0, :cn=>0}]}] 
 
+fetch method-
+
+3.0.1 :001 > a={mn:10,ln:20,bn:30,cn:40}
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :002 > a.fetch(:ln)
+ => 20 
+3.0.1 :003 > a.fetch(:cn)
+ => 40 
+3.0.1 :004 > b={}
+ => {} 
+3.0.1 :006 > b.fetch(:cn,:default)
+ => :default 
+
+3.0.1 :004 > b={}
+ => {} 
+3.0.1 :009 > b.fetch(:name){|key| "no key #{key}"}
+ => "no key name" 
+
+
+fetch_values method-
+
+3.0.1 :012 > a
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :013 > a.fetch_values(:mn)
+ => [10] 
+3.0.1 :011 > a.fetch_values(:cn)
+ => [40] 
+
+except method-
+
+3.0.1 :014 > a
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :015 > a.except(:mn)
+ => {:ln=>20, :bn=>30, :cn=>40} 
+
+empty? Method-
+
+3.0.1 :016 > b
+ => {} 
+3.0.1 :017 > a
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :018 > b.empty?
+ => true 
+3.0.1 :019 > a.empty?
+ => false 
+
   
