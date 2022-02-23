@@ -1,28 +1,82 @@
 		HASHES:
 
-.new method
 
 
-3.0.1 :002 > Hash.new
+creating hashes-
+
+3.0.1 :011 > Hash.new
  => {} 
-3.0.1 :003 > aw=Hash.new
+3.0.1 :012 > h=Hash[]
  => {} 
-3.0.1 :004 > aw
+3.0.1 :013 > h
  => {} 
-3.0.1 :005 > aw.class
+3.0.1 :014 > a={}
+ => {} 
+3.0.1 :015 > a.class
  => Hash 
-3.0.1 :006 > aw = Hash[foo: 0,bar: 1,baz: 1]
- => {:foo=>0, :bar=>1, :baz=>1} 
-3.0.1 :007 > aw
- => {:foo=>0, :bar=>1, :baz=>1} 
+3.0.1 :016 > a={name:'mayanka' ,age:22}
+ => {:name=>"mayanka", :age=>22} 
+3.0.1 :017 > b=[name:'alex', age:23]
+ => [{:name=>"alex", :age=>23}] 
+3.0.1 :018 > a.class
+ => Hash 
+3.0.1 :019 > b.class
+ => Array 
 
 
-.delete method
+accessing hashes-
 
-3.0.1 :002 > h = Hash[a:10,b:20,c:30]
- => {:a=>10, :b=>20, :c=>30} 
-3.0.1 :003 > h.delete(:b)
- => 20 
-3.0.1 :004 > h
- => {:a=>10, :c=>30} 
+3.0.1 :020 > a
+ => {:name=>"mayanka", :age=>22} 
+3.0.1 :021 > a[:name]
+ => "mayanka" 
+3.0.1 :022 > a[:age]
+ => 22 
+
+deleting elements-
+
+3.0.1 :028 > a.delete(:name)
+ => "mayanka" 
+3.0.1 :029 > a
+ => {:age=>22} 
+
+
+include method-
+
+3.0.1 :029 > a
+ => {:age=>22} 
+3.0.1 :030 > a.include?(:name)
+ => false 
+3.0.1 :031 > a.include?(:age)
+ => true 
+
+
+
+modifying a hash element-
+
+3.0.1 :053 > a
+ => {:age=>12} 
+3.0.1 :054 > a[:age]=15
+ => 15 
+3.0.1 :055 > a
+ => {:age=>15} 
+
+.default method-
+
+3.0.1 :050 > c.default
+ => nil 
+3.0.1 :051 > c.default=false
+ => false 
+3.0.1 :052 > c.default
+ => false 
+
+.delete if method-
+
+3.0.1 :057 > a
+ => {:age=>15} 
+3.0.1 :058 > a.delete_if{|key,value| value >10}
+ => {} 
+3.0.1 :059 > a
+ => {} 
+
 
