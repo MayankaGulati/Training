@@ -257,4 +257,64 @@ key value method-
 3.0.1 :057 > b.slice(:attendance)
  => {:attendance=>49} 
 
+
+.values method-
+3.0.1 :058 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :059 > b
+ => {:attendance=>49, :semester=>5} 
+3.0.1 :060 > c
+ => {:subject=>"english"}
+3.0.1 :062 > a.values
+ => ["mayanka", 23, 98] 
+3.0.1 :063 > b.values
+ => [49, 5] 
+3.0.1 :064 > c.values
+ => ["english"] 
+
+.values_at method-
+
+3.0.1 :065 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :066 > a.values_at(:name)
+ => ["mayanka"] 
+3.0.1 :067 > a.values_at(:marks,:age)
+ => [98, 23] 
+3.0.1 :068 > b
+ => {:attendance=>49, :semester=>5} 
+3.0.1 :069 > b.values_at(:semester)
+ => [5] 	
+
+.rassoc method-
+3.0.1 :071 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :072 > a.rassoc(23)
+ => [:age, 23] 
+3.0.1 :073 > a.rassoc('mayanka')
+ => [:name, "mayanka"]  
+
+
+.key? Method-
+
+3.0.1 :071 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :074 > a.key?(:name)
+ => true 
+3.0.1 :075 > a.key?(:me)
+ => false 
+3.0.1 :076 > a.key?(:age)
+ => true 
+3.0.1 :077 > a.key?(:Age)
+ => false 
+
+
+.flatten method-
+
+3.0.1 :080 > ah={mn:0,kn:[ln:[bn:0,cn:0]]}
+ => {:mn=>0, :kn=>[{:ln=>[{:bn=>0, :cn=>0}]}]} 
+3.0.1 :081 > ah.flatten(1)
+ => [:mn, 0, :kn, [{:ln=>[{:bn=>0, :cn=>0}]}]] 
+3.0.1 :082 > ah.flatten(2)
+ => [:mn, 0, :kn, {:ln=>[{:bn=>0, :cn=>0}]}] 
+
   
