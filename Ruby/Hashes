@@ -363,4 +363,42 @@ empty? Method-
 3.0.1 :019 > a.empty?
  => false 
 
-  
+each_value method-
+
+3.0.1 :020 > a
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :021 > a.each_value{|value| puts value}
+10
+20
+30
+40
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+
+
+each_pair method-
+
+3.0.1 :024 > a
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :025 > a.each_pair{|key,value| puts "#{key}#{value}"}
+mn10
+ln20
+bn30
+cn40
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+3.0.1 :026 > a.each_pair{|key,value| puts "#{key}: #{value}"}
+mn: 10
+ln: 20
+bn: 30
+cn: 40
+ => {:mn=>10, :ln=>20, :bn=>30, :cn=>40} 
+
+dig method-
+
+3.0.1 :028 > n={mn:{ln:{bn:{cn:0}}}}
+ => {:mn=>{:ln=>{:bn=>{:cn=>0}}}} 
+3.0.1 :030 > n.dig(:mn)
+ => {:ln=>{:bn=>{:cn=>0}}} 
+3.0.1 :031 > n.dig(:mn, :ln)
+ => {:bn=>{:cn=>0}} 
+3.0.1 :032 > n.dig(:mn, :ln,:cn)
+ => nil   
