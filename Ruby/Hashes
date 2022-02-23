@@ -79,4 +79,50 @@ modifying a hash element-
 3.0.1 :059 > a
  => {} 
 
+.any? Method-
 
+3.0.1 :008 > a.any?([:age2,76])
+ => true 
+3.0.1 :009 > a.any?([:age,76])
+ => false 
+3.0.1 :010 > a.any?([:age2,26])
+ => false 
+
+.empty? Method-
+
+3.0.1 :012 > a
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :013 > a.empty?
+ => false 
+3.0.1 :014 > e={}
+ => {} 
+3.0.1 :015 > e.empty?
+ => true 
+
+eql? Method-
+	checks if the key and the value of the two hashes are same or not
+
+3.0.1 :016 > a
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :017 > b
+ => {:roll1=>45, :roll2=>76, :roll3=>23, :roll4=>12} 
+3.0.1 :018 > a.eql? b
+ => false 
+3.0.1 :019 > a.eql? a
+ => true 
+3.0.1 :020 > c={age1:23,age2:13,age3:67,age4:89}
+ => {:age1=>23, :age2=>13, :age3=>67, :age4=>89} 
+3.0.1 :021 > a.eql? c
+ => false 
+3.0.1 :025 > d = {age1:45,age2:76,age3:23,age4:12}
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :026 > a.eql? d
+ => true 
+
+
+3.0.1 :038 > h1 = {foo: 0, bar: 1, baz: 2}
+ => {:foo=>0, :bar=>1, :baz=>2} 
+3.0.1 :039 > h2 = {baz: 2, bar: 1, foo: 0}
+ => {:baz=>2, :bar=>1, :foo=>0} 
+3.0.1 :040 > h1.eql? h2
+ => true 
