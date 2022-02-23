@@ -125,4 +125,45 @@ eql? Method-
 3.0.1 :039 > h2 = {baz: 2, bar: 1, foo: 0}
  => {:baz=>2, :bar=>1, :foo=>0} 
 3.0.1 :040 > h1.eql? h2
- => true 
+ => true
+
+.replace method-
+
+3.0.1 :033 > b
+ => {:roll1=>45, :roll2=>76, :roll3=>23, :roll4=>12} 
+
+3.0.1 :041 > b.replace({age1:22,age2:22,age3:22})
+ => {:age1=>22, :age2=>22, :age3=>22} 
+3.0.1 :042 > b
+ => {:age1=>22, :age2=>22, :age3=>22} 
+
+.invert method-
+
+3.0.1 :046 > z ={age1:45,age2:76,age3:23,age4:12} 
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :047 > z.invert
+ => {45=>:age1, 76=>:age2, 23=>:age3, 12=>:age4} 
+
+.inspect method-
+
+3.0.1 :044 > b
+ => {:age1=>22, :age2=>22, :age3=>22} 
+3.0.1 :045 > b.inspect
+ => "{:age1=>22, :age2=>22, :age3=>22}" 
+
+3.0.1 :048 > z
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :049 > z.inspect
+ => "{:age1=>45, :age2=>76, :age3=>23, :age4=>12}" 
+.keep_if method-
+
+3.0.1 :050 > z
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :051 > z.keep_if{|key,value|key.start_with?('a')}
+ => {:age1=>45, :age2=>76, :age3=>23, :age4=>12} 
+3.0.1 :052 > z.keep_if{|key,value|key.start_with?('b')}
+ => {} 
+3.0.1 :053 > h1
+ => {:foo=>0, :bar=>1, :baz=>2} 
+3.0.1 :054 > h1.keep_if{|key,value|key.start_with?('b')}
+ => {:bar=>1, :baz=>2}  
