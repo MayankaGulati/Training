@@ -223,4 +223,38 @@ key value method-
  => {:name=>"mayanka", :age=>23, :marks=>98} 
 3.0.1 :028 > a.reject {|key,value| key.start_with?('m')}
  => {:name=>"mayanka", :age=>23} 
+
+
+.select method-
+
+3.0.1 :047 > n={sd:12, mn:23, lo:46}
+ => {:sd=>12, :mn=>23, :lo=>46} 
+3.0.1 :048 > n.select{|key,value| value<20}
+ => {:sd=>12} 
+
+3.0.1 :041 > h = {foo: 0, bar: 1, baz: 2}
+ => {:foo=>0, :bar=>1, :baz=>2} 
+3.0.1 :042 > h.select {|key, value| value < 2 }
+ => {:foo=>0, :bar=>1} 
+
+
+.shift method-
+3.0.1 :049 > n
+ => {:sd=>12, :mn=>23, :lo=>46} 
+3.0.1 :050 > n.shift
+ => [:sd, 12] 
+3.0.1 :051 > n
+ => {:mn=>23, :lo=>46} 
+
+.slice method-
+
+3.0.1 :054 > a
+ => {:name=>"mayanka", :age=>23, :marks=>98} 
+3.0.1 :055 > a.slice(:name,:marks)
+ => {:name=>"mayanka", :marks=>98} 
+3.0.1 :056 > b
+ => {:attendance=>49, :semester=>5} 
+3.0.1 :057 > b.slice(:attendance)
+ => {:attendance=>49} 
+
   
